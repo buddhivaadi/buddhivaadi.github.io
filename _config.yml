@@ -1,6 +1,7 @@
-title: "Student of Logic"
+title: "Buddhi Vaadi: Student of Logic"
 description: "Investigating ideas through logic"
 theme: minima
 
 # Optional settings for nicer permalinks
 permalink: /:categories/:title/
+header_pages: []
