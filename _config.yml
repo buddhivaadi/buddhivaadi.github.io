@@ -1,3 +1,6 @@
 title: "Student of Logic"
-description: "Investigations into religion, philosophy, and politics through logic"
+description: "Investigating ideas through logic"
 theme: minima
+
+# Optional settings for nicer permalinks
+permalink: /:categories/:title/
