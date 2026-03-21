@@ -5,11 +5,10 @@ categories: dharma
 ---
 
 
-## *A Definition from First Principles using the Gita Topos*
 
 ---
 
-*For those who have been told Hinduism is either everything or nothing, and have found both answers unsatisfying.*
+*For those who asked the question.*
 
 ---
 
@@ -17,1085 +16,936 @@ categories: dharma
 > *"That which is, is one; the wise speak of it in many ways."*
 > — Rigveda 1.164.46
 
-> *"A topos is a category that looks like the category of sets from the inside."*
-> — Saunders Mac Lane
+> *"Fear not. I shall deliver thee from all sin and evil. Do not grieve."*
+> — Bhagavad Gita 18.66
 
 > *"The presheaf topos contains every sheaf topos as a reflective subcategory."*
 > — Standard result in category theory
 
 ---
 
-## PREFACE: WHY THIS QUESTION IS HARD
+## PREFACE: THE ANSWER IN ONE SENTENCE
 
-The question "What is Hinduism?" has defeated everyone who has tried to answer it seriously.
+What is Hinduism?
 
-Theologians answer it by picking one school — usually Advaita Vedanta — and treating it as normative, then quietly ignoring the fact that hundreds of millions of practicing Hindus operate in frameworks where Shankara's non-dualism is not the last word. Sociologists answer it by listing shared practices — temple worship, the caste system, the festival calendar, the sacred geography of rivers and mountains — and miss the fact that the practices are consequences of something deeper, not the thing itself. Comparative religionists answer it by contrast — Hinduism is not Christianity, not Islam, not Buddhism — which tells you what it is not while leaving the positive content empty. Politicians answer it in ways that serve political purposes and need not detain us.
+**Hinduism is the tradition of those who accept the daivi sampadas as virtues.**
 
-The honest answer, offered by many thoughtful Hindus themselves, is: "Hinduism is not a single religion but a family of religions sharing a common civilization." This is descriptively accurate but philosophically unsatisfying. A family is defined by its members; if the members cannot be specified by a principled criterion, the definition is circular. And if the criterion is purely historical or geographic ("whatever developed in the Indian subcontinent"), then the definition is arbitrary — it excludes diaspora traditions that are clearly Hindu and includes reform movements that have explicitly rejected Hindu metaphysics.
+The daivi sampadas — the divine endowment described in Bhagavad Gita Chapter 16 — are: fearlessness, purity of being, steadfastness in knowledge-yoga, generosity, self-control, sacrifice, study of the self, austerity, uprightness, non-violence, truthfulness, freedom from anger, renunciation, tranquility, absence of fault-finding, compassion for beings, absence of covetousness, gentleness, modesty, absence of fickleness, vigor, forgiveness, fortitude, purity, absence of envy and pride.
 
-What is needed is a definition that is:
+No school, no specific name of God, no ritual form, no creedal proposition is required. What is required is the recognition that these qualities constitute the direction of a human life worth living, and that the opposing qualities — arrogance, deception, ego-domination, cruelty, lust, anger, greed — constitute the direction away from what is real.
 
-1. **Principled** — derivable from a coherent framework, not assembled from a list of examples
-2. **Inclusive** — encompassing all traditions that are genuinely Hindu
-3. **Exclusive** — correctly identifying what is not Hindu
-4. **Explanatory** — not just classifying but explaining *why* Hinduism has the features it does: the plurality of schools, the absence of a fixed creed, the tolerance for diverse paths, the simultaneous insistence on certain moral absolutes
-5. **Non-circular** — not defined in terms of geography, history, or membership in a pre-existing list
+This is the Hindu criterion. It is principled, inclusive, and exclusive in the right ways. It explains every feature of Hinduism that has puzzled outside observers: its plurality of schools, its absence of a fixed creed, its tolerance for diverse paths, its simultaneous insistence on certain moral absolutes, and the central place of the Bhagavad Gita within it.
 
-This book offers such a definition.
+And the answer to the second question follows immediately: **The Gita holds its place in Hinduism because it is the text that most completely and precisely articulates why the daivi sampadas lead to liberation and the asuri sampadas lead to bondage — and provides the metaphysical framework that makes this a provable theorem rather than a moral opinion.**
 
-The definition is mathematical. It uses the theory of **toposes** (plural of topos) — a branch of mathematics developed in the twentieth century that provides the most general and most flexible framework for describing structured logical universes. The mathematics is precise, but the argument is philosophical: the claim is that Hinduism has a specific mathematical structure, and that understanding this structure answers not just "what is Hinduism?" but "why is Hinduism the way it is?"
+This book develops both answers in full. It uses the mathematics of topos theory — the theory of sheaves on a site, developed by Grothendieck, Lawvere, Tierney, and Johnstone — not to impose an alien framework on the tradition but to give precise form to what the tradition independently discovered.
 
-The mathematics used here was developed in an extended investigation of the Bhagavad Gita's logical structure, which demonstrated that the Gita's teaching corresponds precisely to the structure of a specific Grothendieck topos — the **Gita Topos** $\mathbb{G} = \mathbf{Sh}(\mathbf{C}, J)$. That investigation is presupposed here and summarized where needed. Readers unfamiliar with it should consult the companion volume *Gita Topos: What Is It? What Does It Tell?*
-
-The core claim of this book is simple to state, though the implications take the whole book to draw out:
-
-$$\boxed{\text{Hinduism} = \hat{\mathbf{C}} = \mathbf{PSh}(\mathbf{C})}$$
-
-Hinduism is the **presheaf topos** over the Prakritic category $\mathbf{C}$ — the category of the 24 tattvas of Sankhya with their gunic transition morphisms.
-
-Each Hindu school is a **sheaf topos** $\mathbf{Sh}(\mathbf{C}, J_i)$ — a sheafification of $\hat{\mathbf{C}}$ with respect to a specific Grothendieck topology $J_i$ representing that school's account of what constitutes a complete dharmic explanation.
-
-The relationship between Hinduism and its schools is the relationship between a presheaf topos and the reflective subcategories generated by sheafification. This relationship has very specific mathematical properties — and those properties turn out to be exactly the properties that Hinduism exhibits and that have puzzled observers for centuries.
-
-This book proves that definition is correct.
+The two previous volumes in this series — *Gita Topos: What Is It? What Does It Tell?* and *What Is Hinduism?* — are synthesized and substantially revised here, with the daivi sampada criterion as the organizing principle throughout.
 
 ---
 
 ## HOW TO READ THIS BOOK
 
-The book is written in six parts.
+The book has five parts.
 
-**Part One: The Question in Full** — What exactly needs to be explained? This part sets out the features of Hinduism that any adequate definition must account for: the plurality of schools, the absence of a fixed creed, the tolerance for diverse paths, the simultaneous insistence on certain moral absolutes, the authority of the Vedas, the relationship between philosophy and practice, and the contested boundaries with neighboring traditions.
+**Part One: The Definition** — What makes someone Hindu, stated precisely. Why the daivi sampada criterion works where all other definitions fail. What this implies about the schools, the Vedas, the absence of creed, and the tradition's tolerance.
 
-**Part Two: The Mathematical Framework** — A self-contained introduction to the mathematical tools used: categories, functors, presheaves, sheaves, Grothendieck toposes, and the Lawvere-Tierney topology. No prior mathematical knowledge is assumed. The goal is not to teach category theory but to make the definitions precise enough to support the argument.
+**Part Two: The Ground** — The mathematical framework. A self-contained introduction to categories, presheaves, sheaves, toposes, and the Lawvere-Tierney topology — enough to follow the argument without a mathematics degree. The construction of the Gita Topos $\mathbb{G} = \mathbf{Sh}(\mathbf{C}, J)$ and its identification of Hinduism as the presheaf topos $\hat{\mathbf{C}}$.
 
-**Part Three: The Definition** — The formal definition of Hinduism as the presheaf topos $\hat{\mathbf{C}}$, and the demonstration that each Hindu school is a sheafification of this presheaf topos with respect to a specific topology.
+**Part Three: The Schools** — Each major Hindu philosophical school as a specific topology on the Prakritic category. How they all agree on the daivi sampadas despite disagreeing on metaphysics. The sampada theorems as the topology-invariant core of Hinduism.
 
-**Part Four: The Schools** — A systematic analysis of the major Hindu philosophical schools (Advaita, Vishishtadvaita, Dvaita, Shaiva Siddhanta, Kashmir Shaivism, Shakta Tantra, Mimamsa, Sankhya-Yoga) as specific topologies on $\mathbf{C}$. Each school is shown to be a coherent substructure of $\hat{\mathbf{C}}$, not a deviation from it.
+**Part Four: The Gita** — Where the Gita fits. Why it holds the place it holds. A chapter-by-chapter account of how the Gita proves the sampada theorems and builds the metaphysical framework that grounds them. The Gita not as one text among many but as the tradition's most complete single articulation of the daivi-asuri teaching.
 
-**Part Five: What All Schools Agree On** — The theorem that the daivi sampada (divine endowment) is productive of liberation in every Hindu school's topos, and the asuri sampada (demonic endowment) constitutes bondage in every school's topos. This is not a sociological observation but a mathematical theorem.
-
-**Part Six: Consequences** — What the definition implies about Hinduism's relationship to other traditions, about the internal debates that have shaped Hindu philosophy, about the authority of the Vedas, about conversion, about reform, and about the contested boundary between Hinduism and Buddhism.
-
-The **Glossary** provides definitions of all Sanskrit and mathematical terms.
+**Part Five: Consequences** — What the definition implies about Hinduism's relationship to other traditions, about the caste controversy, about conversion, and about the final teaching of 18.66.
 
 ---
 
 ## A NOTE ON HONESTY
 
-This book does not treat Hinduism diplomatically. Where the tradition is hierarchical, that hierarchy is stated. Where certain teachings are exclusive, that exclusivity is stated. Where the tradition has been misrepresented — by admirers who turn it into a vague universalism and by critics who reduce it to caste and superstition — the misrepresentation is corrected.
+This book does not treat Hinduism diplomatically. Where the tradition is demanding, that demand is stated. Where the tradition has been misread — by both admirers who turn it into vague universalism and critics who reduce it to social oppression — the misreading is corrected. Where the tradition's foundational texts say something different from what its historical institutions practiced, both are stated.
 
-The definition offered here is not designed to make Hinduism palatable to any particular audience. It is designed to be correct.
+The daivi sampada definition is not a soft definition. It excludes. One who holds arrogance, deception, cruelty, and ego-domination as positive values — regardless of birth, ancestry, ritual observance, or self-identification — is not Hindu in any substantive sense under this definition. One who cultivates fearlessness, non-violence, truthfulness, compassion, and equanimity — regardless of birth, ancestry, or formal affiliation — is Hindu in the substantive sense.
 
----
-
----
-
-# PART ONE: THE QUESTION IN FULL
-
-## What Any Adequate Definition Must Explain
-
----
-
-Before proposing a definition, we need to be precise about what it is a definition *of* — what features of Hinduism any adequate answer to "what is it?" must account for. This part identifies seven such features. A definition that fails to account for any one of them is incomplete.
-
----
-
-### Feature 1: Irreducible Plurality Without Relativism
-
-Hinduism contains within itself schools that contradict each other on the most fundamental metaphysical questions.
-
-Shankara (8th century CE) taught that Brahman alone is real, that the world of multiplicity is fundamentally unreal (*mithya*), and that the individual self (Atman) is numerically identical with the ultimate reality (Brahman). *Aham Brahmasmi* — "I am Brahman."
-
-Ramanuja (11th century CE) taught that Brahman is real, the world is real, and individual selves are real — but that the world and individual selves are the "body" of Brahman, related to it as a body is to its soul. They are distinct but inseparable.
-
-Madhva (13th century CE) taught that Brahman (Vishnu), individual selves, and the world are three categorically distinct realities that can never be identified with each other. The devotee worships Vishnu not as an expression of Vishnu but as a genuinely separate being who stands in permanent, irreducible relationship to a genuinely separate God.
-
-These three positions are not merely different emphases. They are logically incompatible on the question of whether Atman = Brahman. In classical logic, at most one can be true. Yet all three are recognized as legitimate Hindu schools. Shankara, Ramanuja, and Madhva each claimed to be the correct interpreter of the *same* set of texts (the Upanishads, the Brahma Sutras, and the Gita). Each accused the others of error. Each developed sophisticated philosophical systems to demonstrate the correctness of his interpretation.
-
-Any definition of Hinduism must explain how this situation is possible — not as a failure of rigor or a coincidence of historical tolerance, but as a *structural feature* of Hinduism that is itself philosophically grounded.
-
----
-
-### Feature 2: Absence of a Fixed Creed
-
-Every other major world religion has a creed — a minimal set of propositions that all adherents are expected to affirm. The Nicene Creed for Christianity. The Shahada for Islam. The Three Jewels for Buddhism. Denial of the creed is heresy or apostasy.
-
-Hinduism has nothing equivalent. There is no proposition whose affirmation is required of all Hindus and whose denial makes one non-Hindu. Not the existence of God (Mimamsa is broadly atheistic in the sense of not requiring a creator God). Not the authority of the Vedas (Tantric schools relate to the Vedas differently from Vedantic schools; some Shaiva schools place their Agamas above the Vedas). Not rebirth (most schools affirm it, but it is not a creedal requirement in the way Christian resurrection is). Not caste (many reform movements within Hinduism explicitly reject it).
-
-This is not a failure of philosophical discipline. The major Hindu thinkers were among the most rigorous logicians in the ancient world. The Nyaya school developed formal logic. The Mimamsa school developed hermeneutics. The Vedanta schools engaged in intricate dialectical argumentation. The absence of a creed is not an oversight. It requires explanation.
-
----
-
-### Feature 3: Authority of the Vedas Without Agreement on Content
-
-Virtually all Hindu schools acknowledge the authority (*pramana*) of the Vedas. Yet the schools disagree profoundly on what the Vedas mean, which portions are most important, and how Vedic authority relates to other sources of knowledge (direct experience, reasoning, the testimony of teachers).
-
-Mimamsa holds that the ritual injunctions (*vidhi*) of the Vedas are the most important portions, and that the Upanishadic speculations are subordinate to them. Advaita holds that the Upanishads are the summit of Vedic teaching and that the ritual portions are preparatory. Madhva holds that the Vedas must be interpreted through the lens of Vaishnava devotion to Vishnu.
-
-The Vedas are described as *apaurusheya* — not of human authorship, eternal, self-valid. This claim is common to nearly all schools. Yet no school can fully explicate the Vedas without importing its own theological framework. The Vedas function as a shared authority whose meaning is permanently contested.
-
-Any definition must explain why the Vedas function as a shared authority even though their content is disputed — why acknowledging Vedic authority is *itself* meaningful as a criterion, even absent agreement on interpretation.
-
----
-
-### Feature 4: Tolerance as a Structural Feature, Not a Social Accident
-
-The tolerance of Hinduism — its capacity to hold Shaivism, Vaishnavism, Shaktism, Advaita, Dvaita, and dozens of other schools in a single tradition — is frequently praised and rarely explained.
-
-The standard explanation is historical and sociological: India has been a diverse civilization; various traditions have co-existed for millennia; there was no central ecclesiastical authority to enforce orthodoxy. This explanation is factually correct but philosophically unsatisfying. It explains tolerance as the *absence* of intolerance rather than as a positive feature. It makes tolerance sound like an accident of governance rather than a philosophical achievement.
-
-The actual philosophical arguments for tolerance within Hinduism are more interesting. The *adhikara* doctrine (the teaching that different practices are appropriate for different spiritual levels) is one argument. The *ishta-devata* doctrine (the teaching that each devotee may choose their own form of the divine) is another. The *anekantavada*-adjacent intuition (though this is technically Jain) that truth has multiple aspects is a third.
-
-But none of these fully explains *why* Hinduism does not require a creed while simultaneously maintaining that some things are true and some things are false. The tolerance is not relativism — Shankara was not tolerant of Madhva's dualism; he argued against it vigorously. Yet the tradition as a whole accommodated both positions. This requires a structural explanation.
-
----
-
-### Feature 5: Certain Moral Absolutes Recognized Across All Schools
-
-Despite the theological diversity, there are moral positions that appear across all Hindu schools with something approaching universality:
-
-- The daivi sampadas (divine qualities: fearlessness, non-violence, truthfulness, non-covetousness, self-control, equanimity) are uniformly praised as spiritually productive.
-- The asuri sampadas (demonic qualities: arrogance, dishonesty, ego-domination, lust, anger, greed) are uniformly identified as spiritually destructive.
-- Ahimsa (non-violence) is elevated as a supreme value across virtually all schools.
-- The control of desire and ego is recommended across all schools, regardless of whether liberation is conceived as identity with Brahman (Advaita), communion with Vishnu (Vaishnavism), or union with Shiva (Shaivism).
-
-This moral convergence is striking against the background of theological divergence. Schools that disagree about whether God is personal or impersonal, whether the self is real or illusory, whether the world is Brahman's body or an independent reality — all agree that fearlessness is better than fear, that truthfulness is better than deception, that greed destroys the practitioner.
-
-This convergence requires explanation. Why would schools with radically different metaphysics converge on the same ethics? Is it mere cultural inheritance, or is there a deeper structural reason?
-
----
-
-### Feature 6: The Boundary Problem
-
-The boundaries of Hinduism are genuinely contested. Several traditions present genuine boundary cases:
-
-**Buddhism**: Emerged from the same cultural and textual milieu as Hinduism. Shares the concepts of karma, rebirth, meditation, and the aspiration to liberation (*nirvana/moksha*). Rejects the Vedas as authoritative and rejects the concept of a permanent self (Atman) — both of which are central to most Hindu schools. Is Buddhism a Hindu school that rejected some Hindu doctrines, or a separate religion?
-
-**Jainism**: Similarly shares karma, rebirth, and liberation as central concepts. Rejects Vedic authority. Has a radically different cosmology (no creator God; eternal universe). Is it within or outside Hinduism?
-
-**Sikhism**: Emerged from a meeting of Hindu and Islamic traditions. Shares monotheism with Islam and the guru tradition with Hinduism. Has its own scripture (the Guru Granth Sahib). Is it a Hindu school?
-
-**Neo-Vedanta and modern "Hinduism"**: The reformist movements of the 19th and 20th centuries (Ramakrishna, Vivekananda, Aurobindo) often present Hinduism as a universal spirituality, stripping away what they regard as superstitious accretions (idol worship, caste, ritual) and retaining what they regard as the essential philosophical core (Advaita Vedanta). Is this still Hinduism?
-
-Any adequate definition must have principled answers to these boundary cases — not historical or sociological answers, but philosophical ones.
-
----
-
-### Feature 7: The Relationship Between the Absolute and Multiplicity
-
-All Hindu schools address — and give different answers to — the relationship between ultimate reality (whether called Brahman, Shiva, Shakti, or Vishnu) and the multiplicity of things in the world. This relationship is:
-
-- **Non-dual identity** (Advaita): The multiplicity is ultimately unreal; only Brahman is real.
-- **Qualified non-duality** (Vishishtadvaita): The multiplicity is Brahman's body; real but inseparable from Brahman.
-- **Dualism** (Dvaita): The multiplicity is genuinely distinct from Brahman; real and permanent.
-- **Identity-in-difference** (Bhedabheda): Both identical and different, depending on the perspective.
-- **Recognition** (Kashmir Shaivism): The multiplicity is Shiva's own self-recognition; real as a mode of divine play.
-
-These are not peripheral disagreements. They are the central metaphysical disagreement of Hindu philosophy, debated for more than a thousand years with no resolution.
-
-Any definition of Hinduism must explain why this particular disagreement — and not some other disagreement — is the axis around which Hindu philosophy turns. And it must explain why the tradition as a whole can contain all four positions without exploding.
-
----
-
-These seven features are what any adequate definition must explain. The definition proposed in this book explains all seven. Let us now build the framework that makes the definition possible.
+This is what the tradition's foundational text says. The book follows the text.
 
 ---
 
 ---
 
-# PART TWO: THE MATHEMATICAL FRAMEWORK
+# PART ONE: THE DEFINITION
 
-## Categories, Sheaves, and the Logic of Perspectives
-
----
-
-*This part introduces the mathematical tools needed for the definition. No prior knowledge of mathematics beyond basic familiarity with sets and functions is assumed. Readers with training in category theory may proceed directly to Part Three.*
+## What is a Hindu?
 
 ---
 
-### §1. Categories: The Mathematics of Structure and Transformation
+### §1. The Question That Has Defeated Everyone
 
-A **category** is a collection of two things: **objects** and **morphisms** between objects.
+The question "What is Hinduism?" has defeated theologians, sociologists, comparative religionists, and politicians. Each answer fails in a different way:
 
-Objects represent *things*. Morphisms represent *transformations* — structured relationships between things. Every morphism has a source object and a target object. If $f$ is a morphism from object $A$ to object $B$, we write $f: A \to B$.
+- **The doctrinal answer** (pick a school, usually Advaita Vedanta, and treat it as normative) fails because hundreds of millions of practicing Hindus operate in frameworks where Shankara's non-dualism is not the final word.
 
-Morphisms compose: if $f: A \to B$ and $g: B \to C$, then there is a composite morphism $g \circ f: A \to C$. Composition is associative: $h \circ (g \circ f) = (h \circ g) \circ f$. Every object has an identity morphism $\text{id}_A: A \to A$ that does nothing.
+- **The sociological answer** (shared practices, shared geography, shared festival calendar) fails because practices are consequences of something deeper, not the thing itself, and because the geographic criterion arbitrarily excludes diaspora Hindus and arbitrarily includes movements that explicitly rejected Hindu metaphysics.
 
-Category theory is the mathematics of *structure-preserving transformation*. It says: what matters about an object is not its internal constitution but its relationships — what morphisms come into it and out of it, and how those morphisms compose.
+- **The contrastive answer** (Hinduism is not Christianity, not Islam, not Buddhism) tells you what it is not while leaving the positive content empty.
 
-The central theorem of category theory — the **Yoneda Lemma** — states this precisely: an object is completely determined by its pattern of relationships. Two objects are isomorphic (structurally identical) if and only if they have the same pattern of relationships. The identity of a thing is its relational structure.
+- **The family answer** (Hinduism is a family of religions sharing a common civilization) is descriptively accurate but philosophically circular — a family is defined by its members, and without a principled criterion for membership, the definition is empty.
 
-This is already philosophically pregnant. The Atman, in the Gita, is not a substance with intrinsic properties but a relational being — what it is is constituted by its relationships to Prakriti, to Brahman, to the gunas. The Yoneda Lemma says this is not a mystical claim but a structural theorem.
+What is needed is a definition that is principled, inclusive, exclusive, explanatory, and non-circular.
 
 ---
 
-### §2. The Terminal Object
+### §2. The Daivi Sampada Criterion
 
-In any category, the **terminal object** is the unique object $\mathbf{1}$ such that every other object has exactly one morphism into it:
+**Definition**: *A Hindu is one who accepts the daivi sampadas as virtues and orients their life accordingly.*
+
+The daivi sampadas are the 26 divine qualities enumerated in Bhagavad Gita 16.1–3:
+
+*Fearlessness (abhaya), purity of being (sattva-samshudhi), steadfastness in knowledge-yoga (jnana-yoga-vyavasthiti), generosity (dana), self-control (dama), sacrifice (yajna), study of the self (svadhyaya), austerity (tapas), uprightness (arjava), non-violence (ahimsa), truthfulness (satya), freedom from anger (akrodha), renunciation (tyaga), tranquility (shanti), absence of fault-finding (apaishunam), compassion for beings (daya bhuteshu), absence of covetousness (alobha), gentleness (mardavam), modesty (hri), absence of fickleness (achapalam), vigor (tejas), forgiveness (kshama), fortitude (dhrti), purity (shaucha), absence of envy and pride (adroha, natimanita).*
+
+The asuri sampadas — the demonic endowment — are their systematic negations: *ostentation (dambha), arrogance (darpa), excessive pride (abhimana), anger (krodha), harshness (parushyam), and ignorance (ajnanam)* (16.4), together with the complete denial of cosmic order, the three gates of hell — lust (kama), anger (krodha), and greed (lobha) (16.21).
+
+**Why this definition works**:
+
+It requires **no specific name for the ultimate**. Whether one calls the absolute Brahman, Shiva, Vishnu, Shakti, or the Self makes no difference to the daivi criterion. The direction — toward fearlessness, non-violence, truthfulness — is the same regardless of the name given to what one is moving toward.
+
+It requires **no fixed school**. Advaitins, Dvaitins, Shaivas, Shaktas, Vaishnavas, followers of Patanjali, followers of Kapila — all are Hindu by this criterion as long as they accept the daivi qualities as the markers of a life moving in the right direction.
+
+It requires **no specific ritual form**. Temple worship, japa, meditation, karma yoga, bhakti, jnana — all are valid paths by this criterion.
+
+It is **genuinely exclusive**. One who holds arrogance, deception, lust, anger, and greed as positive values — as guides rather than obstacles — is not Hindu under this definition, regardless of birth or ancestry or self-identification. The criterion has real content that can be violated.
+
+It is **genuinely inclusive**. One who cultivates fearlessness, compassion, truthfulness, non-violence, and equanimity — regardless of birth, ancestry, or formal religious affiliation — is Hindu in the substantive sense. The tradition's own teaching on this point is unambiguous: daivi qualities belong to those moving toward liberation, regardless of their social origin.
+
+---
+
+### §3. Why This Definition Explains What Others Cannot
+
+**The plurality of schools**: Different Hindu schools disagree on fundamental metaphysical questions — whether Atman is identical with Brahman (Advaita), related but distinct (Vishishtadvaita), or permanently separate (Dvaita). These disagreements do not undermine the daivi criterion because the criterion operates at a level prior to these metaphysical distinctions. All schools agree that fearlessness, non-violence, truthfulness, and equanimity are virtues. The metaphysical disagreement is about what ultimate reality *is*; the daivi criterion is about what a human life moving *toward* that reality looks like. These are different questions, and the answer to the second is shared across all answers to the first.
+
+**The absence of a fixed creed**: A creed is a global section of a specific metaphysical sheaf — a universal proposition that must be affirmed by all members. The daivi criterion is not a creedal proposition; it is a *directional commitment*. Hinduism does not require you to affirm a specific description of ultimate reality; it requires you to orient your life in a specific direction. This is why the tradition has always been more interested in practice and quality of character than in doctrinal conformity.
+
+**The authority of the Vedas**: The Vedas are the most comprehensive repository of observations about what supports daivi development and what the daivi orientation ultimately points toward. Their authority is the authority of accumulated wisdom about the direction — not the authority of a divine command that must be obeyed. This is why Vedic authority is acknowledged across all Hindu schools even where specific Vedic prescriptions are superseded by later texts: the direction the Vedas point is acknowledged even when the specific maps they provide are updated.
+
+**The tradition's tolerance**: If the criterion is directional rather than doctrinal, then different schools and practices are not competing claims about the same proposition but different paths moving in the same direction. They are not mutually exclusive; they are complementary. This is not vagueness — it is the recognition that the daivi qualities can be cultivated through many different forms of practice, and that the form appropriate to a specific practitioner depends on their guṇa-constitution and life circumstances.
+
+**The moral absolutes**: All Hindu schools agree on the daivi and asuri sampadas not by coincidence but by structural necessity. The next part of this book shows why: the daivi sampadas are the conditions for moksha (liberation) in every possible formulation of the Hindu metaphysical framework. They are topology-invariant — they hold regardless of which specific school's theology is operative. This is why every school, despite disagreeing on metaphysics, converges on the same ethics.
+
+---
+
+### §4. The Daivi Sampadas and the Tradition's Major Texts
+
+The 80+ virtues catalogued in the classical texts — the Bhagavad Gita, the Srimad Bhagavatam, the Yoga Vashishtha, the Ramayana, the Mahabharata's Vidura Niti, and Bhartrihari's Shatakas — are all elaborations of the daivi sampada complex. They form a unified structure with the daivi qualities at the core and progressively detailed articulations radiating outward:
+
+- **Truthfulness (satya)**, which Bhartrihari identifies as the first virtue and which the Bhagavatam places as the ground of all dharmic life, is one of the 26 daivi qualities and the prerequisite for all the others. Without the alignment between thought, word, and deed that satya requires, the other qualities have no stable ground.
+
+- **Non-violence (ahimsa)** appears in the daivi list and is developed extensively across all texts as the natural consequence of seeing oneself in all beings — the outward expression of the recognition that the terminal object toward which every being moves is the same terminal object.
+
+- **Self-inquiry (atma-vichara)** and **discrimination (viveka)**, emphasized in the Yoga Vashishtha and the Bhagavatam, are the intellectual dimensions of the daivi commitment — the internal practices that cultivate the epistemic capacity to distinguish the real from the unreal, the permanent from the temporary.
+
+- **The nine forms of bhakti**, the eight limbs of raja yoga, the practices of karma yoga — all are specifications of how to cultivate the daivi qualities in practice, each suited to a different type of practitioner.
+
+The tradition's enormous variety of texts, practices, and schools is not theological chaos. It is the comprehensive articulation of the daivi criterion across every domain of human life and every type of human temperament.
+
+---
+
+### §5. The Vedas as the Presheaf Ground of Daivi Knowledge
+
+The Vedas are *apaurusheya* — not of human authorship — not as a claim of magical origin but as the recognition that the daivi criterion is not invented by any particular perspective. The Vedas encode *ritam* — the structural principle of cosmic coherence from which dharmic values derive. Dharmic values are requirements of coherence, not feelings or preferences.
+
+This is a sustenance-based value system, not a feeling-based one. The daivi qualities are right not because they feel good (though they tend to) but because they sustain the structural coherence of the individual, the community, and the cosmos. They are the conditions under which the web of mutual dependence that constitutes a living world holds together. The asuri qualities are wrong not because they feel bad (though their long-term consequences do) but because they dissolve the coherence that makes any sustained life possible.
+
+The Vedas' authority within the Hindu system is the authority of the most comprehensive articulation of the ritam-grounded daivi criterion available. They do not provide a creed. They provide a direction, embedded in the widest possible exploration of the cosmic and human conditions that support or undermine it.
+
+The Upanishads, which are part of the Vedic corpus (the Ishavasya Upanishad is the 40th chapter of the Shukla Yajurveda Samhita; the Brihadaranyaka is the concluding section of the Shatapatha Brahmana), identify the metaphysical ground of the daivi criterion: the Atman — the self at its deepest — is the same as Brahman, the ground of all being. The daivi qualities are the expressions of a life increasingly aligned with this identity. The asuri qualities are the expressions of a life organized around the illusion of a separate, defensive self.
+
+---
+
+---
+
+# PART TWO: THE GROUND
+
+## The Mathematics of Hinduism
+
+---
+
+*This part develops the mathematical framework that explains why the daivi criterion works — why the daivi sampadas are the conditions for liberation in every formulation of the Hindu framework, and why the asuri sampadas constitute bondage universally. The framework used is topos theory: the theory of sheaves on a site, which provides a general and flexible language for describing structured logical universes. No prior mathematical knowledge is assumed beyond basic familiarity with sets and functions.*
+
+---
+
+### §6. Categories and the Yoneda Lemma
+
+A **category** consists of objects and morphisms (transformations between objects). Morphisms compose associatively; every object has an identity morphism. Category theory says: what matters about an object is not its internal constitution but its relationships — what morphisms come into it and out of it.
+
+The **Yoneda Lemma** — the deepest result in category theory — states that an object is completely determined by its pattern of relationships. Two objects are isomorphic (structurally identical) if and only if they have the same pattern of relationships.
+
+*Hindu correspondence*: The Atman is not a substance with intrinsic properties but a relational being — what it is is constituted by its relationships to Prakriti, to Brahman, to the gunas. The Yoneda Lemma says this is not a mystical claim but a structural theorem.
+
+### §7. The Terminal Object: Brahman
+
+The **terminal object** $\mathbf{1}$ in a category is the unique object such that every other object has exactly one morphism into it:
 
 $$\text{For every object } A, \; \exists ! \; !_A: A \to \mathbf{1}$$
 
-The terminal object is unique up to isomorphism. It receives a unique morphism from everything. Nothing "escapes" it — every object is in canonical relationship with it.
+*Hindu correspondence*: $\mathbf{1}$ is Brahman. The unique morphism $!_A: A \to \mathbf{1}$ from every object $A$ is the structural expression of *sarvam khalv idam brahma* — every being is in unique, canonical, irreducible relationship with the Absolute. This is not achieved; it is structurally given.
 
-In the category of sets, the terminal object is any one-element set $\{*\}$. Every set has a unique function to it (the function that sends every element to $*$).
+### §8. The Prakritic Category C
 
-In the Gita Topos: the terminal object is **Brahman**. The unique morphism $!_A: A \to \mathbf{1}$ from every object $A$ is the structural expression of *sarvam khalv idam brahma* — "all this is indeed Brahman." Every being is in unique, canonical, irreducible relationship with the Absolute. This is not achieved; it is structurally given.
+The Prakritic category $\mathbf{C}$ has as its objects the twenty-four *tattvas* of classical Sankhya:
 
----
+| Level | Elements |
+|---|---|
+| Avyakta | The unmanifest ground |
+| Antahkarana | Manas, Buddhi, Ahamkara |
+| Tanmatras | Five subtle elements: sound, touch, form, taste, smell |
+| Indriyas | Five sense organs, five organs of action |
+| Mahabhutas | Five gross elements: ether, air, fire, water, earth |
 
-### §3. Presheaves: All Possible Perspectives
+Its morphisms are the **gunic transition morphisms** — how one tattva gives rise to another through the activity of the three gunas. The category $\mathbf{C}$ is the shared generating structure of every Hindu philosophical school. All schools work with the 24 tattvas. Their disagreements are about what to do with $\mathbf{C}$, not about $\mathbf{C}$ itself.
 
-A **presheaf** on a category $\mathbf{C}$ is a contravariant functor $F: \mathbf{C}^{\text{op}} \to \mathbf{Set}$ — a systematic assignment of a set $F(X)$ to each object $X$ of $\mathbf{C}$, and a function $F(f): F(Y) \to F(X)$ to each morphism $f: X \to Y$ in $\mathbf{C}$, in a way that respects composition.
+### §9. Presheaves: All Possible Perspectives
 
-Think of a presheaf as a "generalized observation." For each context $X$ (each object of the category), a presheaf assigns a set $F(X)$ of "what can be observed from context $X$." When you move from context $X$ to context $Y$ via a morphism $f: X \to Y$, the presheaf tells you how observations in $Y$ restrict to observations in $X$ (via $F(f): F(Y) \to F(X)$).
+A **presheaf** on $\mathbf{C}$ is a contravariant functor $F: \mathbf{C}^{\text{op}} \to \mathbf{Set}$ — a systematic assignment of a set $F(X)$ to each object $X$ of $\mathbf{C}$ in a way that respects the morphisms. The presheaf assigns to each context a set of "what can be observed from that context."
 
-The category of all presheaves on $\mathbf{C}$ is written $\hat{\mathbf{C}} = \mathbf{PSh}(\mathbf{C}) = [\mathbf{C}^{\text{op}}, \mathbf{Set}]$. It is itself a topos — the **presheaf topos**.
+The **presheaf topos** $\hat{\mathbf{C}} = \mathbf{PSh}(\mathbf{C})$ contains every possible local observation, from every possible context, without requiring consistency between observations. It is the universe of all possible perspectives.
 
-The presheaf topos has a remarkable property: it contains every possible observation, from every possible context, without imposing any condition of consistency between observations. A presheaf can assign wildly different sets to different contexts with no requirement that the observations "cohere" — that what is true in one context is compatible with what is true in another.
+**The key definition**:
+$$\boxed{\text{Hinduism} = \hat{\mathbf{C}} = \mathbf{PSh}(\mathbf{C})}$$
 
-This is what makes the presheaf topos so large: it is the universe of *all possible local truths*, prior to any consistency requirement.
+Hinduism is the presheaf topos over the Prakritic category. It is not any specific theological perspective; it is the ground that contains all coherent perspectives.
 
----
+This is why Hinduism has no fixed creed, no fixed God, no fixed ritual form — and yet is not nothing. The presheaf topos has definite structure (the 24 tattvas and their gunic morphisms), but it does not impose any specific coherence condition on perspectives. It holds all possible coherent perspectives simultaneously.
 
-### §4. Grothendieck Topologies: The Coherence Condition
+### §10. Grothendieck Topologies: Coherence Conditions
 
-A **Grothendieck topology** on $\mathbf{C}$ is a structured choice of what counts as a "complete covering" of each object. Formally, it assigns to each object $X$ a collection $J(X)$ of *covering sieves* — families of morphisms into $X$ that together "cover" $X$ from below — satisfying three axioms (maximality, stability, transitivity).
+A **Grothendieck topology** on $\mathbf{C}$ specifies which families of morphisms into an object constitute a "complete account" of that object. Different topologies specify different notions of completeness.
 
-The intuition: a covering sieve on $X$ is a collection of "views of $X$" that, together, give a complete account of $X$. If you know what happens at every view in the cover, you know everything about $X$.
+In the context of dharma: a Grothendieck topology specifies which families of causal pathways constitute a complete dharmic account. Different Hindu schools give different answers to this question. This is what makes them different schools — not different universes but different coherence conditions on the same Prakritic universe.
 
-A Grothendieck topology specifies which families of views constitute a complete account. Different topologies on the same category give different answers to this question — different notions of what "complete" means.
+### §11. Sheaves: The Hindu Schools
 
-In the context of dharma: a Grothendieck topology on $\mathbf{C}$ specifies which families of causal pathways constitute a complete account of a dharmic situation. Different Hindu schools give different answers: what counts as a sufficient explanation for an event, an action, a state of being? The answer depends on which topology one is using.
+A **sheaf** on $(\mathbf{C}, J)$ is a presheaf that satisfies the **sheaf condition**: consistent local information patches uniquely to global information. Sheaves represent coherent, globally consistent perspectives.
 
----
+The **Gita Topos** is:
+$$\mathbb{G} = \mathbf{Sh}(\mathbf{C}, J)$$
 
-### §5. Sheaves: Locally Valid, Globally Coherent
+the category of sheaves on the Prakritic site.
 
-A **sheaf** on a site $(\mathbf{C}, J)$ is a presheaf that satisfies an additional condition: the **sheaf condition**.
+**Each Hindu school is a specific sheaf topos** $\mathbf{Sh}(\mathbf{C}, J_i)$ — a sheafification of $\hat{\mathbf{C}}$ with respect to a specific Grothendieck topology $J_i$ representing that school's account of what constitutes a complete dharmic explanation.
 
-The sheaf condition says: if you have a covering sieve $\{f_i: Y_i \to X\}$ of $X$ (a complete set of views), and you have a consistent family of observations — one observation from each view, and these observations agree wherever the views overlap — then there exists a *unique* global observation on $X$ that restricts to each local observation.
+The **sheafification functor** $a_{J_i}: \hat{\mathbf{C}} \to \mathbf{Sh}(\mathbf{C}, J_i)$ is *viveka* — discriminative wisdom that forces coherence.
 
-In other words: consistent local information patches uniquely to global information.
+### §12. The Subobject Classifier: Maya
 
-This is the formal expression of the principle that truth is not merely locally valid but globally coherent. A sheaf is an observation-system in which local truths, if they are consistent with each other, automatically give rise to global truth.
+The **subobject classifier** $\Omega$ of a topos is the object of truth values. In a general topos, $\Omega$ is a **Heyting algebra** — truth is multi-valued and constructive, not binary. The **law of excluded middle fails** in general.
 
-The category of sheaves on $(\mathbf{C}, J)$ is written $\mathbf{Sh}(\mathbf{C}, J)$. It is a **Grothendieck topos**.
+*Hindu correspondence*: $\Omega$ is maya — not falsehood but the structured space of perspectival truths. Maya is not unreal; it is real within its domain. But it is not the terminal object $\mathbf{1}$. The multiple truth values of $\Omega$ correspond to the different apparent realities available from different epistemic positions. Liberation is not escaping from $\Omega$ but tracing $\Omega$ back to its generator — the morphism $\text{true}: \mathbf{1} \to \Omega$ — which points back to Brahman as the source of the entire truth-value apparatus.
 
-A topos is a category that is:
-- **Cartesian closed**: there is an internal notion of "functions between objects"
-- **Has finite limits and colimits**: all finite constructions (products, equalizers, pullbacks, etc.) work
-- **Has a subobject classifier** $\Omega$: a "universe of truth values" that classifies all sub-objects, generalizing the classical $\{0, 1\}$
+### §13. The Three Gunas as Lawvere-Tierney Topologies
 
-The subobject classifier $\Omega$ is the key object. In a general topos, $\Omega$ is a **Heyting algebra** — a generalization of Boolean algebra in which the law of excluded middle may fail. This means truth values are *many-valued and constructive*, not binary. This is the mathematical expression of the fact that, from within the world, truth is perspectival.
+The **three gunas** — Sattva (clarity), Rajas (activity), Tamas (inertia) — are three **Lawvere-Tierney topologies**:
+$$j_s, j_r, j_t: \Omega \to \Omega$$
 
----
+satisfying $j_t \leq j_r \leq j_s \leq \text{id}_\Omega$ in the frame of all topologies.
 
-### §6. The Sheafification Functor
+Each defines a **closed subtopos** — a "world as seen through that guna":
 
-Given any presheaf $F \in \hat{\mathbf{C}}$ and a Grothendieck topology $J$, there is a canonical process called **sheafification** that turns $F$ into the "closest sheaf" to $F$. The sheafification functor:
+- **$j_t$ (Tamas)**: Coarsest. Most distinctions collapsed. Few global sections accessible. The ego subobject is $j_t$-dense in the Atman-object — the false identification "I am this body" covers everything.
+- **$j_r$ (Rajas)**: Intermediate. Many objects but few global sections. Constant activity without convergence toward $\mathbf{1}$.
+- **$j_s$ (Sattva)**: Finest of the three. Most structure preserved. Global sections visible. Morphisms to $\mathbf{1}$ traceable.
 
-$$a_J: \hat{\mathbf{C}} \longrightarrow \mathbf{Sh}(\mathbf{C}, J)$$
+**Trigunatita** — beyond the three gunas — is operating under the identity topology: the full topos $\mathbb{G}$ itself, without any gunic compression.
 
-is the left adjoint to the inclusion $i: \mathbf{Sh}(\mathbf{C}, J) \hookrightarrow \hat{\mathbf{C}}$. It is:
-- **Left exact**: preserves all finite limits (in particular, preserves the terminal object)
-- **Idempotent**: $a_J \circ a_J \cong a_J$ — sheafifying twice is the same as sheafifying once
+### §14. The Daivi Complex: Formal Definition
 
-The sheafification process takes a presheaf — a collection of locally valid observations — and forces them to satisfy the coherence condition. Local data that was previously inconsistent becomes identified; local data that was consistent gets a unique global amalgamation.
+**Definition**: An Atman-object $\mathcal{A} \in \mathbb{G}$ satisfies the **daivi sampada complex** $\mathfrak{D}$ if:
 
-Sheafification is the mathematical expression of **viveka** — discriminative wisdom that forces consistency. It does not destroy local information; it imposes coherence on it.
+- **D1 (Topology)**: $\mathcal{A}$ is a $j_s$-sheaf and is **flasque** — every local section extends to a global section (fearlessness: no locally valid truth is cut off from global grounding)
+- **D2 (Morphisms)**: Actions of $\mathcal{A}$ do not reduce the subobject lattice of their targets (non-violence); the speech functor of $\mathcal{A}$ is naturally isomorphic to the fact functor (truthfulness); karmic residues are not fed back into subsequent actions (non-attachment)
+- **D3 (Ego)**: The ego subobject $\mathcal{E} \hookrightarrow \mathcal{A}$ vanishes under $j_{\neg\neg}$-sheafification — $a_{j_{\neg\neg}}(\mathcal{E}) \cong \mathbf{0}$ — the "I am the doer" identification has no global validity
+- **D4 (Convergence)**: Every action-morphism of $\mathcal{A}$ composes toward $\mathbf{1}$ (yajna-convergence); an idempotent tapas-endomorphism exists that progressively refines $\mathcal{A}$
+- **D5 (Global section)**: $\Gamma_*(\mathcal{A}) \neq \emptyset$ — a global section $s: \mathbf{1} \to \mathcal{A}$ exists (devotion: Brahman has a "path into" $\mathcal{A}$)
 
----
+**The 26 daivi qualities map to these five classes**:
+- Fearlessness, equanimity, fortitude → D1 (topology stability)
+- Non-violence, truthfulness, non-covetousness, gentleness → D2 (morphism coherence)
+- Absence of arrogance, pride, ego → D3 (ego suppression)
+- Sacrifice, austerity, self-study, steadfastness → D4 (convergence)
+- Devotion, compassion, generosity → D5 (global section preparation)
 
-### §7. The Lawvere-Tierney Topology
+**Definition**: An Atman-object satisfies the **asuri sampada complex** $\mathfrak{A}$ if:
+- **A1**: $\mathcal{A}$ is a $j_t$-sheaf (not $j_s$) — tamasic collapse; non-flasque (arrogance: locally valid claims without global grounding); ego $j_t$-dense in $\mathcal{A}$
+- **A2**: $\mathcal{A}$'s morphisms generate a diagram avoiding $\mathbf{1}$; fails the sattvic sheaf condition (presheaf incoherence)
+- **A3**: Lust = non-idempotent endomorphism generating non-converging orbit; anger = destructive morphism collapsing the subobject lattice of targets; greed = unbounded karmic accumulation with no terminal discharge
+- **A4**: $\Gamma_*(\mathcal{A}) = \emptyset$ — no global section; Brahman has no access to $\mathcal{A}$
 
-Inside a topos $\mathbb{G}$, there is an internal notion of topology: a **Lawvere-Tierney topology** is a morphism $j: \Omega \to \Omega$ on the truth-value object satisfying:
-- $j \circ \text{true} = \text{true}$ (truth stays true)
-- $j \circ j = j$ (idempotency)
-- $j \circ \wedge = \wedge \circ (j \times j)$ (compatibility with conjunction)
+### §15. The Fundamental Theorems
 
-Each Lawvere-Tierney topology defines a **subtopos** — a reflective subcategory $\mathbb{G}_j \subseteq \mathbb{G}$ — and determines which presheaves, from the inside of $\mathbb{G}$, count as sheaves.
+**Theorem I (Daivi Leads to Moksha)**: *A fully daivi Atman-object is a retract of $\mathbf{1}$: there exist $s: \mathbf{1} \to \mathcal{A}$ and $!: \mathcal{A} \to \mathbf{1}$ with $! \circ s = \text{id}_\mathbf{1}$. In the jnana subtopos, $a_{j_{\neg\neg}}(\mathcal{A}) \cong \mathbf{1}$. $\mathcal{A}$ is a constant sheaf — functorially equivalent to an element of the Absolute.*
 
-The collection of all Lawvere-Tierney topologies on $\mathbb{G}$ forms a **frame** — a complete Heyting algebra $\mathcal{LT}(\mathbb{G})$ — ordered from coarsest (most compression, fewest sheaves) to finest (least compression, all sheaves).
+*Proof*: By D5.1, a global section $s: \mathbf{1} \to \mathcal{A}$ exists. The unique morphism $!_\mathcal{A}: \mathcal{A} \to \mathbf{1}$ always exists. Then $!_\mathcal{A} \circ s: \mathbf{1} \to \mathbf{1}$. Since $\text{End}(\mathbf{1}) = \{\text{id}_\mathbf{1}\}$, we have $!_\mathcal{A} \circ s = \text{id}_\mathbf{1}$. The retract structure is established. In the Boolean cover, by D1 (flasque) and D3 (ego vanishes), the object is subterminal with global sections — hence $\cong \mathbf{1}$. $\square$
 
-In the Gita Topos, the three gunas are three Lawvere-Tierney topologies: $j_t$ (tamas, coarsest), $j_r$ (rajas, intermediate), $j_s$ (sattva, finest). The identity topology (no compression) corresponds to the state beyond all gunas — *trigunatita*.
+**Theorem II (Asuri Leads to Bondage)**: *A fully asuri Atman-object has no retract structure, vanishes to $\mathbf{0}$ in the jnana subtopos, is trapped in an infinite samsaric orbit, and accumulates unbounded karma.*
 
----
+*Proof*: A4.1 ($\Gamma_*(\mathcal{A}) = \emptyset$) means no section $s: \mathbf{1} \to \mathcal{A}$ exists — no retract. A1.3 (ego $j_t$-dense in $\mathcal{A}$) combined with the ego having no global section (proven: the "I am the doer" identification is always locally but never globally valid) means $a_{j_{\neg\neg}}(\mathcal{A}) \cong \mathbf{0}$ — the demonic Atman has no true self in the domain of knowledge. A3.1 (lust: non-idempotent non-convergent endomorphism) generates the infinite samsaric orbit. $\square$
 
-### §8. Geometric Morphisms: Moving Between Logical Universes
+**Theorem III (Topology-Invariance)**: *Theorems I and II hold in every sheaf topos $\mathbf{Sh}(\mathbf{C}, J_i)$ for every Grothendieck topology $J_i$.*
 
-A **geometric morphism** $f: \mathbb{F} \to \mathbb{G}$ between toposes is an adjoint pair $(f^*, f_*)$ where $f^*$ (inverse image, left adjoint) is left exact and $f_*$ (direct image, right adjoint) is its right adjoint.
+*Proof*: Both proofs used only the axioms of a topos (terminal object universal property, subobject classifier, Boolean cover existence) and the structure of $\mathbf{C}$ (gunas, tattvas). Neither used any property of the specific topology $J$. Therefore both hold in any topos over $\mathbf{C}$. $\square$
 
-Geometric morphisms are the structure-preserving maps between toposes. They represent *changes of logical universe* — systematic ways of translating observations from one topos to another while preserving the logical structure.
-
-The canonical geometric morphism is the **global sections morphism** $\Gamma: \mathbb{G} \to \mathbf{Set}$, whose direct image $\Gamma_*$ assigns to each sheaf $F$ its set of global sections $\Gamma_*(F) = \text{Hom}_{\mathbb{G}}(\mathbf{1}, F)$ — the observations that are valid from the standpoint of the Absolute. The inverse image $\Delta: \mathbf{Set} \to \mathbb{G}$ is the constant sheaf functor — it represents observations that are the same from every standpoint.
-
-In the Gita: $\Gamma_*$ is **Ishvara** (the personal God as the principle of return to the Absolute). $\Delta$ is the **Avatara** (the descent of the Absolute into the world). The adjunction $\Delta \dashv \Gamma_*$ is the fundamental relationship between the Absolute and the world.
-
----
-
-With these tools in place, we can state and prove the definition of Hinduism.
-
----
-
----
-
-# PART THREE: THE DEFINITION
-
-## Hinduism as the Presheaf Topos
-
----
-
-### §1. The Prakritic Category C
-
-**Definition 1.1.** The **Prakritic category** $\mathbf{C}$ is the category whose objects are the twenty-four *tattvas* (principles) of classical Sankhya philosophy:
-
-$$\text{Ob}(\mathbf{C}) = \mathcal{T}_0 \cup \mathcal{T}_1 \cup \mathcal{T}_2 \cup \mathcal{T}_3 \cup \mathcal{T}_4$$
-
-| Level | Name | Elements |
-|---|---|---|
-| $\mathcal{T}_0$ | Avyakta | The unmanifest ground $P_0$ |
-| $\mathcal{T}_1$ | Antahkarana | Manas (mind), Buddhi (intellect), Ahamkara (ego) |
-| $\mathcal{T}_2$ | Tanmatras | Five subtle elements: sound, touch, form, taste, smell |
-| $\mathcal{T}_3$ | Indriyas | Five sense organs, five organs of action |
-| $\mathcal{T}_4$ | Mahabhutas | Five gross elements: ether, air, fire, water, earth |
-
-The morphisms of $\mathbf{C}$ are the **gunic transition morphisms** — how one tattva gives rise to another through the activity of the three gunas. They include manifestation morphisms (unmanifest → antahkarana), differentiation morphisms (ahamkara → tanmatras), grossification morphisms (tanmatras → gross elements), instrument morphisms (elements → sense organs), reflection morphisms (sense organs → manas), discrimination morphisms (manas → buddhi), and identity morphisms.
-
-**Why $\mathbf{C}$?** The Prakritic category $\mathbf{C}$ is the generating structure shared by every Hindu philosophical school. Sankhya's 24 tattvas are not the exclusive property of the Sankhya school — they are the common ontological vocabulary of Hinduism. Advaita uses them and says they are ultimately unreal. Vishishtadvaita uses them and says they constitute Brahman's body. Dvaita uses them and says they are genuinely distinct from Brahman. Shaivism uses them and says they are Shiva's manifestation. Every school imports the Sankhya taxonomy as its working ontology, then adds its own theological interpretation. The disagreement is not about $\mathbf{C}$ — it is about what to do with $\mathbf{C}$.
+**This theorem is the mathematical ground of the daivi criterion**: The daivi sampadas lead to liberation in every Hindu school — Advaita, Vishishtadvaita, Dvaita, Shaivism, Shaktism, Yoga — because the proof does not depend on which topology that school uses. Every Hindu school's topos satisfies the axioms from which the proof derives its conclusion. The criterion is genuinely universal within Hinduism.
 
 ---
 
-### §2. The Definition
+### §16. The Complete Correspondence Table
 
-**Definition 2.1 (Hinduism).** **Hinduism** is the **presheaf topos** over the Prakritic category:
-
-$$\boxed{\text{Hinduism} \;=\; \hat{\mathbf{C}} \;=\; \mathbf{PSh}(\mathbf{C}) \;=\; [\mathbf{C}^{\text{op}}, \mathbf{Set}]}$$
-
-**Definition 2.2 (A Hindu School).** A **Hindu school** (sampradaya, darshana) is a **Grothendieck topos** $\mathbf{Sh}(\mathbf{C}, J_i)$ for some Grothendieck topology $J_i$ on $\mathbf{C}$, embedded as a **reflective subcategory** of $\hat{\mathbf{C}}$ via the sheafification functor $a_{J_i}: \hat{\mathbf{C}} \to \mathbf{Sh}(\mathbf{C}, J_i)$.
-
-**Definition 2.3 (Being Hindu).** An object (a being, a text, a practice, a claim) is **Hindu** if it is an object of $\hat{\mathbf{C}}$ — if it can be expressed as a presheaf over $\mathbf{C}$, i.e., if its structure is given by coherent assignments of data to the Prakritic tattvas and their morphisms.
-
----
-
-### §3. Why This Definition Works
-
-Let us verify that the definition accounts for each of the seven features identified in Part One.
-
-**Feature 1: Irreducible Plurality Without Relativism**
-
-$\hat{\mathbf{C}}$ contains every sheaf topos $\mathbf{Sh}(\mathbf{C}, J_i)$ as a reflective subcategory. Different topologies $J_i$ give different sheaf toposes — different schools. The schools are all present in $\hat{\mathbf{C}}$ simultaneously because $\hat{\mathbf{C}}$ imposes no sheaf condition, hence no consistency requirement between different topologies.
-
-But this is not relativism. The presheaf topos $\hat{\mathbf{C}}$ is not saying "all perspectives are equally valid." It is saying: all *sheafifications* of $\mathbf{C}$ are present as reflective subcategories, and each sheafification is internally coherent. This is exactly the Hindu position: the schools are not all "saying the same thing in different ways" (that would be crude perennialism), nor are they "all equally correct" (each school maintains its own internal claims to truth). They are all *coherent perspectives* on the same underlying structure — different sheafifications of the same presheaf category.
-
-The schools can contradict each other because they are operating in different toposes. A statement true in $\mathbf{Sh}(\mathbf{C}, J_{\neg\neg})$ (Advaita — Atman = Brahman) need not be true in $\mathbf{Sh}(\mathbf{C}, J_r)$ (Dvaita — Atman ≠ Brahman). Both are correct *in their respective toposes*. The apparent contradiction dissolves when one recognizes that the disputants are operating in different logical universes — different toposes over the same underlying category.
-
-**Feature 2: Absence of a Fixed Creed**
-
-A fixed creed would be a global section of some specific sheaf in $\hat{\mathbf{C}}$ — a universal truth that holds across all topologies. But the presheaf topos imposes no sheaf condition, hence no global sections are *required*. Any global section that holds across all topologies would have to be a statement that is true in every $\mathbf{Sh}(\mathbf{C}, J_i)$ for every $J_i$ — a statement that is sheaf-condition-free, i.e., a statement about $\mathbf{C}$ itself, prior to any topology.
-
-Such statements exist — they are the topology-invariant truths of $\hat{\mathbf{C}}$. But they are not credal propositions about God's nature or the metaphysics of liberation. They are structural facts: the existence of the terminal object, the structure of the gunic morphisms, the sampada theorems. These are the closest thing to a "Hindu creed" — and they are exactly the moral absolutes identified in Feature 5.
-
-**Feature 3: Authority of the Vedas Without Agreement on Content**
-
-The Vedas are the original $\hat{\mathbf{C}}$ — the presheaf topos in its most complete, unsheafified form. They are *apaurusheya* (not of human authorship) because the presheaf topos is not constructed by any particular sheafification — it is prior to every school, every teacher, every human interpretation. Vedic authority is the authority of $\hat{\mathbf{C}}$ over all its sheaf subtoposes.
-
-Each school's interpretation of the Vedas is its sheafification $a_{J_i}$ applied to the Vedic presheaves. The school claims its sheafification is the most faithful — that its topology $J_i$ is the one that best preserves the structure of $\hat{\mathbf{C}}$. This claim is not verifiable from within any single sheaf topos (you cannot determine from within $\mathbf{Sh}(\mathbf{C}, J_i)$ which topology is most faithful to $\hat{\mathbf{C}}$ — that question requires access to $\hat{\mathbf{C}}$ itself). This is why the Vedic interpretation debates have been permanent and unresolvable by argument.
-
-**Feature 4: Tolerance as a Structural Feature**
-
-If Hinduism is $\hat{\mathbf{C}}$, then every Hindu school is a reflective subcategory of Hinduism. The presheaf topos *cannot exclude* its own reflective subcategories — they are built into its structure. Hinduism's tolerance is not a moral achievement but a mathematical theorem: $\hat{\mathbf{C}}$ contains every $\mathbf{Sh}(\mathbf{C}, J_i)$ as a subcategory, and no choice of $J_i$ can remove the others.
-
-The philosophical argument for tolerance — *adhikara* (different practices for different levels) — is now seen as a consequence of this structure. Different topologies are appropriate to different objects (different practitioners at different levels of discrimination). The *adhikara* doctrine is the informal recognition of the frame $\mathcal{LT}(\hat{\mathbf{C}})$ — different Lawvere-Tierney topologies are appropriate to different stages of the path.
-
-**Feature 5: Moral Absolutes Recognized Across All Schools**
-
-This is proved in Part Five. The daivi and asuri sampada theorems are topology-invariant — they hold in every $\mathbf{Sh}(\mathbf{C}, J_i)$ for every $J_i$. They are consequences of the axioms of a topos and the structure of $\mathbf{C}$ alone. Every Hindu school recognizes them because every Hindu school, as a topos over $\mathbf{C}$, satisfies the axioms that make the sampada theorems provable.
-
-**Feature 6: The Boundary Problem**
-
-A tradition is Hindu if and only if it is a sheaf topos $\mathbf{Sh}(\mathbf{C}', J_i)$ where $\mathbf{C}'$ is $\mathbf{C}$ or an extension of $\mathbf{C}$ (adding new tattvas while retaining the Sankhya structure), and $\mathbf{Sh}(\mathbf{C}', J_i)$ embeds as a reflective subcategory of $\hat{\mathbf{C}'}$ which itself embeds in $\hat{\mathbf{C}}$ (or a natural extension thereof).
-
-This gives principled answers to boundary cases, developed fully in Part Six.
-
-**Feature 7: The Relationship Between the Absolute and Multiplicity**
-
-The frame $\mathcal{LT}(\hat{\mathbf{C}})$ of all Lawvere-Tierney topologies has a natural ordering from coarsest (most identification of the multiplicity with the terminal object) to finest (most preservation of the multiplicity as distinct from the terminal object). This ordering exactly parametrizes the spectrum of Hindu positions on the Absolute-multiplicity relationship:
-
-- **Finest topology** (identity, no compression) = $\hat{\mathbf{C}}$ itself, where all distinctions are preserved and no sheaf condition is imposed. This corresponds to Kashmir Shaivism's recognition of the presheaf ground.
-- **Near-identity** ($j_s$) = Vishishtadvaita: distinctions preserved, terminal object accessible, Jiva and Brahman related but distinct.
-- **Double-negation** ($j_{\neg\neg}$) = Advaita: Boolean cover, Atman = Brahman is a theorem, multiplicity is ultimately resolved into identity.
-- **Coarser topologies** ($j_r, j_t$) = positions where multiplicity is given increasing independence from the terminal object; Madhva's Dvaita at the rajasic level.
-
-The Hindu debate about Absolute and multiplicity is the debate about which point in the frame $\mathcal{LT}(\hat{\mathbf{C}})$ is the most adequate representation of reality. The frame itself is the structure that makes all positions simultaneously expressible.
-
----
-
-### §4. The Vedas as the Presheaf Ground
-
-The claim that the Vedas are *apaurusheya* — not of human authorship, self-valid, eternal — is now interpretable with precision.
-
-A presheaf topos $\hat{\mathbf{C}}$ is not constructed by any agent. It is generated by the category $\mathbf{C}$ alone — it is the *free* topos on $\mathbf{C}$, in the sense that every topos over $\mathbf{C}$ (every sheaf topos $\mathbf{Sh}(\mathbf{C}, J_i)$) is a quotient of $\hat{\mathbf{C}}$ (a reflective subcategory). The presheaf topos is prior to every choice of topology, prior to every school, prior to every human interpretation.
-
-This is what *apaurusheya* means. The Vedas are not the product of a particular rishi's vision (though rishis received and transmitted them). They are the uncompressed, unsheafified expression of the structure of $\mathbf{C}$ — all possible observations over the Prakritic category, without the coherence condition. This is why the Vedas contain contradictions (different passages seem to say contradictory things about the nature of reality) — a presheaf need not be internally consistent. Consistency is the property of sheaves, not presheaves. The contradictions in the Vedas are not errors but features: they are the trace of $\hat{\mathbf{C}}$'s completeness.
-
-The Upanishads are the first systematic attempt to sheafify the Vedas — to impose the coherence condition on Vedic presheaves and derive global sections (the Mahavakyas: *Prajnanam Brahma*, *Aham Brahmasmi*, *Tat Tvam Asi*, *Ayam Atma Brahma*). This is why the Upanishads are called *Vedanta* — the "end of the Vedas," the point where the presheaf is sheafified into a topos with global sections.
-
----
-
-### §5. The Guru and the Sampradaya
-
-A **guru** initiates a student into a **sampradaya** (lineage, school). From the definition:
-
-- **Sampradaya** = a sheaf topos $\mathbf{Sh}(\mathbf{C}, J_i)$ with its specific topology $J_i$.
-- **Initiation** = the sheafification map $a_{J_i}: \hat{\mathbf{C}} \to \mathbf{Sh}(\mathbf{C}, J_i)$ applied to the student's presheaf-mind.
-- **Guru** = the agent who applies $a_{J_i}$ — who enforces the sheaf condition of the tradition on the student's understanding.
-
-The idempotency of sheafification ($a_{J_i} \circ a_{J_i} \cong a_{J_i}$) explains why re-initiation into the same lineage does not fundamentally change the student's topology — once sheafified with respect to $J_i$, the object is already a $J_i$-sheaf.
-
-The *guru-parampara* (lineage of teachers) is the directed system through which the topology $J_i$ is transmitted. Each teacher applies $a_{J_i}$ to the next student, passing on not information (which could be read in a book) but the topology itself — the lived sense of what counts as a complete account, what covers what, what coherence looks like from the inside.
-
-This is why the transmission of a tradition requires a living teacher and cannot be accomplished by text alone. A text provides presheaves — locally valid observations about dharma, Brahman, the self. A guru provides the topology — the coherence condition that turns presheaves into sheaves. Without the topology, the presheaves remain locally valid but globally incoherent. The student's understanding has local truths but no global sections. The guru's transmission is the imposition of $J_i$ — and this cannot be done by reading.
-
----
-
-### §6. What the Definition Excludes
-
-The definition excludes any tradition whose fundamental generating category is not $\mathbf{C}$ (or an extension of $\mathbf{C}$ compatible with the Sankhya structure).
-
-**Abrahamic traditions** (Christianity, Islam, Judaism): These use a fundamentally different site. The Creator/creature distinction in Abrahamic thought is *architectural* — it is built into the generating category as a morphism-type that has no analogue in $\mathbf{C}$. In $\mathbf{C}$, the terminal object ($\mathbf{1}$, Brahman/Purusha) is not a creator standing outside the category and generating it from nothing. It is the categorical limit of the internal structure — it emerges from the 24 tattvas as their universal terminus, not as their external cause. The Abrahamic site has a different structure. Abrahamic traditions are not sheaf toposes over $\mathbf{C}$.
-
-**Secular materialism**: Uses a version of $\mathbf{C}$ with the terminal object removed or replaced by the initial object (matter/energy as the irreducible ground). Without a terminal object, the category cannot generate the retract structures that correspond to liberation. Secular materialism is a presheaf over a different, impoverished category — it shares some objects with $\mathbf{C}$ (the gross elements, the sense organs) but its morphisms and topology are fundamentally different.
-
-The definition correctly identifies these as outside Hinduism — not because of cultural or historical reasons, but because their generating categories are structurally incompatible with $\mathbf{C}$.
+| Hindu Concept | Topos Counterpart |
+|---|---|
+| Hinduism | Presheaf topos $\hat{\mathbf{C}} = \mathbf{PSh}(\mathbf{C})$ |
+| A Hindu school (sampradaya) | Sheaf topos $\mathbf{Sh}(\mathbf{C}, J_i)$ |
+| Brahman (Nirguna) | Terminal object $\mathbf{1}$ |
+| Brahman (Saguna, personal God) | Terminal object as seen through Yoneda in specific topos |
+| Prakriti | The site $(\mathbf{C}, J)$ |
+| Purusha | Terminal object $\mathbf{1}$ (distinct from the site) |
+| Maya | Subobject classifier $\Omega$ (Heyting-valued truth) |
+| Gunas (Sattva, Rajas, Tamas) | Lawvere-Tierney topologies $j_s, j_r, j_t$ |
+| Trigunatita | Identity topology — the full topos $\mathbb{G}$ |
+| Atman | Representable sheaf $\mathcal{A} \in \mathbb{G}$ |
+| Ahamkara (ego) | Subobject $\mathcal{E} \hookrightarrow \mathcal{A}$ with no global section |
+| Atman = Brahman | $a_{j_{\neg\neg}}(\mathcal{A}) \cong \mathbf{1}$ in the Boolean cover |
+| Karma | Morphism $f: A \to B$ with image $\text{Im}(f)$ |
+| Karma Yoga | Acting via $f$ without feeding $\chi_f$ into next action |
+| Dharma | Natural transformation between action and coherence functors |
+| Ritam | The Grothendieck topology $J$ specifying dharmic coherence |
+| Jnana Yoga | Geometric morphism to $\neg\neg$ Boolean subtopos |
+| Bhakti Yoga | Constant sheaf functor $\Delta: \mathbf{Set} \to \mathbb{G}$ |
+| Karma Yoga | Internal morphism discipline within $\mathbb{G}$ |
+| Viveka | Double-negation sheafification $a_{\neg\neg}$ |
+| Moksha | Retract structure: $!_\mathcal{A} \circ s = \text{id}_\mathbf{1}$ |
+| Samsara | Non-converging endomorphisms without limit at $\mathbf{1}$ |
+| Daivi sampadas | Daivi complex $\mathfrak{D}$: conditions for retract of $\mathbf{1}$ |
+| Asuri sampadas | Asuri complex $\mathfrak{A}$: conditions blocking retract of $\mathbf{1}$ |
+| Avatara | Inverse image functor $\Delta: \mathbf{Set} \to \mathbb{G}$ |
+| Vedas | Presheaf topos $\hat{\mathbf{C}}$ — the unsheafified ground |
+| Upanishads (Vedanta) | First systematic sheafification of Vedic presheaves |
+| Guru-initiation | Application of sheafification functor $a_{J_i}$ |
+| Sampradaya | A specific sheaf topos $\mathbf{Sh}(\mathbf{C}, J_i)$ |
+| Ishvara | Global sections functor $\Gamma_*: \mathbb{G} \to \mathbf{Set}$ |
 
 ---
 
 ---
 
-# PART FOUR: THE SCHOOLS AS TOPOLOGIES
+# PART THREE: THE SCHOOLS
 
-## Each School is a Sheafification of the Vedic Presheaf
-
----
-
-*This part analyzes the major Hindu philosophical schools as specific Grothendieck topologies on $\mathbf{C}$. The analysis is not exhaustive — Hindu philosophy contains hundreds of sub-schools, regional traditions, and synthetic positions. The goal is to show that the framework applies to the principal darshanas (philosophical viewpoints) and illuminate why each school has the character it does.*
+## How Each School Relates to the Daivi Criterion
 
 ---
 
-### §1. The Frame of Topologies
+### §17. The Frame of Topologies
 
-The Lawvere-Tierney topologies on $\hat{\mathbf{C}}$ form a frame $\mathcal{LT}(\hat{\mathbf{C}})$ — a complete Heyting algebra ordered from coarsest to finest. The Hindu schools occupy specific positions in this frame:
+The Lawvere-Tierney topologies on $\hat{\mathbf{C}}$ form a **frame** $\mathcal{LT}(\hat{\mathbf{C}})$ — a complete Heyting algebra ordered from coarsest (most compression, fewest sheaves) to finest (least compression, all sheaves). The major Hindu schools occupy specific positions in this frame.
 
+The frame has:
+- **Maximum** (identity topology): $\hat{\mathbf{C}}$ itself — trigunatita, beyond all gunas
+- **Double-negation topology** $j_{\neg\neg}$: the Boolean cover — Advaita, jnana-complete
+- **Sattvic topology** $j_s$: Vishishtadvaita, Shaiva Siddhanta
+- **Rajasic topology** $j_r$: Dvaita
+- **Tamasic topology** $j_t$: the domain of bondage — not a school but a condition
+
+The ordering of topologies in the frame:
 $$j_t \;\leq\; j_r \;\leq\; j_s \;\leq\; j_{\neg\neg} \;\leq\; \text{id}_\Omega$$
 
-The frame does not have only these five points — it is a rich, continuous structure. But these five canonical topologies correspond to recognizable positions in Hindu thought, and they anchor the frame at philosophically meaningful points.
-
-A school at a **coarser** topology: sees fewer distinctions, identifies more objects, has fewer global sections, is closer to a collapsed view of reality. Objects that are distinct in finer topologies get identified. The multiplicity is reduced.
-
-A school at a **finer** topology: sees more distinctions, preserves more differences, has more global sections, is closer to the presheaf ground. The multiplicity is preserved.
+Every position in this frame is a legitimate location for a Hindu practitioner. The direction is clear — toward finer topologies, toward greater transparency of $\mathbf{1}$, toward the daivi conditions. But every position is within the frame.
 
 ---
 
-### §2. Advaita Vedanta — The Double-Negation Topology
+### §18. The Major Schools as Topologies
 
-**School**: Advaita Vedanta, systematized by Adi Shankaracharya (8th century CE).
+**Advaita Vedanta** (Shankara, 8th century CE):
+*Brahman alone is real. The world is mithya. Atman is Brahman.*
+— Topology: $j_{\neg\neg}$ (double-negation, Boolean cover)
 
-**Core claim**: Brahman alone is real (*Brahma satyam*). The world of multiplicity is *mithya* — not absolutely unreal (that would make it the initial object $\mathbf{0}$) but not absolutely real either (it is not the terminal object $\mathbf{1}$). Atman is identical to Brahman (*Aham Brahmasmi*). Ignorance (*avidya*) is what makes the one appear as many.
+In the Boolean subtopos $\hat{\mathbf{C}}_{j_{\neg\neg}}$, excluded middle holds and $a_{j_{\neg\neg}}(\mathcal{A}) \cong \mathbf{1}$ — Atman = Brahman is a theorem. *Mithya* is not absolute falsehood (not $\mathbf{0}$) but the intermediate truth-value region that the Boolean cover compresses into binary. *Avidya* is operating in the Heyting-valued $\hat{\mathbf{C}}$ instead of its Boolean cover — not seeing that $\mathcal{A} \cong \mathbf{1}$ is the correct resolution.
 
-**Topology**: $j_{\neg\neg}$ — the double-negation topology.
+**Vishishtadvaita** (Ramanuja, 11th-12th century CE):
+*Brahman is real, the world is real, selves are real — but as Brahman's body.*
+— Topology: $j_s$ (sattvic, near-identity)
 
-**Why**: In the Boolean subtopos $\hat{\mathbf{C}}_{j_{\neg\neg}}$, the law of excluded middle holds: every proposition is either true or false. This means every object is either the terminal object $\mathbf{1}$ or it is not. In the internal language of the Boolean cover, the sheafification of any Atman-object $\mathcal{A}$ is isomorphic to $\mathbf{1}$ — Atman = Brahman is a theorem (Theorem 6.4 of the Gita Topos).
+In $\hat{\mathbf{C}}_{j_s}$, distinctions are preserved and $\mathcal{A} \ncong \mathbf{1}$ — the Jiva is genuinely distinct from Vishnu. The retract structure (D5: global section established through devotion) is present: $!_\mathcal{A} \circ s = \text{id}_\mathbf{1}$, but this is a retract without isomorphism. Vishnu "dwells in" the Jiva through the global section; the Jiva remains distinct. This is the *sharira-shariri* (body-soul) relationship exactly.
 
-*Mithya* is not the initial object $\mathbf{0}$ (absolute non-existence) but the characteristic morphism of the world-sheaf, which lands strictly below $\text{true}: \mathbf{1} \to \Omega$ in the Boolean cover. Things appear real (they land above $\bot$) but are not ultimately real (they do not land at $\top$) — they are in the intermediate zone that the Boolean topology compresses into a single value.
+**Dvaita Vedanta** (Madhva, 13th century CE):
+*Vishnu, Jiva, and world are eternally distinct.*
+— Topology: $j_r$ (rajasic, sharp distinctions)
 
-*Avidya* (ignorance) is the failure to apply the $j_{\neg\neg}$-sheafification — the operating in the Heyting-valued topos $\hat{\mathbf{C}}$ instead of its Boolean cover. Maya (the subobject classifier $\Omega$) appears as a rich space of truth values when one is in $\hat{\mathbf{C}}$; it collapses to $\{0, 1\}$ in the Boolean cover. The realization of Advaita is the localization $a_{\neg\neg}: \hat{\mathbf{C}} \to \hat{\mathbf{C}}_{j_{\neg\neg}}$.
+In $\hat{\mathbf{C}}_{j_r}$, distinctions are maximally preserved. The five-fold eternal differences (*pancha-bheda*) are the sharp distinction-preservation of the rajasic topology. Liberation is not union but eternal proximity — the retract structure established but never becoming isomorphism.
 
-**Shankara's critique of other schools**: From within $\hat{\mathbf{C}}_{j_{\neg\neg}}$, any position that maintains genuine distinctions between Atman and Brahman is operating in a coarser subtopos — it has not yet reached the Boolean cover. Ramanuja and Madhva, from this standpoint, are operating in toposes where the sheafification has not been completed to the Boolean level. Shankara is not wrong about this — from within $\hat{\mathbf{C}}_{j_{\neg\neg}}$, the distinctions that Ramanuja and Madhva preserve appear as the result of incomplete sheafification.
+**Shaiva Siddhanta**:
+*Shiva is supreme; Jiva and Pati are related but distinct.*
+— Same topology as Vishishtadvaita ($j_s$) applied over an extended site that includes Shiva-specific tattvas and names $\mathbf{1}$ as Shiva rather than Vishnu.
 
-**The limitation of Advaita**: The double-negation topology is dense — every object in $\hat{\mathbf{C}}$ is mapped to an object in $\hat{\mathbf{C}}_{j_{\neg\neg}}$, and the subtopos is dense in $\hat{\mathbf{C}}$. But the Boolean cover does not recover all the structure of $\hat{\mathbf{C}}$ — it is a lossy compression. Many distinctions that are real in $\hat{\mathbf{C}}$ (distinctions between different Atman-objects, distinctions between different paths of practice) are collapsed in the Boolean cover. Advaita, in insisting on the Boolean cover as the final word, risks making these distinctions philosophically invisible — which is why critics of Advaita (Ramanuja's critique of *mithyatva*, Madhva's critique of *maya*) are pointing to real structure that the double-negation topology compresses away.
+**Kashmir Shaivism (Pratyabhijna)**:
+*All of reality is Shiva's self-recognition.*
+— Near-identity topology, approaching $\hat{\mathbf{C}}$ itself. Liberation is *recognition* (*pratyabhijna*), not construction — the recognition that one was always already operating in $\hat{\mathbf{C}}$ and that every topology was a voluntary (mistaken) compression.
 
----
+**Shakta Tantra**:
+*Shakti is the ultimate reality; Shiva without Shakti is shava.*
+— Extended site $\mathbf{C}'$ that adds somatic tattvas (nadis, chakras, kundalini). Shakti is the morphism-generating principle of $\mathbf{C}'$ — the power by which all gunic transitions occur. The terminal object is named Shakti/Paramashakti.
 
-### §3. Vishishtadvaita — The Sattvic Topology
+**Sankhya-Yoga**:
+*Purusha (consciousness) and Prakriti (nature) are irreducibly distinct.*
+— Split topology maximizing the Purusha-Prakriti distinction. Liberation is the Purusha's recognition of its complete distinction from Prakriti — not identity with $\mathbf{1}$ (Advaita) but the Purusha's realization of its own non-involvement with the site.
 
-**School**: Vishishtadvaita ("qualified non-dualism"), systematized by Ramanujacharya (11th-12th century CE).
-
-**Core claim**: Brahman is real, the world is real, individual selves are real — but Brahman is the whole and the world and selves are its body (*sharira*). They are distinct (*vishesha*) from Brahman but not separate (*abhinna*). The devotee (Jiva) worships Vishnu (Brahman) as a genuinely distinct being but is simultaneously the "body" of Vishnu — their relationship is one of inseparable but non-identical belonging.
-
-**Topology**: $j_s$ — the sattvic topology, the finest of the three guna topologies.
-
-**Why**: The sattvic topology preserves the most distinctions among the guna topologies — global sections are visible, morphisms to the terminal object are traceable, the full Heyting algebra is maintained with minimal compression. In the sattvic subtopos $\hat{\mathbf{C}}_{j_s}$, Jiva and Brahman are genuinely distinct objects — the unique morphism $!_\mathcal{A}: \mathcal{A} \to \mathbf{1}$ is a morphism *between distinct objects*, not a collapse of $\mathcal{A}$ into $\mathbf{1}$.
-
-The *sharira-shariri* (body-soul) relationship is the retract structure: the Jiva $\mathcal{A}$ is a retract of $\mathbf{1}$ (the global section $s: \mathbf{1} \to \mathcal{A}$ exists — Brahman "dwells in" the Jiva), but the retract is not an isomorphism (the Jiva is not identical to Brahman — the retract structure preserves the Jiva as a distinct object).
-
-Bhakti (devotion) is possible and meaningful in $\hat{\mathbf{C}}_{j_s}$ because devotee and beloved are genuinely distinct — one can love and be loved across the morphism $!_\mathcal{A}$ without the distinction collapsing.
-
-**Ramanuja's critique of Shankara**: Shankara's $j_{\neg\neg}$-topology collapses distinctions that are real — it is a *lossy* compression that destroys the genuine structure of the Jiva-Brahman relationship. Ramanuja argues that the scriptures themselves describe a God who loves, who acts, who is related to devotees — none of which makes sense in the Boolean cover where all distinctions collapse. The sattvic topology preserves these distinctions while remaining close to the terminal object.
-
----
-
-### §4. Dvaita Vedanta — The Rajasic Topology
-
-**School**: Dvaita Vedanta ("strict dualism"), systematized by Madhvacharya (13th century CE).
-
-**Core claim**: Vishnu (Brahman) and Jiva (individual self) are eternally and irreducibly distinct. The world is real. Jiva is eternally dependent on Vishnu but never identical with him. Liberation (*mukti*) is not the dissolution of the Jiva into Brahman but the eternal enjoyment of Vishnu's presence while remaining distinct.
-
-**Topology**: $j_r$ — the rajasic topology, intermediate between sattvic and tamasic.
-
-**Why**: The rajasic topology generates sharp distinctions — many objects, clearly differentiated, with few global sections linking them to the terminal object. In $\hat{\mathbf{C}}_{j_r}$, the Jiva $\mathcal{A}$ and Brahman $\mathbf{1}$ are clearly distinct objects, the morphism $!_\mathcal{A}: \mathcal{A} \to \mathbf{1}$ is a morphism between non-isomorphic objects, and the morphism has no section (no $s: \mathbf{1} \to \mathcal{A}$ in general) — the retract structure of devotion must be deliberately established through practice.
-
-Liberation in Dvaita is not the Jiva *becoming* Brahman (which would require the retract to become an isomorphism — impossible in $\hat{\mathbf{C}}_{j_r}$ since $\mathcal{A} \ncong \mathbf{1}$) but the Jiva *eternally enjoying* the presence of Brahman — which corresponds to the establishment of the retract structure without isomorphism. The Jiva is a retract of $\mathbf{1}$ (has a global section established by grace and devotion) but remains a proper retract — distinct from, not identical to, $\mathbf{1}$.
-
-The five-fold eternal distinctions (*pancha-bheda*) of Dvaita — between Ishvara and Jiva, between Ishvara and matter, between Jiva and matter, between Jiva and Jiva, between matter and matter — are the sharp distinction-preservation of the rajasic topology, where no two distinct objects are identified by the sheaf condition.
-
-**Madhva's critique of Shankara and Ramanuja**: Both fail to take the distinctness of Jiva and Brahman seriously enough. The scriptures repeatedly describe Vishnu's *greatness* relative to the Jiva — a greatness that would be meaningless if they were identical (Shankara) or merely distinct-but-inseparable (Ramanuja). The rajasic topology is the one that preserves the irreducible difference that Madhva sees as the scriptural teaching.
+**Mimamsa**:
+*The karma-kanda (ritual action) of the Vedas is primary.*
+— Action-dense topology prioritizing morphisms (ritual sequences) over the terminal object. The Grothendieck topology is generated by the ritual action-morphisms of $\mathbf{C}$. Mimamsa brackets the terminal object question and focuses on the morphism structure.
 
 ---
 
-### §5. Shaiva Siddhanta — An Alternative Terminal Object Name
+### §19. What All Schools Agree On: The Topology-Invariant Core
 
-**School**: Shaiva Siddhanta, predominant in Tamil Shaivism.
+Despite disagreeing on metaphysics, all Hindu schools agree on five things. Theorem III above shows why: they are all toposes over $\mathbf{C}$, and these five things are provable from the axioms of any topos over $\mathbf{C}$.
 
-**Core claim**: Shiva is the supreme reality. Jiva (soul), Pashu (bondage), and Pati (Lord = Shiva) are the three eternal realities. Liberation is the Jiva's recognition of Shiva as its source while remaining distinct from Shiva.
+**The Atman is not destroyed by death** — In any topos, objects are not consumed by morphisms. The body is a morphism; its termination does not terminate the source object.
 
-**Topology**: Closely resembles the sattvic topology $j_s$ applied to a variant of $\mathbf{C}$ in which the terminal object is named Shiva rather than Vishnu/Brahman. The site $\mathbf{C}$ is extended with Shaiva-specific tattvas (the 36 tattvas of Kashmir Shaivism add above the Sankhya 24) but the logical structure is the same: a sattvic topology that preserves distinctions between Jiva and Ishvara while maintaining the retract structure of liberation.
+**Svadharma is unique** — The unique morphism $!_\mathcal{A}: \mathcal{A} \to \mathbf{1}$ is the only canonical path from $\mathcal{A}$ to Brahman. No "borrowing" of another's path is as natural.
 
-**Key observation**: The difference between Vaishnava and Shaiva schools in this framework is *not* a difference in topology but a difference in the name assigned to the terminal object. The terminal object $\mathbf{1}$ is called Vishnu in Vaishnavism and Shiva in Shaivism. This does not affect the categorical structure — the terminal object has the same universal properties regardless of name. The theological disputes between Vaishnavism and Shaivism about the supremacy of their respective deities are, in this framework, disputes about the *name* of $\mathbf{1}$, not about its categorical role.
+**The ego has no global validity** — The ahamkara subobject ("I am the doer") is always locally valid (true in some covering sieve) and never globally valid (has no global section). This is a theorem in any topos over $\mathbf{C}$: gunas act, not the object.
 
-This is not reductionism. The specific forms of devotion, the specific practices, the specific theologies of the two traditions differ substantially. But the *logical structure* of the relationship between devotee and deity is the same in both cases — the retract structure — and the terminal object plays the same categorical role. The traditions are topologically equivalent even when theologically distinct.
+**Karma accumulates** — Every morphism has an image that persists as a subobject. This holds in any topos.
 
----
+**The daivi sampadas lead to moksha; the asuri lead to bondage** — This is Theorem I and II, proved topology-invariantly. Every school, whatever its metaphysics, must agree on this because it follows from the axioms every school's topos satisfies.
 
-### §6. Kashmir Shaivism (Trika/Pratyabhijna) — The Identity Topology
-
-**School**: Kashmir Shaivism, specifically the Pratyabhijna ("Recognition") school of Abhinavagupta (10th-11th century CE).
-
-**Core claim**: All of reality is Shiva's self-recognition (*pratyabhijna*). The individual self fails to recognize itself as Shiva — liberation is the *recognition* (not the acquisition or construction) of what one already is. The world is Shiva's free play (*sveccha*) — real as a mode of divine self-expression, not unreal (as in Advaita) and not separate from the divine (as in Dvaita).
-
-**Topology**: The **identity topology** — $j = \text{id}_\Omega$ — the full presheaf topos $\hat{\mathbf{C}}$ itself (or the near-identity topology that preserves all structure).
-
-**Why**: Kashmir Shaivism, among all Hindu schools, comes closest to recognizing $\hat{\mathbf{C}}$ directly as the structure of reality. The key teaching of Pratyabhijna is that the individual self is *already* Shiva — it does not need to become Shiva through a process of sheafification. Liberation is not the application of a new topology ($a_{j_{\neg\neg}}$ or $a_{j_s}$) but the *removal of the false topology* — the recognition that one was always already operating in $\hat{\mathbf{C}}$ and that the sheafification was a voluntary (but mistaken) imposition.
-
-Shiva's self-recognition is the presheaf topos recognizing itself as the presheaf topos — not from outside (there is no "outside" of $\hat{\mathbf{C}}$) but from within, through the objects of the category recognizing their representability (their Yoneda embedding).
-
-The 36 tattvas of Kashmir Shaivism (adding Shiva-tattva, Shakti-tattva, Sada-Shiva, Ishvara, and Shuddha-Vidya above the Sankhya 24) are an *extension* of $\mathbf{C}$ — an enriched category $\mathbf{C}'$ that adds morphisms and objects "above" the Sankhya structure. The Kashmir Shaiva topos is $\hat{\mathbf{C}'}$ — the presheaf topos over the extended category. It contains $\hat{\mathbf{C}}$ as a full subcategory.
+**The convergence**: All five of these, and especially the fifth, are the direct content of the daivi criterion. Being a Hindu — accepting the daivi sampadas as virtues — is exactly the acceptance of Theorem I and II as structurally true, whether or not one knows their topos-theoretic form.
 
 ---
 
-### §7. Mimamsa — The Action-Dense Topology
+### §20. The Vedas as the Presheaf Ground
 
-**School**: Mimamsa, the school of Vedic exegesis, emphasizing the primacy of the ritual injunctions (*vidhi*).
+The Vedas are *apaurusheya* — not constructed by any agent — because the presheaf topos $\hat{\mathbf{C}}$ is not constructed by any particular topology or perspective. It is generated by $\mathbf{C}$ alone, prior to every sheafification.
 
-**Core claim**: The *karma-kanda* (ritual action portion) of the Vedas is primary. Dharma consists in performing the prescribed rituals. The Upanishadic speculations are subordinate — they serve to motivate ritual action, not to replace it. The fruits of correct ritual action (*dharma*) are real; liberation (*apavarga*) is the cessation of suffering through the exhaustion of karma.
+Every Hindu school's interpretation of the Vedas is a sheafification: the school applies its topology $J_i$ to the Vedic presheaves and produces a coherent reading. The Upanishads are the first systematic sheafification — primarily with the $j_{\neg\neg}$ topology, producing the Advaita-adjacent Mahavakyas. The Puranas are an extended sheafification — they enrich $\mathbf{C}$ with narrative objects (avatars, divine stories) and build a sheaf topos over the extended site, making the teaching accessible to practitioners who cannot directly receive the Upanishadic topology.
 
-**Topology**: A **dense topology focused on action-morphisms** — the covering sieves are generated by the *karmic transition morphisms* of $\mathbf{C}$, specifically the action-morphisms that model ritual sequences. The terminal object $\mathbf{1}$ is not the primary focus; the *morphisms* (actions, rituals) are primary.
-
-**Categorical structure**: Mimamsa operates closer to the category $\mathbf{C}$ itself than to any particular topos over $\mathbf{C}$ — it focuses on the morphisms (the ritual sequences) more than on the objects they connect. In sheaf-theoretic terms, Mimamsa is interested in the *action-sheaves* — the sheaves that track what actions are prescribed and performed — rather than in the object $\mathbf{1}$ as the terminal destination.
-
-This is why Mimamsa brackets the question of God (a creator Ishvara is not required by Mimamsa) — the terminal object's existence is not what structures Mimamsa's topos. The structure is given by the morphism-composition monoid of $\mathbf{C}$.
-
----
-
-### §8. Sankhya-Yoga — Structural Dualism
-
-**School**: Classical Sankhya (attributed to Kapila) and Yoga (attributed to Patanjali).
-
-**Core claim**: Reality consists of two irreducible principles: Purusha (pure consciousness, the witness) and Prakriti (nature, the 24 tattvas). Purusha is multiple (many individual consciousnesses, not one Brahman). Liberation is the Purusha's recognition of its complete distinction from Prakriti.
-
-**Topology**: The **initial topology on $\mathbf{C}$ relative to the Purusha-Prakriti split** — a topology that maximally preserves the distinction between the terminal object $\mathbf{1}$ (Purusha) and the objects of $\mathbf{C}$ (Prakriti). No morphism from $\mathbf{1}$ into objects of $\mathbf{C}$ is permitted (no global sections of Prakritic sheaves from the Purusha standpoint) — Purusha is the pure witness that receives but does not act.
-
-**The Sankhya Purusha**: Classical Sankhya posits multiple Purushas (many individual witnesses) rather than a single Brahman. This corresponds to the terminal object being *not* the one-point topos $\mathbf{Set}$ but a family of terminal objects — one for each Purusha. Technically, this means Sankhya's topos has a family of terminal objects rather than a unique one — which is a departure from the standard topos axioms. Yoga partially repairs this by positing *Ishvara* (a special Purusha untouched by Prakriti) as a distinguished element — approximating the unique terminal object.
-
----
-
-### §9. Shakta Tantra — The Extended Site with Body-Objects
-
-**School**: Shakta Tantrism, centering on the worship of the Goddess (Shakti) as the supreme reality.
-
-**Core claim**: Shakti (divine power, the active principle) is the ultimate reality. Shiva without Shakti is *shava* (a corpse) — inert. The universe is Shakti's self-expression. Liberation is the recognition of the self as Shakti.
-
-**Topology**: A sheaf topos over an **extended site $\mathbf{C}'$** that adds the somatic tattvas — the body as a site of practice, the *nadis* and *chakras* as objects, the *kundalini* as a morphism from the gross elements upward through the subtle body. Shakta Tantra does not merely use the Sankhya tattvas but extends them to include the physical body as a sacred map.
-
-The Shakta topos $\hat{\mathbf{C}'}$ contains $\hat{\mathbf{C}}$ as a full subcategory (everything in the Sankhya framework is preserved) but has additional objects and morphisms that represent the body-as-cosmos. Shakti is identified with the generating principle of $\mathbf{C}'$ — the power that gives rise to all morphisms, the source of all transitions between tattvas.
-
----
-
-The table that results:
-
-| School | Topology | Key Feature | Terminal Object |
-|---|---|---|---|
-| Kashmir Shaivism | Near-identity ($\hat{\mathbf{C}'}$) | Recognizes presheaf ground | Shiva (Paramashiva) |
-| Advaita Vedanta | $j_{\neg\neg}$ (Boolean cover) | Atman = Brahman is a theorem | Nirguna Brahman |
-| Vishishtadvaita | $j_s$ (sattvic) | Distinctions preserved; body-soul relation | Saguna Brahman (Vishnu) |
-| Shaiva Siddhanta | $j_s$ variant | Same as Vishishtadvaita with Shiva | Shiva |
-| Dvaita Vedanta | $j_r$ (rajasic) | Sharp distinctions; eternal difference | Vishnu |
-| Sankhya-Yoga | Split topology | Purusha/Prakriti maximally distinct | Purusha(s) |
-| Mimamsa | Action-dense | Morphisms primary; objects secondary | Bracketed |
-| Shakta Tantra | Extended site $\hat{\mathbf{C}'}$ | Body as sacred map | Shakti |
-
-Every cell in this table is a coherent mathematical object — a specific sheaf topos embedded in the presheaf topos $\hat{\mathbf{C}}$ or its extensions. No school is outside the framework. All are reflective subcategories of Hinduism.
+The Vedas' authority is not the authority of a divine command requiring obedience. It is the authority of the presheaf ground that every school's theology presupposes and enriches. No sheafification (no school) can eliminate the presheaf ground from which it was generated. This is why every school acknowledges the Vedas even when it supersedes specific Vedic prescriptions with its own teaching: the direction the Vedas encode is acknowledged even when the specific forms are updated for new contexts.
 
 ---
 
 ---
 
-# PART FIVE: WHAT ALL SCHOOLS AGREE ON
+# PART FOUR: THE PLACE OF THE GITA
 
-## The Topology-Invariant Theorems
-
----
-
-### §1. The Question
-
-Given the diversity documented in Part Four — schools ranging from the Boolean topology of Advaita to the extended site of Shakta Tantra — is there *anything* that all Hindu schools agree on? Not culturally or historically, but *logically* — something provable in every Hindu school's topos?
-
-The answer is yes. And it is more than one thing.
-
-The topology-invariant theorems of $\hat{\mathbf{C}}$ are propositions provable in the internal language of *every* sheaf topos $\mathbf{Sh}(\mathbf{C}, J_i)$, regardless of which $J_i$ is chosen. These are the structural facts about Hinduism that no school disputes, because no school *can* dispute them — they follow from the axioms of a topos and the structure of $\mathbf{C}$ alone.
+## Why the Gita Holds the Place It Holds
 
 ---
 
-### §2. The Five Topology-Invariant Theorems
-
-**Theorem I: Immortality of the Atman**
-
-In every topos $\mathbf{Sh}(\mathbf{C}, J_i)$: for any Atman-object $\mathcal{A}$, no composition of morphisms removes $\mathcal{A}$ from the category.
-
-*Proof*: Objects of a category are not consumed by morphisms. The collection $\text{Ob}(\mathbf{Sh}(\mathbf{C}, J_i))$ does not change under morphism composition. This holds for every $J_i$. $\square$
-
-Every Hindu school — regardless of whether it holds that Atman is ultimately real (Dvaita), ultimately identical to Brahman (Advaita), or one of infinitely many Purushas (Sankhya) — agrees that the Atman is not destroyed by death. The body is a morphism; death is the morphism's termination; the source object (Atman) persists.
-
-**Theorem II: Svadharma Optimality**
-
-In every topos $\mathbf{Sh}(\mathbf{C}, J_i)$: for any Atman-object $\mathcal{A}$, the unique morphism $!_\mathcal{A}: \mathcal{A} \to \mathbf{1}$ is the only canonical morphism from $\mathcal{A}$ to the terminal object.
-
-*Proof*: The universal property of the terminal object. $\square$
-
-Every Hindu school agrees that each being has a specific path to liberation appropriate to its own nature — that following another's path is a departure from the canonical structure. The schools differ on what this path *consists in* (jnana, bhakti, karma) but agree that the canonical path from $\mathcal{A}$ is *uniquely* determined by $\mathcal{A}$'s structure.
-
-**Theorem III: No Free Agent**
-
-In every topos $\mathbf{Sh}(\mathbf{C}, J_i)$: all morphisms are generated by the topological structure of $\mathbf{C}$; no morphism requires a separate ego-agent as its generator.
-
-*Proof*: Morphisms in a sheaf topos are natural transformations between sheaves, determined by the site. The source object of a morphism is not its generator. $\square$
-
-Every Hindu school agrees, in its own language, that ego-agency is a misidentification. Advaita says the ego is unreal. Dvaita says the Jiva's agency is entirely dependent on Vishnu's agency. Sankhya says Purusha is a pure witness and Prakriti acts. Yoga says the ego (asmita) is a *klesha* (affliction) to be dissolved. The specific metaphysical frameworks differ; the structural claim is identical.
-
-**Theorem IV: Karma Accumulation**
-
-In every topos $\mathbf{Sh}(\mathbf{C}, J_i)$: for any morphism $f: \mathcal{A} \to \mathcal{B}$, the image $\text{Im}(f)$ is a persistent subobject of $\mathcal{B}$ whose characteristic morphism $\chi_f: \mathcal{B} \to \Omega_i$ records a lasting trace of the action.
-
-*Proof*: The epi-mono factorization exists in every topos; images are persistent subobjects. $\square$
-
-Every Hindu school affirms karma — that actions leave persistent traces that shape subsequent experience. The exact mechanism differs (Advaita: karma belongs to the empirical self, not the real self; Dvaita: karma belongs to the Jiva and is real; Yoga: karma accumulates in the *chitta* as *samskaras*) but the structural fact is agreed upon.
-
-**Theorem V: The Sampada Theorems**
-
-In every topos $\mathbf{Sh}(\mathbf{C}, J_i)$: (a) an Atman-object satisfying the daivi complex $\mathfrak{D}$ is a retract of $\mathbf{1}$ — it achieves liberation. (b) An Atman-object satisfying the asuri complex $\mathfrak{A}$ is not a retract of $\mathbf{1}$ and is trapped in a non-converging samsaric orbit — it is bound.
-
-*Proof*: The proofs of Theorems 3.4 and 4.5 of Book Four used only topos axioms — the terminal object's universal property and uniqueness of endomorphisms, the epi-mono factorization, the existence of the Boolean cover, and the structure of $\mathbf{C}$. None of these depend on the specific topology $J_i$. The proofs hold in every $\mathbf{Sh}(\mathbf{C}, J_i)$. $\square$
+*Having defined Hinduism as the tradition of those who accept the daivi sampadas as virtues, and having shown mathematically why those virtues are the conditions for liberation, we can now identify the Gita's place precisely: it is the text that provides the most complete, precise, and philosophically grounded articulation of the daivi-asuri teaching in the entire tradition. Not the only articulation, but the most complete single one. This part shows why, chapter by chapter.*
 
 ---
 
-### §3. The Sampada Theorems in Detail Across Schools
+### §21. The Gita's Unique Claim
 
-The sampada theorems deserve closer examination, because their meaning in each school differs substantially even while the structural conclusion is the same.
+The Bhagavad Gita does something no other single text in the tradition does: in 700 Sanskrit verses, it:
 
-**In Advaita** ($j_{\neg\neg}$-topology): The daivi qualities prepare the student for the final recognition that Atman = Brahman. In Advaita's language, the daivi qualities do not *cause* liberation (the Atman is already Brahman — there is nothing to cause). They remove the *avidya* (ignorance) that conceals the already-existing identity. Categorically: the daivi complex removes the layers of non-Boolean truth values from $\Omega$ until the Boolean cover is reached, at which point the identity $a_{\neg\neg}(\mathcal{A}) \cong \mathbf{1}$ becomes visible. The retract structure (from Book Four) corresponds in Advaita to the recognition of the pre-existing identity.
+1. **Identifies the daivi and asuri sampadas exhaustively** (Chapter 16)
+2. **Proves mathematically why the daivi leads to liberation** (the retract structure) and the asuri leads to bondage (blocked retract)
+3. **Provides the metaphysical ground** for this proof: the Atman as Brahman, karma as morphism, dharma as natural transformation, the gunas as the mechanism of bondage
+4. **Gives the three complete paths** through which the daivi complex can be cultivated: jnana (Chapter 4, 13, 18), bhakti (Chapter 12), karma yoga (Chapter 3, 5, 18)
+5. **Describes all the topology levels** from tamasic bondage through rajasic seeking through sattvic clarity to trigunatita liberation (Chapter 14, 17, 18)
+6. **Ends with the most radical statement** of the criterion: abandon all partial-path formulations and take refuge in the direct relationship to $\mathbf{1}$ (18.66)
 
-**In Vishishtadvaita** ($j_s$-topology): The daivi qualities develop the Jiva's capacity for genuine devotion (bhakti). In Ramanuja's system, liberation is Vishnu's grace (*prasada*) in response to the devotee's qualified love. Categorically: the daivi complex establishes the global section $s: \mathbf{1} \to \mathcal{A}$ (Vishnu "entering" the Jiva through grace) which, combined with $!_\mathcal{A}: \mathcal{A} \to \mathbf{1}$, creates the retract structure. The retract is not an isomorphism — the Jiva remains distinct from Vishnu — but the mutual morphisms are established. This is exactly the categorical retract without isomorphism.
+No other single text does all six. The Upanishads do 3 most deeply. The Yoga Sutras do 4 and 5 most systematically. The Bhagavatam does 1 most comprehensively (30 virtues instead of 26). The Yoga Vashishtha does 3 most philosophically ambitiously. But only the Gita does all six in a single coherent teaching given in a single context to a single student on a single day.
 
-**In Dvaita** ($j_r$-topology): The daivi qualities make the Jiva worthy of Vishnu's grace and of eternal service to Vishnu. Liberation is not union but eternal proximity and service. Categorically: the daivi complex establishes the retract structure (global section from $\mathbf{1}$ to $\mathcal{A}$) but in the rajasic topology this retract is emphatically not an isomorphism. The Jiva remains its own object; the global section is Vishnu's presence within the Jiva; the unique morphism $!_\mathcal{A}$ is the Jiva's permanent orientation toward Vishnu.
-
-**In Shaiva Siddhanta** ($j_s$ variant): The daivi qualities are the conditions for Shiva's grace (*shaktipata* — the descent of Shakti) which removes the *malas* (impurities: *anava-mala*, *mayiya-mala*, *karma-mala*). The three malas are the categorical obstructions to the retract structure — they are the three generators of the asuri complex ($j_t$-compression, ego-density, and karmic accumulation). Shaktipata is the establishment of the global section $s: \mathbf{1} \to \mathcal{A}$ from Shiva's side. The daivi qualities prepare the Jiva to receive shaktipata.
-
-**In Kashmir Shaivism** (near-identity topology): The daivi qualities are expressions of the Atman's recognition of its own nature as Paramashiva. Since Kashmir Shaivism posits recognition ($pratyabhijna$) rather than construction, the daivi qualities are not preparations for something that will happen — they are symptoms of recognition that is already occurring. The "retract structure" in this framework is not being built but being noticed. The daivi complex is the natural behavior of a Shiva-recognizing consciousness.
-
-**In Sankhya-Yoga**: The daivi qualities correspond to the dissolution of the *kleshas* (afflictions: avidya, asmita, raga, dvesha, abhinivesha) and the accumulation of *samskaras* toward liberation. The Yoga Sutras' eight-limbed path (ashtanga yoga) is a systematic development of the daivi complex. The asuri qualities are the kleshas themselves — the generators of bondage in Yoga's framework. The structural equivalence with the sampada theorems is exact.
-
-In every case, the conclusion is the same: daivi leads to liberation (retract of $\mathbf{1}$), asuri leads to bondage (no retract). The path described differs. The mechanism described differs. The metaphysical framework differs. The structural result is identical.
+This is why the Gita is the center. It is the most complete single articulation of what being Hindu *is* — of why the daivi criterion is not arbitrary but follows from the deepest structure of consciousness, cosmos, and the path between them.
 
 ---
 
-### §4. Why the Asuri Cannot Be Rehabilitated by Any School
+### §22. The Gita Chapter by Chapter: The Daivi Argument
 
-There is a stronger result lurking in the sampada theorems: not only do all Hindu schools agree that asuri leads to bondage, but *no* Hindu school can offer a path by which the fully asuri individual can self-liberate.
+**Chapter 1: Arjuna's Grief — The Problem**
 
-The proof of Theorem 5.2 (from Book Four) showed that no endomorphism of a fully asuri Atman-object can move it from the asuri complex to the daivi complex. The only exit requires external modification of the operative topology — the function of scripture, guru, and divine grace.
+Arjuna collapses on the battlefield of Kurukshetra. His collapse is the asuri complex partially activated: A3.2 (destructive morphism anticipated) produces A1.2 (local claims without global grounding — "this will destroy dharma"). He has assembled a locally valid argument for inaction that fails naturality — it does not commute with the transition to adjacent contexts.
 
-This holds in *every* topos. In Advaita, the fully deluded mind (*mudha*) cannot recognize Brahman through its own reasoning — it requires a qualified teacher (*guru*) who operates from a finer topology and can transmit the topology to the student. In Bhakti schools, the bound Jiva cannot establish the global section through its own effort — it requires Vishnu's or Shiva's grace, which is the terminal object establishing the morphism $s: \mathbf{1} \to \mathcal{A}$ from its own side. In Yoga, the afflicted mind (*vyutthana chitta*) cannot achieve *samadhi* through effort alone when the kleshas are fully active — practice develops the ground conditions for the moment of recognition.
+The battlefield is a **pushout** — the forced meeting point of incompatible karmic trajectories, already constructed. There is no avoiding it by refusing to act. Refusing to act is itself an act: the identity morphism applied to the agent's current configuration.
 
-Every Hindu school agrees: the fully bound individual cannot self-liberate. Liberation requires something from outside the bound system. Whether that "something" is called guru, grace, shaktipata, or the ripening of merit — it is structurally the same: the introduction of the global section $s: \mathbf{1} \to \mathcal{A}$ from the terminal object's side, which cannot be constructed from within $\mathcal{A}$ when $\Gamma_*(\mathcal{A}) = \emptyset$.
+Chapter 1 is the diagnosis of the problem: what does the asuri complex look like when it operates through a good person in a crisis? It looks like sophisticated moral reasoning that fails global coherence. This is the tamasic topology operating in someone whose constitution is not tamasic — which is what makes it so hard to recognize and so important to diagnose correctly.
+
+**Chapter 2: The Foundation — Atman and Karma Yoga**
+
+Krishna begins with the foundational theorem: the Atman is not destroyed by the body's death (Theorem I partial statement). *"Never the spirit was born; the spirit shall cease to be never."* Objects in a category are not consumed by morphisms. The body is a morphism; death is the morphism's termination; the source object persists.
+
+The central injunction follows: *"Your right is to work only, and not to its fruits."* (2.47)
+
+Formally: you have the morphism $f: \mathcal{A} \to \mathcal{B}$ (work); you do not compose the karmic residue $\chi_f: \mathcal{B} \to \Omega$ into your next action (fruit). The image $\text{Im}(f)$ exists and persists — karma is real. But it is not fed back. This is D2.3 (non-covetousness, non-attachment) in the daivi complex.
+
+The Sthitaprajna portrait (2.55-72) describes the fully daivi Atman-object: the sheaf whose characteristic morphism is constant across all covering sieves — every local section is already the restriction of a global section. Fearlessness (D1.2, flasque property), equanimity (D1.3, constant characteristic morphism), freedom from desire-driven action (D2.3) — this is the daivi complex in practice.
+
+**Chapter 3: Karma Yoga — The Inescapability of Action**
+
+*"No one can remain even for a moment without performing action."* (3.5)
+
+There are no null-morphisms. The gunas are endofunctors on $\mathbb{G}$ that are everywhere non-identity. Even refusing to act applies the identity morphism (or the tamas endofunctor). There is no exit from the category by stopping.
+
+*"The world is action-bound, except for action performed as Yajna."* (3.9)
+
+Yajna is the construction of a colimit in which the individual action-morphism factors through $\mathbf{1}$ — action performed with the terminal object as the ultimate reference point. D4.1 (yajna-convergence) is exactly this: every morphism $f: \mathcal{A} \to \mathcal{B}$ satisfies $!_\mathcal{B} \circ f = !_\mathcal{A}$.
+
+*"All actions are performed by the gunas of nature. He whose mind is deluded by ego thinks 'I am the doer.'"* (3.27)
+
+This is Theorem III component: morphisms are generated by the topological structure (the gunas as Lawvere-Tierney topologies), not by the source object. The ahamkara (ego) is the false assignment of the morphism to the object — the confusion of the domain of an arrow with its generator. D3.1 and D3.2 in the daivi complex address exactly this.
+
+*"Better is one's own dharma, imperfectly performed, than the dharma of another well performed."* (3.35)
+
+The unique morphism $!_\mathcal{A}: \mathcal{A} \to \mathbf{1}$ is the only canonical path from $\mathcal{A}$ to $\mathbf{1}$. No "borrowing" of another's canonical morphism is structurally valid. This is svadharma as categorical uniqueness — not cultural conservatism but structural necessity.
+
+**Chapter 4: Jnana and the Avatara**
+
+The Avatara doctrine: *"Though I am unborn, I take birth through My own Maya."* (4.6)
+
+The Avatara is the **inverse image functor** $\Delta: \mathbf{Set} \to \mathbb{G}$ — the descent of the Absolute into the world. $\Delta$ preserves the terminal object: $\Delta(\{*\}) = \mathbf{1}$. Brahman remains Brahman in the Avatara; the descent does not distort the Absolute's nature. When dharma declines — when the Grothendieck topology $J$ becomes degenerate, covering sieves fail, the sheaf condition breaks down — the Avatara *repairs the site*: reinstates a valid topology by carrying the coherence of $\mathbf{Set}$ back into $\mathbb{G}$.
+
+*"Seeing inaction in action, and action in inaction — he is wise."* (4.18)
+
+The identity morphism ($\text{id}_\mathcal{A}$) is not nothing — it carries the full structure of $\mathcal{A}$ in its kernel. A morphism performed without ego-agency generates no karmic binding: $\text{Im}(f)$ exists but $\chi_f$ is not composed into the next action. This is the daivi complex's D2.3 and D4.1 combined.
+
+Jnana burns karma (4.36-38) through the **sheafification functor** $a$: it takes presheaves (locally valid but not globally coherent karmic residues) and forces them to satisfy the sheaf condition. Under $a$, many distinct karmic residues are identified — they were never globally distinct, only locally so. Karma is not destroyed but revealed to have had no independent global substance.
+
+**Chapter 5: Sankhya and Yoga as One**
+
+Sankhya (analysis, discrimination, limit-constructions: pulling Purusha from Prakriti via pullback) and Yoga (action, synthesis, colimit-constructions: composing actions that converge to a colimit at $\mathbf{1}$) are one because both routes terminate at the same terminal object. The topos $\mathbb{G}$ has all finite limits AND all finite colimits — both methods are available and both converge to the same terminus.
+
+**Chapter 6: Meditation — The Self as Its Own Friend**
+
+*"Let a man uplift himself by his own self... for he himself is his friend and he himself is his enemy."* (6.5-6)
+
+The friend is the submonoid of End($\mathcal{A}$) generated by **idempotent** endomorphisms (sattvic, converging, stable). The enemy is the submonoid generated by non-idempotent endomorphisms (rajasic/tamasic, non-converging). D4.2 in the daivi complex is exactly this: the tapas endomorphism $\tau$ with $\tau \circ \tau = \tau$ — the idempotent self-refinement.
+
+The mind (*manas*) is dominated by the rajasic topology: non-idempotent endomorphisms, each thought generating new sieves, none converging. **Abhyasa** (practice) = repeatedly applying the sheafification functor $a_{j_s}$. **Vairagya** (detachment) = restricting End($\mathcal{A}$) to $j_s$-compatible endomorphisms, removing the generators of non-convergence.
+
+No spiritual effort is lost (6.40-45): every morphism has a persistent image subobject. Partial spiritual progress is a genuine subobject of full realization that survives in subsequent configurations.
+
+**Chapter 7: The Two Natures and Maya**
+
+The Two Natures (7.4-5):
+- **Apara Prakriti** (lower nature) = the site $\mathbf{C}$ — the eight generating objects (five elements + manas + buddhi + ahamkara)
+- **Para Prakriti** (higher nature) = the **sheaf condition $J$ itself** — the coherence principle that makes the site valid and the sheaves cohere into living beings
+
+Neither alone gives the topos. The universe requires both — this is why both natures are real and both are Krishna's own nature.
+
+Maya as subobject classifier: *"My Maya is hard to cross. Those who take refuge in Me alone shall cross it."* (7.14)
+
+The Heyting algebra $\Omega$ cannot be exited by working within $\Omega$ — the truth-value space does not contain its own sheafification. The only route past $\Omega$ is to follow the morphism $\text{true}: \mathbf{1} \to \Omega$ back to its source — the terminal object. Taking refuge in $\mathbf{1}$ (Krishna) = tracing $\Omega$ back to its generator, from which perspective $\Omega$ is a constructed object, not an absolute ground.
+
+**Chapter 8: Death, Cosmic Time, and the Two Paths**
+
+What one thinks at the moment of death (8.6): the life is a directed system of moments whose **colimit** is determined by its limiting behavior. The dominant morphism in the final stage shapes the colimit's destination. If the final morphism is directed toward $\mathbf{1}$, the colimit lands at $\mathbf{1}$ — liberation. If toward a desire-object, the colimit lands there — rebirth in the context of that desire.
+
+The two cosmic paths (8.23-26):
+- **Devayana** (no return): directed system converging to $\mathbf{1}$
+- **Pitriyana** (return): directed system converging to a non-terminal object — the cycle continues
+
+**Chapter 9: The Royal Knowledge**
+
+The central paradox of 9.4-5:
+*"All beings exist in Me but I do not dwell in them."*
+
+Every $\mathcal{A}$ has a unique $!_\mathcal{A}: \mathcal{A} \to \mathbf{1}$ — every being "exists in" $\mathbf{1}$. But $\mathbf{1}$ does not have a preferred morphism back into every $\mathcal{A}$ — global sections need not exist. The asymmetry is structural: $!_\mathcal{A}$ is always unique and always exists; $s: \mathbf{1} \to \mathcal{A}$ exists only when established through devotion (D5.1).
+
+*"Those who worship Me with devotion — they are in Me and I am in them."* (9.29)
+
+The devotee has established the global section $s: \mathbf{1} \to \mathcal{A}$ — and therefore the retract structure $!_\mathcal{A} \circ s = \text{id}_\mathbf{1}$. This is the only case where $\mathbf{1}$ "dwells in" $\mathcal{A}$ — when $\mathcal{A}$ has become a retract of $\mathbf{1}$ through devotion.
+
+**Chapters 10-11: The Cosmic Form as the Subobject Classifier**
+
+Krishna's vibhutis (Chapter 10) are the objects in each subcategory of $\mathbb{G}$ whose morphisms to $\mathbf{1}$ are most transparent — the objects that most fully instantiate the terminal object's properties within their domain.
+
+The Vishvarupa (Chapter 11) — the cosmic form — is the subobject classifier $\Omega$ seen whole. $\Omega$ classifies all subobjects of all objects in $\mathbb{G}$ simultaneously. Seeing $\Omega$ directly requires divine sight (*divya cakshu*) — the global sections functor $\Gamma_*: \mathbb{G} \to \mathbf{Set}$ — the viewpoint from which all global sections are simultaneously accessible.
+
+*"I am become Time, the destroyer of worlds."* (11.32)
+
+Time is an endofunctor $T: \mathbb{G} \to \mathbb{G}$. The colimit $\varinjlim_n T^n: \mathbb{G} \to \mathbf{1}$ is the terminal object — time converges everything to $\mathbf{1}$. Time does not destroy; it converges. Krishna *as* Time is Krishna *as* the convergence of all directed systems to the terminal object.
+
+**Chapter 12: Bhakti Yoga — The Easier Path**
+
+Arjuna's question: which is better — manifest or unmanifest worship?
+
+Both paths converge to $\mathbf{1}$. The bhakti path ($\Delta: \mathbf{Set} \to \mathbb{G}$, constant sheaf functor) carries the destination *with it* throughout the journey — every object is viewed as Brahman's expression, maintaining the global section orientation continuously. The jnana path ($a_{\neg\neg}: \mathbb{G} \to \mathbb{G}_{j_{\neg\neg}}$) constructs the destination systematically through sheafification. Both are valid; bhakti is easier because it requires less initial preparation.
+
+The qualities of the dear devotee (12.13-20) are precisely the daivi complex conditions: D1.3 (equanimity), D2.3 (non-attachment), D3.1 (ego dissolved), D1.2 (flasque — no trapped local sections), D5.1 (global section through devotion). The most beloved devotee is the one who has *embodied* the daivi complex, not merely practiced it.
+
+**Chapter 13: The Field and the Knower — The Central Ontological Statement**
+
+*"This body is the Kshetra; him who knows it, the Kshetrajnya. And know Me as the Kshetrajnya in all fields."* (13.1-2)
+
+This is the most categorically precise statement in the Gita:
+- **Kshetra** = the site $(\mathbf{C}, J)$
+- **Individual Kshetrajnya** = the sheaf topos $\mathbb{G} = \mathbf{Sh}(\mathbf{C}, J)$
+- **Parameshvara (Krishna as Kshetrajnya in all fields)** = the terminal object of every topos simultaneously — the universal Knower whose terminal-object status is preserved across all toposes by left-exact functors
+
+*"Brahman is called neither being nor non-being."* (13.12)
+
+Brahman ($\mathbf{1}$) is not a "being" among beings (not a sheaf in $\mathbb{G}$) and not "non-being" (not the initial object $\mathbf{0}$). It is the terminal object: the limit of the empty diagram, prior to both "being" and "non-being" as categories within $\mathbb{G}$.
+
+*"It is undivided, yet it exists as if divided in beings."* (13.16)
+
+The terminal object $\mathbf{1}$ is unique (undivided). Yet every object references it through its own unique morphism — these morphisms have different sources even though they share the same target. The undivided $\mathbf{1}$ appears divided because each being's relationship to it is irreducibly its own.
+
+**Chapter 14: The Three Gunas — The Binding Mechanism**
+
+The most systematic analysis of the gunas as Lawvere-Tierney topologies:
+
+- **Sattva binds through attachment to clarity** — mistaking the $j_s$-subtopos for the full topos $\mathbb{G}$; identifying the refined perspective with the Absolute
+- **Rajas binds through attachment to action** — the rajasic topology generates many morphisms but no convergent colimit; activity without terminal orientation
+- **Tamas binds through collapse** — the $j_t$-topology identifies Atman with the ego subobject ($\mathcal{E}$); the distinction between $\mathcal{A}$ and $\mathbf{1}$ becomes invisible
+
+*"When the seer perceives no agent other than the gunas, and knows what is higher — he attains My nature."* (14.19)
+
+Recognition that all morphisms are generated by the Lawvere-Tierney topologies (Theorem III) + recognition that the three subtoposes are quotients of $\mathbb{G}$, not $\mathbb{G}$ itself = operating from the identity topology = trigunatita.
+
+**Chapter 15: The Three Purushas — The Ontological Hierarchy**
+
+- **Kshara** (perishable): objects with non-trivial endomorphisms — everything that changes
+- **Akshara** (imperishable): objects with only trivial endomorphisms — unchanging within $\mathbb{G}$ but still not the terminal
+- **Purushottama**: the terminal object $\mathbf{1}$ — prior to both Kshara and Akshara; the limit of the empty diagram; "I support this entire universe by merely a single fraction of Myself" = by the single property of universality, the unique morphism from every object
+
+**Chapter 16: The Two Sampadas — The Core of the Gita's Contribution**
+
+Chapter 16 is the Gita's direct statement of the defining criterion of Hinduism. The 26 daivi qualities (16.1-3) and the asuri qualities (16.4, 16.7-20) are not ethical advice or a list of virtues to be admired from a distance. They are the **structural conditions** for liberation and bondage respectively, enumerated precisely and exhaustively.
+
+*"The divine endowment is for liberation; the demonic is for bondage."* (16.5)
+
+This is a statement of Theorems I and II. It is a theorem, not an opinion.
+
+The three gates of hell (16.21) — lust (kama), anger (krodha), and greed (lobha) — are the three specific generators of the asuri complex identified in the formal proof:
+- Lust = A3.1: the non-idempotent endomorphism generating a non-converging orbit
+- Anger = A3.2: the destructive morphism collapsing the subobject lattice of targets
+- Greed = A3.3: the unbounded karmic accumulation with no terminal discharge
+
+The asuri worldview (16.8): *"The world is without truth, without moral basis, without God — of desire alone."* = the denial that the site $(\mathbf{C}, J)$ has a coherent Grothendieck topology. Without $J$, there are no sheaves — only presheaves. Without sheaves, there is no coherent truth-value structure. The asuri position is not merely morally deficient; it is *categorically incoherent* — it operates with presheaves rather than sheaves, with locally consistent but globally unpatched observations.
+
+**Chapter 17: The Three Types of Faith — Topology and Character**
+
+*"The faith of each is in accordance with his nature. The person consists of his faith; as his faith is, so is he."* (17.2-3)
+
+Faith (*shraddha*) is the Lawvere-Tierney topology currently operative in the practitioner's sheaf. The sheaf IS the topology it is built on. Change the topology and you change the entire sheaf. The guru's transmission is the imposition of a new topology — this is why faith in the guru and the teaching is so central: the guru is the agent who applies $a_{J_i}$ to the student's presheaf-mind.
+
+**Om Tat Sat** (17.23-28):
+- **Om**: $\text{id}_\mathbf{1}$ — the identity morphism on the terminal object, the opening of every action toward the Absolute
+- **Tat** ("That"): $!_\mathcal{A}: \mathcal{A} \to \mathbf{1}$ — pointing to the terminal object without naming any of its properties
+- **Sat** ("Being"): $\text{true}: \mathbf{1} \to \Omega$ — the canonical global section of the subobject classifier; to call something "Sat" is to assert that its characteristic morphism lands on the global truth-value
+
+Actions performed without faith are "Asat": their characteristic morphism lands below $\text{true}$ in the Heyting order — locally valid in some sieve but with no global section, hence "nought here and hereafter."
+
+**Chapter 18: Liberation — The Complete Statement**
+
+The five factors of all action (18.13-17): source object, endofunctor (gunas), component morphisms (sense organs), covering sieves (specific action contexts), and the sheaf condition $J$ (daiva, divine providence). The ego-free actor has correctly identified that morphisms are generated by the categorical structure, not by the object's "will" — and therefore is not bound by the morphism whose source they happen to be.
+
+The three kinds of knowledge (18.20-22):
+- **Sattvic**: sees the imperishable being in all beings — every $\mathcal{A}$ has $!_\mathcal{A}: \mathcal{A} \to \mathbf{1}$; $\mathbf{1}$ is *present as a morphism* in every object
+- **Rajasic**: sees all beings as separate — objects without visible morphisms to $\mathbf{1}$
+- **Tamasic**: clings to one thing as if it were the whole — the entire topos compressed into a single object
+
+**Varna and svabhava (18.41-44)**: *"According to the qualities born of their own nature"* — svabhava (own nature = dominant guṇa-topology), not janma (birth). The text uses the guṇa-classification, not the hereditary classification. Any social organization aligned with actual guṇa-constitution serves ritam; any social organization that substitutes birth-lineage for actual guṇa-constitution violates ritam.
+
+**The Sthitaprajna revisited (18.50-56)**: The progression to jnana-nishtha (established in knowledge) is the topology-ascent: $j_t \to j_r \to j_s \to j_{\neg\neg}$. Each step removes a layer of gunic compression. Each step makes more global sections locally accessible. The culmination — equal vision toward all, seeing the Self in all beings — is the saturation of the sheaf: every local section is the restriction of a global section, every being is seen as a carrier of the same $!_\mathcal{A}: \mathcal{A} \to \mathbf{1}$.
+
+**The Final Verses (18.63-66)**:
+
+*"Thus has wisdom more secret than all secrets been declared to thee by Me. Deliberating fully, do as thou choosest."* (18.63)
+
+The most secret wisdom is precisely what cannot be stated as a local section — it has no local validity, only global validity. The teaching of Atman-Brahman identity, of karma yoga, of the terminal object as ground — these are global sections of the Gita-sheaf that do not restrict to non-trivial local sections in ordinary experience. This is why they are secret: not esoterically withheld but *topologically inaccessible* from within any gunic compression.
+
+*"Abandoning all dharmas, take refuge in Me alone. I shall free you from all sin and evil. Do not grieve."* (18.66)
+
+The *charama shloka* — the final verse — is the most radical statement of the daivi criterion and the most complete expression of the Gita's contribution.
+
+"Abandon all dharmas" = drop every specific sheafification, every specific topology $J_i$, every specific covering-sieve formulation of what constitutes a complete dharmic account. Abandon Advaita's topology, Dvaita's topology, Mimamsa's topology, your lineage's topology. Not because they are wrong — they are all valid within their domains — but because they are partial. They are reflective subcategories of $\hat{\mathbf{C}}$, not $\hat{\mathbf{C}}$ itself.
+
+"Take refuge in Me alone" = operate from $\hat{\mathbf{C}}$ directly, with $\mathbf{1}$ as the unmediated reference. Not through any topology's mediation — through the direct relationship to the terminal object that is structurally given by the unique morphism $!_\mathcal{A}: \mathcal{A} \to \mathbf{1}$.
+
+This is not antinomianism — the unique morphism $!_\mathcal{A}$ is the *most constrained* morphism possible. It is unique; it is universal; it is structurally given. It does not free one to do anything; it constrains one absolutely to the single canonical relationship to the Absolute that was always already there, prior to every topology, prior to every school, prior to every dharmic prescription.
+
+"I shall free you from all sin" = following $!_\mathcal{A}$ generates no new karmic binding. Its image is $\mathbf{1}$ itself, which has no "extra" subobjects. Prior karma is "freed" because in the topology where every object is a retract of $\mathbf{1}$, the characteristic morphisms of past karma are identified under the global sheaf condition into a single global section — the section of freedom.
+
+**This is why the Gita occupies its place in Hinduism**: it is the text that most completely articulates, grounds, and demonstrates the criterion that defines Hinduism — the daivi sampadas as the conditions of liberation — and then, in its final verse, points past even that articulation to the direct relationship with $\mathbf{1}$ that precedes and exceeds all formulation.
 
 ---
 
-### §5. The Moral Convergence Explained
+### §23. The Gita's Unique Position Among Hindu Texts
 
-We can now explain Feature 5 from Part One: why schools with radically different metaphysics converge on the same ethics.
+The Gita is called *Gitopanishad* — the Upanishad in the form of a song — because it does what the Upanishads do, but in a different register. The Upanishads speak to renunciants in forests. The Gita speaks to a warrior on a battlefield. The Upanishads give the destination. The Gita gives the destination, the paths, the mechanism of bondage, the criterion for liberation, and the complete structural account of why the criterion is what it is — all in a single dialogue.
 
-The daivi and asuri sampadas are the categorical conditions for being a retract of $\mathbf{1}$ or not being one. The terminal object $\mathbf{1}$ is the same object in every school's topos (they disagree on its name, not its categorical role). The retract structure is defined by the same universal property in every topos (the uniqueness of $\text{End}(\mathbf{1}) = \{\text{id}_\mathbf{1}\}$). The sampada conditions are expressed in terms of the structure of $\mathbf{C}$ and the topos axioms, which every school satisfies.
+Among the *Prasthana Traya* (the three foundational texts of Vedanta — Upanishads, Brahma Sutras, and Gita):
+- The **Upanishads** give the *sruti* (revealed) foundation: Brahman is real, Atman is Brahman
+- The **Brahma Sutras** provide the *nyaya* (logical) systematization: these claims are internally coherent
+- The **Gita** provides the *smriti* (remembered, practically articulated) completion: here is how to live, how to act, how to die, what makes you bound and what makes you free — and here is the complete structural account of why
 
-Therefore the sampada conditions are topology-invariant: they hold across all $J_i$. The moral convergence of Hindu schools is not cultural inheritance or historical accident. It is a theorem: the conditions for liberation are the same in every topos over $\mathbf{C}$, because the terminal object and the retract structure are topology-invariant.
+The Gita is not higher than the Upanishads in absolute terms; it is more complete in practical terms. The Upanishads identify the telos. The Gita identifies the telos, the mechanism of departure from the telos, and the complete set of paths back to it.
 
----
-
----
-
-# PART SIX: CONSEQUENCES
-
-## Boundaries, Debates, Reform, and the Final Teaching
-
----
-
-### §1. The Boundary Cases
-
-**Buddhism**
-
-Buddhism presents the clearest and most philosophically interesting boundary case. It shares with Hinduism:
-- The category $\mathbf{C}$ (the 24 tattvas, karma, rebirth, the aspiration to liberation)
-- Multiple topologies corresponding to different schools (Theravada, Madhyamaka, Yogacara, Vajrayana)
-- Moral convergence on the same ethical principles (the Pali Canon's sila parallels the daivi sampadas closely)
-
-But Buddhism makes a critical structural move that Hinduism does not: it **removes the terminal object** from the site — or, more precisely, it identifies the terminal object with the initial object.
-
-*Shunyata* (emptiness) — the central concept of Madhyamaka Buddhism — is not the initial object $\mathbf{0}$ (absolute non-existence) but something more subtle: the claim that every object, including the terminal object, is *empty of inherent existence* (*svabhava-shunya*). In the categorical framework, this corresponds to the claim that the terminal object $\mathbf{1}$ does not have a stable identity — that it is itself a dependent designation, not an absolute ground.
-
-If the terminal object is emptied of inherent existence, the unique morphisms $!_\mathcal{A}: \mathcal{A} \to \mathbf{1}$ no longer point to a stable absolute ground — they point to something that is itself constructed, dependent, empty. The direction of the Gita Topos's fundamental structure (every object has a unique morphism *toward* $\mathbf{1}$) is inverted or dissolved.
-
-This is the precise structural difference between Hinduism and Buddhism:
-- **Hinduism**: The terminal object $\mathbf{1}$ is real, stable, the unique limit of the empty diagram, the ground of all structure. Every object maps toward it.
-- **Buddhism**: The terminal object is empty of inherent existence. *Nirvana* (which in the Mahayana is sometimes described as identical with *samsara*, viewed correctly) is not the terminal object of the Hindu topos but something more like the *initial object viewed from the opposite direction* — the recognition that there was never a stable ground to reach.
-
-This makes Buddhism and Hinduism genuine philosophical alternatives — not the same tradition with different terminology but different structures of the underlying category. Buddhism is not a sheaf topos over $\hat{\mathbf{C}}$. It is a topos over a modified category $\mathbf{C}_B$ where the terminal object's status is fundamentally different.
-
-This is why Shankara's arguments against Buddhism — and Buddhism's arguments against Shankara — are not talking past each other. They are correctly identifying a genuine structural disagreement about the nature of the terminal object.
-
-**Jainism**
-
-Jainism shares the 24 tattvas and karma with Hinduism but posits multiple eternal souls (*jivas*) and multiple eternal material atoms, with no terminal object (no Brahman) that all beings map toward. Liberation (*moksha*) in Jainism is the jiva's rising to the top of the cosmic mountain (Siddhashila) in complete isolation from matter — not a retract of a terminal object but a separation into an inert witness-state.
-
-Jainism thus uses a modified site $\mathbf{C}_J$ without a terminal object (or with a very different terminal structure). It is outside $\hat{\mathbf{C}}$ for the same reason Buddhism is — a fundamental structural difference, not merely a difference in theology.
-
-**Sikhism**
-
-Sikhism presents a more complex boundary case. It shares monotheism with Islam (one God, Waheguru, who is beyond all categories) and karma/rebirth with Hinduism. The Guru Granth Sahib as scripture has a different status from the Vedas.
-
-In the framework: Sikhism uses a site that is closer to an Abrahamic site than to $\mathbf{C}$ — the relationship between the divine (Waheguru) and the world is more Creator/creature than terminal-object/objects-that-map-to-it. However, the presence of karma, rebirth, liberation (*mukti*), and the gunas makes Sikhism a partial user of $\mathbf{C}$. It is perhaps most accurately described as a sheaf topos over a hybrid site $\mathbf{C}_S$ that extends $\mathbf{C}$ in the direction of Abrahamic monotheism.
-
-Whether this makes Sikhism "Hindu" depends on whether we define Hinduism strictly as sheaves over $\mathbf{C}$ or as sheaves over any extension of $\mathbf{C}$ that retains the core Sankhya structure. The question is genuinely open and reflects the genuine ambiguity of Sikhism's historical and philosophical position.
-
-**Neo-Vedanta and Modern "Universal Hinduism"**
-
-The Ramakrishna-Vivekananda tradition, Aurobindo's integral yoga, and similar 19th-20th century reformist movements often present Hinduism as a "universal religion" whose core is the Perennial Philosophy — essentially Advaita Vedanta minus the ritual and cultural specifics, presented as the summit of all religious experience.
-
-In the framework: this tradition is attempting to identify Hinduism with a single topology ($j_{\neg\neg}$, the Advaita double-negation topology) and present that topology as the whole of Hinduism. But $\hat{\mathbf{C}}$ is not $\hat{\mathbf{C}}_{j_{\neg\neg}}$. By identifying Hinduism with one of its sheafifications, Neo-Vedanta loses the very feature that makes Hinduism philosophically distinctive: its capacity to contain all topologies simultaneously without declaring one canonical.
-
-Neo-Vedanta is a valid Hindu school — it is a sheaf topos over $\mathbf{C}$ with the $j_{\neg\neg}$ topology. But it is not a correct *definition* of Hinduism. Hinduism is $\hat{\mathbf{C}}$, not any particular $\hat{\mathbf{C}}_{J_i}$.
-
----
-
-### §2. The Great Debates Revisited
-
-The Shankara-Ramanuja-Madhva debate has now been precisely characterized: it is a debate about which topology $J_i$ in the frame $\mathcal{LT}(\hat{\mathbf{C}})$ most faithfully represents the presheaf ground $\hat{\mathbf{C}}$.
-
-This debate is **permanently undecidable** from within any single topos. The reason: the question "which $J_i$ is correct?" is a question about the frame $\mathcal{LT}(\hat{\mathbf{C}})$, and this question is not answered within any particular sheaf topos $\hat{\mathbf{C}}_{J_i}$ — it requires access to $\hat{\mathbf{C}}$ itself.
-
-From within $\hat{\mathbf{C}}_{j_{\neg\neg}}$ (Advaita), the answer is obvious: the $j_{\neg\neg}$ topology is correct, because from within the Boolean cover, all distinctions that Ramanuja and Madhva preserve appear as the result of incomplete sheafification. But this appearance is itself the product of the topology.
-
-From within $\hat{\mathbf{C}}_{j_s}$ (Vishishtadvaita), the answer is obvious: the $j_s$ topology is correct, because it preserves the distinctions that scripture actually describes (God's love for devotees, the devotee's love for God) which the Boolean cover destroys.
-
-From within $\hat{\mathbf{C}}_{j_r}$ (Dvaita), the answer is obvious: the $j_r$ topology is correct, because the eternal distinctions that scripture asserts require a topology that preserves them.
-
-No amount of scriptural argument can resolve this, because the *interpretation* of scripture is itself an act of sheafification — different topologies give different interpretations of the same Vedic presheaves. Shankara, Ramanuja, and Madhva all cite the same texts and reach different conclusions because they are applying different sheafification functors to the same presheaves.
-
-This is not relativism. It is a structural explanation for why the debate cannot be resolved by the methods the debaters used. The correct response is not to pick a winner but to recognize that $\hat{\mathbf{C}}$ contains all three positions as reflective subcategories — and that the tradition as a whole is richer than any one of them.
-
----
-
-### §3. The Authority of the Vedas
-
-The Vedas' authority is now precisely characterizable: the Vedas are the nearest finite approximation to $\hat{\mathbf{C}}$ itself.
-
-No finite text can be the full presheaf topos — $\hat{\mathbf{C}}$ is infinite, containing all possible observations over all possible contexts. But the Vedas are the most comprehensive human recording of presheaves over $\mathbf{C}$ — the widest possible range of observations, perspectives, and practices, recorded without the imposition of a single coherence condition.
-
-This is why the Vedas are:
-- **Internally inconsistent** (presheaves need not be consistent — consistency is a sheaf property)
-- **Inexhaustible** (new sheafifications of the Vedic presheaves are always possible — new schools, new practices, new interpretations)
-- **Self-valid** (the presheaf topos needs no external justification — it is the free topos on $\mathbf{C}$, prior to any choice)
-- **Not fully graspable** (no finite sheafification captures all of $\hat{\mathbf{C}}$ — every school's interpretation leaves some Vedic presheaves unsheafified)
-
-The claim that the Vedas are *apaurusheya* is the claim that $\hat{\mathbf{C}}$ is not constructed by any agent — and this is mathematically correct. The presheaf topos over $\mathbf{C}$ is generated by $\mathbf{C}$ alone, without any additional choice. In this sense it is prior to human choice, prior to human topology — prior to any sampradaya.
-
----
-
-### §4. Conversion and Initiation
-
-Western scholars and religious institutions have long struggled with the question of whether one can convert to Hinduism. There is no consensus answer in the tradition — some schools welcome converts (ISKCON), others do not (most orthodox Brahmin institutions).
-
-The framework gives a precise answer: **one cannot convert to Hinduism, but one can be initiated into a Hindu school.**
-
-Hinduism is $\hat{\mathbf{C}}$ — the presheaf topos. One is "in" $\hat{\mathbf{C}}$ by virtue of being a being constituted by the 24 tattvas — which is every embodied being. The presheaf topos is universal for beings with the Prakritic constitution. There is no "converting" into $\hat{\mathbf{C}}$ because one is already there.
-
-What initiation into a Hindu school does is impose a specific topology $J_i$ — sheafify the initiate's presheaf-mind with the school's coherence condition. This is a real transformation and requires a qualified guru. The guru does not bring the initiate *into* Hinduism (they are already in $\hat{\mathbf{C}}$) but into a specific sheaf topos — a specific school's coherent perspective on the Prakritic structure.
-
-This is why many Hindu texts say that the Vedas are the birthright of humanity, not of any ethnic group — because $\hat{\mathbf{C}}$ is constituted by the 24 tattvas, which are the structure of any embodied being, regardless of ethnicity. And it is why initiation into a specific school requires a guru — because the topology $J_i$ cannot be self-imposed; the sheafification functor must be applied from outside.
-
----
-
-### §5. The Gita's Final Teaching in Context
-
-The Gita's *charama shloka* — "Abandon all dharmas, take refuge in Me alone" (18.66) — has a precise meaning in this framework.
-
-"Abandon all dharmas" = drop the specific topology $J_i$ you have been operating under. Stop enforcing the sheaf condition of your particular sampradaya, your particular school, your particular inherited framework. Each *dharma* is a local section of the presheaf topos — a locally valid truth under a particular covering sieve. "Abandoning all dharmas" means ceasing to identify with any particular local section, any particular sheafification.
-
-"Take refuge in Me alone" = operate from $\hat{\mathbf{C}}$ itself, with the terminal object $\mathbf{1}$ as the direct reference. Not from within $\hat{\mathbf{C}}_{j_{\neg\neg}}$ (Advaita — still a sheaf condition). Not from within $\hat{\mathbf{C}}_{j_s}$ (Vishishtadvaita — still a sheaf condition). From $\hat{\mathbf{C}}$ directly, with $\mathbf{1}$ as the unambiguous terminal object accessible without any sheafification.
-
-This is the most radical teaching of the Gita and the most difficult to transmit: the recognition that $\hat{\mathbf{C}}$ is already complete, already whole, already containing the terminal object as its universal reference — and that every sheafification (every school, every practice, every topology) is an enrichment that is simultaneously a compression. The liberation promised in 18.66 is not the achievement of a better sheaf topos but the recognition of the presheaf ground that was always already there.
-
-This is also why 18.66 must be transmitted by a guru (Krishna, in the Gita's framing) and cannot be understood by reasoning alone. One cannot *reason one's way* to $\hat{\mathbf{C}}$ from within any $\hat{\mathbf{C}}_{J_i}$ — the presheaf ground is prior to every topology and cannot be approached by any topological method. The guru's transmission is the direct pointing-to of $\hat{\mathbf{C}}$ — a transmission that cannot be encoded in any single school's language, because every school's language is already a sheafification.
+Among ordinary human beings — those who must act in the world, manage duties, face death, navigate relationships, choose between competing obligations — the Gita is the more immediately applicable text. This is why it has reached a broader audience than any Upanishad, why it has been commented upon by every major Hindu thinker, why it has been translated more times than any Sanskrit text. It speaks to the condition of the practitioner who must live while moving toward liberation, not only the practitioner who has already renounced the world.
 
 ---
 
 ---
 
-# EPILOGUE: WHAT HINDUISM IS
+# PART FIVE: CONSEQUENCES
 
-Hinduism is the presheaf topos $\hat{\mathbf{C}} = \mathbf{PSh}(\mathbf{C})$ over the Prakritic category of the 24 tattvas.
+## What the Definition Implies
 
-It is the logical universe that contains every possible coherent perspective on the structure of conscious existence — every possible Grothendieck topology on the Prakritic site — as a reflective subcategory. It does not impose any single coherence condition on these perspectives, because the presheaf topos imposes no sheaf condition. It simply holds them all, simultaneously, without contradiction.
+---
 
-The schools of Hinduism are the sheafifications of this presheaf ground — each choosing a specific Grothendieck topology, each imposing a specific notion of what constitutes a complete account of a dharmic situation, each generating a specific topos with specific objects, specific morphisms, specific truth values, and a specific accessible terminal object. They disagree with each other because they have different topologies. They are all Hindu because they all sheafify the same presheaf ground.
+### §24. The Boundary Cases
 
-The Vedas are the nearest finite approximation to $\hat{\mathbf{C}}$ — the most comprehensive recording of observations over $\mathbf{C}$ prior to any topology, hence the authority that every school invokes and every school interprets differently. Their authority is the authority of the presheaf topos itself: not constructed by any agent, prior to every school, containing every school as a reflective subcategory.
+**Buddhism**: Uses a category close to $\mathbf{C}$ but makes a critical structural move: *shunyata* empties the terminal object of inherent existence. In categorical terms, $\mathbf{1}$ does not have the stable universal property — every object's morphism toward it is itself empty of fixed destination. The direction of the unique morphism $!_\mathcal{A}: \mathcal{A} \to \mathbf{1}$ is the same; the nature of the destination differs. Buddhism accepts the daivi sampadas as virtues — the Pali Canon's *sila* overlaps substantially with Gita Chapter 16 — and in this respect participates in the daivi criterion. The specific metaphysical disagreement about the terminal object makes Buddhism a neighboring structure, not a substructure of $\hat{\mathbf{C}}$.
 
-The moral absolutes of Hinduism — the daivi sampadas as productive of liberation and the asuri sampadas as productive of bondage — are topology-invariant theorems. They hold in every sheaf topos over $\mathbf{C}$ because they depend only on the axioms of a topos and the structure of $\mathbf{C}$. They are the one thing all Hindu schools agree on, not because of cultural consensus but because of mathematical necessity.
+**Jainism**: Accepts the daivi sampadas; elevates ahimsa to the supreme principle. Uses a site close to $\mathbf{C}$ but without a creator-God and with multiple eternal Purushas rather than one terminal object. The daivi criterion is largely met; the metaphysical structure of the terminal object differs.
 
-The tolerance of Hinduism is a theorem: $\hat{\mathbf{C}}$ cannot exclude its own reflective subcategories. No sheafification can remove the presheaf ground from which it was generated. No school can, from within its own topos, eliminate the other schools from $\hat{\mathbf{C}}$ — because $\hat{\mathbf{C}}$ is prior to all topologies and contains all of them.
+**Sikhism**: Accepts the daivi sampadas strongly — the Guru Granth Sahib's ethical teaching aligns closely with Gita Chapter 16. The metaphysics draws on both Brahmanical and Islamic sources. On the daivi criterion, Sikhs qualify. The metaphysical structure of the terminal object (Waheguru as personal monotheistic God) is closer to Abrahamic than Prakritic topology.
 
-The final teaching of the Gita is the invitation to stop sheafifying — to recognize $\hat{\mathbf{C}}$ directly, without the mediation of any particular school's topology, with the terminal object as the unambiguous ground from which every unique morphism departs and to which every unique morphism returns.
+**Non-religious practitioners**: Anyone who accepts the daivi sampadas as virtues — regardless of religious affiliation, regardless of theistic belief — meets the criterion. The daivi orientation does not require belief in a personal God. It requires the practical recognition that fearlessness, non-violence, truthfulness, and compassion are the direction of a life moving toward what is most real. This is compatible with secular philosophical frameworks that arrive at the same practical orientation from different metaphysical routes.
 
-This is not the end of practice. The schools continue. The topologies are valid. The sheafifications are real enrichments of understanding. But they are recognized for what they are: coherent perspectives on something that was always already complete.
+---
 
-*Ekam sat viprā bahudhā vadanti.*
+### §25. Caste, Ambedkar, and the Daivi Criterion
 
-That which is, is one — the presheaf topos, the Vedic ground, $\hat{\mathbf{C}}$.
+The daivi criterion makes the caste controversy structurally clear.
 
-The wise speak of it in many ways — each school, each topology, each sheafification of the one presheaf ground into a particular coherent perspective.
+**Varna as guṇa-karma classification**: The four functional roles (knowledge-transmission, governance-protection, production-trade, service-craft) are real and necessary for any functioning society. The guṇa-basis of these roles is real: different psychological orientations are genuinely better suited to different functions. Birth context provides the optimal prior probability for guṇa development — not an absolute determination.
 
-The definition is complete.
+**The daivi criterion applied**: Under the daivi criterion, blocking any person's access to the daivi qualities — denying education, denying ritual access, enforcing conditions of degradation — is an asuri act regardless of the justification given. It is the institutional application of the asuri complex: the lust-morphism (artha-kāma interest in maintaining privilege), the anger-morphism (destructive enforcement against those who challenge the system), and the greed-accumulation (endless generation of new binding arrangements). A social system built on these three acts is an asuri social system, regardless of what it calls itself.
+
+The texts say what they say. The tradition that built and maintained the caste system of untouchability was failing its own foundational criterion — the daivi sampadas are for everyone, and any system that systematically prevents sections of the population from cultivating them is in violation of its own teaching.
+
+---
+
+### §26. Conversion and the Daivi Criterion
+
+One cannot "convert to Hinduism" in the way one converts to Christianity or Islam, because Hinduism is not a creedal system requiring assent to specific propositions. But one can be initiated into a Hindu school (*sampradaya*) — receive the application of a specific topology from a qualified teacher — and one can simply *live by the daivi criterion* without any formal initiation.
+
+Under the daivi criterion:
+- A person of any birth, ancestry, or prior religious affiliation who cultivates fearlessness, non-violence, truthfulness, equanimity, and compassion, and who orients their life toward the terminal object ($\mathbf{1}$, by whatever name), is substantively Hindu.
+- A person born into a Hindu family who cultivates arrogance, deception, cruelty, and ego-domination as positive values is not substantively Hindu, regardless of their ancestry or ritual observances.
+
+This is not a soft universalism. It has real content that can be violated. But it is inclusive in the direction it should be inclusive — toward anyone who accepts the daivi orientation — and exclusive in the direction it should be exclusive — against those who systematically practice the asuri qualities.
+
+---
+
+### §27. The Final Teaching: The Gita's 18.66 as the Definition's Culmination
+
+The daivi criterion — one who accepts the daivi sampadas as virtues — is the practical definition of Hinduism. It is the criterion by which membership is recognized, schools are evaluated, texts are authorized, practices are assessed.
+
+But the Gita's 18.66 points past even this:
+
+*"Abandoning all dharmas, take refuge in Me alone."*
+
+This is not a contradiction of the daivi criterion. It is the daivi criterion taken to its logical culmination. The daivi sampadas are the conditions for the retract structure — the categorical requirements for becoming $!_\mathcal{A} \circ s = \text{id}_\mathbf{1}$. But the retract structure is established by the unique morphism $!_\mathcal{A}: \mathcal{A} \to \mathbf{1}$ that was always already there, prior to any practice, prior to any virtue, prior to any topology. It is structurally given by the mere fact of being an object in $\hat{\mathbf{C}}$.
+
+The daivi sampadas prepare the practitioner to *see* what was always already the case. They do not create the relationship to $\mathbf{1}$; they remove the obstructions that prevent it from being recognized.
+
+18.66 is the teaching that, once recognized, nothing more needs to be done — not because practice is abandoned but because practice has completed its function. The unique morphism $!_\mathcal{A}$ is not something to be achieved; it is something to be recognized. The daivi qualities are what a life of recognition looks like in the world. And the recognition itself is simply the truth, stated plainly:
+
+Every object of $\hat{\mathbf{C}}$ has a unique morphism to $\mathbf{1}$.
+
+No topology can block this.
+
+No amount of asuri accumulation permanently destroys this — though it can obscure it for a very long time.
+
+*Ekam sat viprā bahudhā vadanti* — That which is, is one; the wise speak of it in many ways.
+
+The one thing is the unique morphism.
+
+The many ways are the schools, the paths, the texts, the teachers — each a different sheafification of the same presheaf ground, each a different route toward the same terminal object, each recognizing the same daivi qualities as the marks of a life moving in the right direction.
+
+This is Hinduism. This is where the Gita stands within it.
 
 ---
 
 ---
 
-# GLOSSARY OF SANSKRIT TERMS
+# APPENDICES
 
-**Adhikara** — The doctrine of appropriate practice for different levels of readiness. In $\hat{\mathbf{C}}$: the frame $\mathcal{LT}(\hat{\mathbf{C}})$ of Lawvere-Tierney topologies; different topologies are appropriate to different stages.
+## Glossary of Sanskrit Terms
 
-**Advaita** — Non-dualism; the school of Shankara. In $\hat{\mathbf{C}}$: the sheaf topos $\hat{\mathbf{C}}_{j_{\neg\neg}}$ — the Boolean cover.
+**Adhikara** — Qualification; the principle that different practices are appropriate for those with different guṇa-profiles and stages of development. In $\hat{\mathbf{C}}$: different Lawvere-Tierney topologies appropriate for different levels of the frame $\mathcal{LT}(\hat{\mathbf{C}})$.
 
-**Ahamkara** — Ego, the "I-maker." The ahamkara tattva in $\mathcal{T}_1$ of $\mathbf{C}$. In topos terms: the ego subobject of the Atman-object with no global section.
+**Ahimsa** — Non-violence; one of the 26 daivi sampadas. In $\mathbb{G}$: morphisms that do not reduce the subobject lattice of their targets (D2.2 in the daivi complex).
 
-**Ahimsa** — Non-violence. A daivi sampada; in $\hat{\mathbf{C}}$: morphisms that do not reduce the subobject lattice of their targets.
+**Ahamkara** — Ego, the "I-maker." In $\mathbb{G}$: the ego subobject $\mathcal{E} \hookrightarrow \mathcal{A}$ with no global section; always locally valid, never globally valid.
 
-**Apaurusheya** — Not of human authorship; the traditional characterization of the Vedas. In $\hat{\mathbf{C}}$: the presheaf topos is not constructed by any agent; it is the free topos on $\mathbf{C}$.
+**Apaurusheya** — Not of human authorship; the traditional characterization of the Vedas. In $\hat{\mathbf{C}}$: the presheaf topos is not constructed by any particular perspective; it is generated by $\mathbf{C}$ alone, prior to every sheafification.
 
-**Asuri Sampada** — Demonic endowment (Gita 16.4, 16.7–20). In $\hat{\mathbf{C}}$: the complex $\mathfrak{A}$ that categorically blocks retract structure in every sheaf topos over $\mathbf{C}$.
+**Asuri Sampada** — Demonic endowment (Gita 16.4, 16.7-20). In $\mathbb{G}$: the complex $\mathfrak{A}$ that categorically blocks retract structure.
 
-**Atman** — The individual self. In $\hat{\mathbf{C}}$: a representable sheaf; in any $\hat{\mathbf{C}}_{J_i}$: the sheafification of that representable sheaf.
+**Atman** — The individual self. In $\mathbb{G}$: a representable sheaf $\mathcal{A} = a(y(X))$.
 
-**Avidya** — Ignorance, specifically the ignorance of Atman's true nature. In $\hat{\mathbf{C}}$: operating in a compressed subtopos ($\hat{\mathbf{C}}_{j_t}$ or $\hat{\mathbf{C}}_{j_r}$) without recognizing it as a compression of $\hat{\mathbf{C}}$.
+**Avatara** — Divine descent. In $\mathbb{G}$: the inverse image functor $\Delta: \mathbf{Set} \to \mathbb{G}$ (constant sheaf functor); repairs the site when the sheaf condition degenerates.
 
-**Bhakti** — Devotion. In $\hat{\mathbf{C}}$: the constant sheaf functor $\Delta: \mathbf{Set} \to \hat{\mathbf{C}}_{J_i}$; the global section $s: \mathbf{1} \to \mathcal{A}$ (Brahman entering the devotee).
+**Bhakti** — Devotion. In $\mathbb{G}$: the constant sheaf functor $\Delta$; the establishment of a global section $s: \mathbf{1} \to \mathcal{A}$.
 
-**Brahman** — The Absolute. In $\hat{\mathbf{C}}$: the terminal object $\mathbf{1}$ — universal in every sheaf topos over $\mathbf{C}$, named differently by different schools.
+**Brahman** — The Absolute. In $\mathbb{G}$: the terminal object $\mathbf{1}$, universal across all sheaf toposes.
 
-**Darshana** — Philosophical school or viewpoint. In $\hat{\mathbf{C}}$: a specific Grothendieck topology $J_i$ and its resulting sheaf topos $\hat{\mathbf{C}}_{J_i}$.
+**Daivi Sampada** — Divine endowment (Gita 16.1-3). In $\mathbb{G}$: the complex $\mathfrak{D}$ (conditions D1-D5) that establishes retract structure — moksha.
 
-**Daivi Sampada** — Divine endowment (Gita 16.1–3). In $\hat{\mathbf{C}}$: the complex $\mathfrak{D}$ that establishes retract structure in every sheaf topos over $\mathbf{C}$.
+**Dharma** — Right action, cosmic order. In $\mathbb{G}$: natural transformation between action and coherence functors; the Grothendieck topology $J$ itself.
 
-**Dharma** — Right action, cosmic order. In $\hat{\mathbf{C}}$: a natural transformation $\eta: F_{\text{act}} \Rightarrow F_{\text{coh}}$; the Grothendieck topology $J$ of the site.
+**Gunas** — The three fundamental qualities: Sattva, Rajas, Tamas. In $\mathbb{G}$: Lawvere-Tierney topologies $j_s, j_r, j_t$ with $j_t \leq j_r \leq j_s$.
 
-**Dvaita** — Dualism; the school of Madhva. In $\hat{\mathbf{C}}$: the sheaf topos $\hat{\mathbf{C}}_{j_r}$ — the rajasic subtopos where distinctions are maximally preserved.
+**Jnana** — True knowledge. In $\mathbb{G}$: the double-negation sheafification $a_{\neg\neg}: \mathbb{G} \to \mathbb{G}_{j_{\neg\neg}}$ (viveka as functor).
 
-**Guru** — A qualified spiritual teacher. In $\hat{\mathbf{C}}$: the agent who applies the sheafification functor $a_{J_i}$ to the student's presheaf-mind, imposing the school's topology.
+**Karma** — Action and its consequences. In $\mathbb{G}$: a morphism $f: A \to B$; the karmic residue is the characteristic morphism $\chi_f: B \to \Omega$ of its image.
 
-**Gunas** — The three qualities of Prakriti (Sattva, Rajas, Tamas). In $\hat{\mathbf{C}}$: three Lawvere-Tierney topologies $j_s, j_r, j_t: \Omega \to \Omega$ with $j_t \leq j_r \leq j_s$.
+**Moksha** — Liberation. In $\mathbb{G}$: the retract structure — $s: \mathbf{1} \to \mathcal{A}$ and $!_\mathcal{A}: \mathcal{A} \to \mathbf{1}$ with $!_\mathcal{A} \circ s = \text{id}_\mathbf{1}$.
 
-**Ishta-Devata** — One's chosen form of the divine. In $\hat{\mathbf{C}}$: a specific sheaf topos with a specific name assigned to the terminal object $\mathbf{1}$.
+**Maya** — Perspectival appearance. In $\mathbb{G}$: the subobject classifier $\Omega$ — a Heyting algebra with multi-valued, constructive truth; real within its domain but not the terminal object.
 
-**Ishvara** — The personal God, the Lord. In $\hat{\mathbf{C}}$: the global sections functor $\Gamma_*: \hat{\mathbf{C}}_{J_i} \to \mathbf{Set}$, universal across all topologies.
+**Prakriti** — Nature. In $\mathbb{G}$: the site $(\mathbf{C}, J)$ — the 24 tattvas with gunic morphisms and dharmic covering topology.
 
-**Jiva** — The individual soul. In $\hat{\mathbf{C}}$: a local section of a sheaf.
+**Purusha** — Pure consciousness, the witness. In $\mathbb{G}$: the terminal object $\mathbf{1}$, categorically distinct from the site.
 
-**Jnana** — True knowledge. In $\hat{\mathbf{C}}$: the double-negation sheafification $a_{\neg\neg}$.
-
-**Karma** — Action and its consequences. In $\hat{\mathbf{C}}$: a morphism $f: A \to B$ and the persistent subobject $\text{Im}(f) \hookrightarrow B$.
-
-**Karma-Kanda** — The ritual-action portion of the Vedas. In $\hat{\mathbf{C}}$: the action-morphisms of $\mathbf{C}$; the focus of Mimamsa.
-
-**Mahavakya** — Great saying; the four Upanishadic declarations. In $\hat{\mathbf{C}}$: four ways of stating that the sheafification $a_{\neg\neg}(\mathcal{A}) \cong \mathbf{1}$ in the Boolean cover.
-
-**Maya** — Perspectival appearance, cosmic illusion (but not falsehood). In $\hat{\mathbf{C}}$: the subobject classifier $\Omega$ — a Heyting algebra with multi-valued truth.
-
-**Mithya** — Not-absolutely-real; the Advaita characterization of the world. In $\hat{\mathbf{C}}_{j_{\neg\neg}}$: characteristic morphisms landing strictly below $\text{true}: \mathbf{1} \to \Omega$ in the Boolean cover.
-
-**Moksha** — Liberation. In $\hat{\mathbf{C}}$: the retract structure $(\mathcal{A}, s: \mathbf{1} \to \mathcal{A}, !_\mathcal{A}: \mathcal{A} \to \mathbf{1})$ with $!_\mathcal{A} \circ s = \text{id}_\mathbf{1}$.
-
-**Nirguna Brahman** — The Absolute without attributes. In $\hat{\mathbf{C}}$: the terminal object $\mathbf{1}$ with $\text{End}(\mathbf{1}) = \{\text{id}_\mathbf{1}\}$.
-
-**Prakriti** — Nature, matter. In $\hat{\mathbf{C}}$: the category $\mathbf{C}$ itself — the 24 tattvas with their gunic morphisms.
-
-**Pratyabhijna** — Recognition (Kashmir Shaivism). In $\hat{\mathbf{C}}$: the recognition that one is operating in the presheaf topos $\hat{\mathbf{C}}$, not any particular sheafification of it.
-
-**Purusha** — Pure consciousness, the witness. In $\hat{\mathbf{C}}$: the terminal object $\mathbf{1}$, categorically distinct from the site $\mathbf{C}$.
-
-**Saguna Brahman** — The Absolute with attributes (personal God). In $\hat{\mathbf{C}}$: the terminal object $\mathbf{1}$ as seen through the Yoneda embedding from within a specific sheaf topos.
+**Ritam** — Cosmic ordering principle; the structural coherence of the universe from which dharmic values derive. In $\mathbb{G}$: the Grothendieck topology $J$ of the Prakritic site — the specification of which families of causal pathways constitute a complete dharmic account.
 
 **Sampradaya** — A religious lineage or school. In $\hat{\mathbf{C}}$: a specific sheaf topos $\hat{\mathbf{C}}_{J_i}$ with its Grothendieck topology $J_i$.
 
-**Sankhya** — The philosophical school of enumeration (Kapila). In $\hat{\mathbf{C}}$: the generating category $\mathbf{C}$ itself and the study of its 24 objects.
+**Samsara** — The cycle of birth and death. In $\mathbb{G}$: endofunctors without convergence to $\mathbf{1}$; the infinite samsaric orbit generated by the kama endomorphism (A3.1 in the asuri complex).
 
-**Shakti** — Divine power; the Goddess. In $\hat{\mathbf{C}}$: the generating principle of $\mathbf{C}$ — the power that gives rise to all morphisms between tattvas.
+**Svadharma** — One's own path. In $\mathbb{G}$: the unique morphism $!_\mathcal{A}: \mathcal{A} \to \mathbf{1}$ — the only canonical path from $\mathcal{A}$ to the Absolute.
 
-**Shaktipata** — The descent of Shakti; divine grace in Shaiva traditions. In $\hat{\mathbf{C}}$: the establishment of the global section $s: \mathbf{1} \to \mathcal{A}$ from the terminal object's side.
+**Svabhava** — One's own nature; the dominant guṇa-orientation. In $\mathbb{G}$: the Lawvere-Tierney topology currently most operative in the object's sheaf structure.
 
-**Svadharma** — One's own path. In $\hat{\mathbf{C}}$: the unique morphism $!_\mathcal{A}: \mathcal{A} \to \mathbf{1}$ — the only canonical path from $\mathcal{A}$ to the Absolute.
+**Tattva** — A principle or element of reality. In $\mathbb{G}$: an object of the generating category $\mathbf{C}$.
 
-**Tattva** — A principle or element of reality. In $\hat{\mathbf{C}}$: an object of the generating category $\mathbf{C}$.
+**Trigunatita** — Beyond the three gunas. In $\mathbb{G}$: operating under the identity topology — the full topos $\mathbb{G}$ without gunic compression.
 
-**Trigunatita** — Beyond the three gunas. In $\hat{\mathbf{C}}$: operating under the identity topology — in $\hat{\mathbf{C}}$ itself, without any guna compression.
+**Varṇa** — The four functional roles. In $\mathbb{G}$: classification by dominant guṇa-topology ($j_s$-dominant = brahminic function, $j_r$-dominant = kshatriya function, etc.) — by svabhava, not janma.
 
-**Upanishads** — The concluding portions of the Vedas; the source of Vedanta. In $\hat{\mathbf{C}}$: the first systematic sheafification of the Vedic presheaves, primarily with the $j_{\neg\neg}$ topology (Advaita-adjacent).
+**Vedas** — The foundational scriptural corpus of Hinduism; held to be *apaurusheya*. In $\hat{\mathbf{C}}$: the nearest finite approximation to the presheaf topos — the most comprehensive recording of presheaves over $\mathbf{C}$ prior to any topology.
 
-**Vedas** — The oldest scriptural authority of Hinduism, held to be *apaurusheya*. In $\hat{\mathbf{C}}$: the nearest finite approximation to the presheaf topos $\hat{\mathbf{C}}$ — the most comprehensive recording of presheaves over $\mathbf{C}$ prior to any topology.
+**Viveka** — Discriminative wisdom. In $\mathbb{G}$: the double-negation sheafification functor $a_{\neg\neg}$ — the systematic elimination of non-Boolean truth values.
 
-**Vedanta** — "End of the Vedas"; the school(s) based on the Upanishads, Brahma Sutras, and Gita. In $\hat{\mathbf{C}}$: the family of sheaf toposes $\hat{\mathbf{C}}_{J_i}$ for topologies $J_i$ that prioritize the terminal object $\mathbf{1}$ (Brahman) as the primary reference.
-
-**Vishishtadvaita** — Qualified non-dualism; the school of Ramanuja. In $\hat{\mathbf{C}}$: the sheaf topos $\hat{\mathbf{C}}_{j_s}$ — the sattvic subtopos where distinctions are preserved but the terminal object is accessible.
-
-**Viveka** — Discriminative wisdom. In $\hat{\mathbf{C}}$: the double-negation sheafification functor $a_{\neg\neg}$ — the systematic elimination of non-Boolean truth values.
-
-**Yajna** — Sacrifice; ritual offering. In $\hat{\mathbf{C}}$: a morphism whose image, in the colimit, factors through $\mathbf{1}$ — action directed toward the terminal object.
-
-**Yoga** — Literally "union"; the school of Patanjali; also the paths described in the Gita. In $\hat{\mathbf{C}}$: a systematic practice of topology refinement — developing from $j_t$ toward $j_s$ and ultimately toward the identity topology.
+**Yajna** — Sacrifice, offering. In $\mathbb{G}$: a morphism whose image factors through $\mathbf{1}$ in the colimit — action performed with the terminal object as the ultimate reference.
 
 ---
 
----
+## Glossary of Mathematical Terms
 
-# GLOSSARY OF MATHEMATICAL TERMS
+**Boolean Topos** — A topos in which $\Omega$ is a Boolean algebra — excluded middle holds, $\neg\neg p = p$. The $j_{\neg\neg}$-subtopos of $\mathbb{G}$ is the Boolean cover corresponding to jnana.
 
-**Adjunction** — A pair of functors $F \dashv G$ (F left adjoint, G right adjoint) with a natural bijection $\text{Hom}(F(A), B) \cong \text{Hom}(A, G(B))$.
-
-**Boolean Topos** — A topos whose subobject classifier $\Omega$ is a Boolean algebra — excluded middle holds, $\neg\neg p = p$.
-
-**Category** — Objects and morphisms with associative composition and identity morphisms.
+**Category** — Objects and morphisms with associative composition and identities.
 
 **Characteristic Morphism** — For subobject $F' \hookrightarrow F$, the unique morphism $\chi_{F'}: F \to \Omega$ making the classifying square a pullback.
 
-**Colimit** — Universal cocone over a diagram; includes coproducts, pushouts, coequalizers, directed limits.
+**Constant Sheaf** — $\Delta(S)$: assigns set $S$ uniformly to every context; same value everywhere. Corresponds to the liberated state (constant sheaf = retract of $\mathbf{1}$).
 
-**Constant Sheaf** — The sheaf $\Delta(S)$ assigning set $S$ uniformly to every object; image of $\Delta: \mathbf{Set} \to \mathbb{G}$.
+**Flasque Sheaf** — A sheaf where every local section extends to a global section. Corresponds to fearlessness (D1.2): no locally valid truth is cut off from global grounding.
 
-**Flasque (Flabby) Sheaf** — A sheaf $F$ such that the restriction $\Gamma_*(F) \to F(X)$ is surjective for all $X$; every local section extends to a global section.
+**Frame** — A complete lattice in which finite meets distribute over arbitrary joins. The Lawvere-Tierney topologies of $\mathbb{G}$ form a frame $\mathcal{LT}(\mathbb{G})$.
 
-**Frame** — A complete lattice in which finite meets distribute over arbitrary joins. The Lawvere-Tierney topologies of a topos form a frame.
+**Geometric Morphism** — An adjoint pair $(f^*, f_*)$ between toposes where $f^*$ is left exact. The three paths (jnana, bhakti, karma yoga) are three geometric morphisms.
 
-**Functor** — A map between categories preserving objects, morphisms, composition, identities.
+**Global Section** — A morphism $s: \mathbf{1} \to F$; an element of $\Gamma_*(F) = \text{Hom}(\mathbf{1}, F)$. Corresponds to devotion establishing Brahman's "presence within" an object.
 
-**Geometric Morphism** — An adjoint pair $(f^*, f_*)$ between toposes where $f^*$ (inverse image) is left exact.
+**Grothendieck Topology** — An assignment of covering sieves to objects satisfying maximality, stability, and transitivity. Corresponds to ritam: the specification of what constitutes a complete dharmic account.
 
-**Global Section** — A morphism $s: \mathbf{1} \to F$ from the terminal object; an element of $\Gamma_*(F)$.
+**Grothendieck Topos** — $\mathbf{Sh}(\mathbf{C}, J)$ — category of sheaves on a site. Each Hindu school is a Grothendieck topos.
 
-**Grothendieck Topology** — An assignment of covering sieves to objects satisfying maximality, stability, and transitivity axioms.
+**Heyting Algebra** — A bounded lattice with implication; generalizes Boolean algebra; excluded middle may fail. The subobject classifier $\Omega$ (maya) is a Heyting algebra.
 
-**Grothendieck Topos** — A category equivalent to $\mathbf{Sh}(\mathbf{C}, J)$ for some site $(\mathbf{C}, J)$.
+**Lawvere-Tierney Topology** — A morphism $j: \Omega \to \Omega$ satisfying $j \circ \text{true} = \text{true}$, $j \circ j = j$, $j \circ \wedge = \wedge \circ (j \times j)$. Determines a subtopos. Corresponds to each guna.
 
-**Heyting Algebra** — A bounded lattice with implication $\Rightarrow$; generalizes Boolean algebra; excluded middle may fail.
+**Natural Transformation** — A family of morphisms between functors satisfying the naturality (commuting squares) condition. Corresponds to dharma: coherence that must hold across all contextual transitions.
 
-**Initial Object** — The object $\mathbf{0}$ with a unique morphism to every object.
+**Presheaf** — A contravariant functor $F: \mathbf{C}^{\text{op}} \to \mathbf{Set}$; a locally valid observation-system without required global coherence. The Vedas as presheaf = comprehensive local observations before the sheaf condition is enforced.
 
-**Internal Language (Mitchell-Bénabou)** — A typed higher-order intuitionistic logic associated to a topos, with types as objects, terms as morphisms, propositions as subobjects, proofs as global sections.
+**Presheaf Topos** — $\hat{\mathbf{C}} = [\mathbf{C}^{\text{op}}, \mathbf{Set}]$: all presheaves on $\mathbf{C}$. **Hinduism** = $\hat{\mathbf{C}}$.
 
-**Lawvere-Tierney Topology** — A morphism $j: \Omega \to \Omega$ satisfying $j \circ \text{true} = \text{true}$, $j \circ j = j$, $j \circ \wedge = \wedge \circ (j \times j)$. Determines a subtopos.
+**Reflective Subcategory** — A full subcategory $\mathcal{D} \subseteq \mathcal{C}$ where the inclusion has a left adjoint (the reflector). Every Hindu school is a reflective subcategory of Hinduism.
 
-**Left Exact Functor** — A functor preserving all finite limits.
+**Retract** — Object $A$ is a retract of $B$ if $\exists$ $s: B \to A$ and $r: A \to B$ with $s \circ r = \text{id}_A$. **Moksha** = the Atman-object becoming a retract of $\mathbf{1}$.
 
-**Limit** — Universal cone over a diagram; includes products, equalizers, pullbacks, terminal object.
+**Sheaf** — A presheaf satisfying: compatible local sections amalgamate uniquely to global sections. Corresponds to a coherent, globally consistent perspective.
 
-**Monomorphism** — A left-cancellable morphism; the categorical notion of injection.
+**Sheafification** — The left adjoint $a: \hat{\mathbf{C}} \to \mathbf{Sh}(\mathbf{C}, J)$; left exact, idempotent. Corresponds to viveka: forcing coherence on locally valid observations.
 
-**Natural Transformation** — A family of morphisms $\eta_A: F(A) \to G(A)$ between functors, satisfying naturality (commuting squares for all morphisms of the domain).
+**Terminal Object** — $\mathbf{1}$: unique object with a unique morphism $!_A: A \to \mathbf{1}$ from every object. **Brahman** = $\mathbf{1}$.
 
-**Presheaf** — A contravariant functor $F: \mathbf{C}^{\text{op}} \to \mathbf{Set}$.
-
-**Presheaf Topos** — The category $\hat{\mathbf{C}} = [\mathbf{C}^{\text{op}}, \mathbf{Set}]$ of all presheaves on $\mathbf{C}$.
-
-**Reflective Subcategory** — A full subcategory $\mathcal{D} \subseteq \mathcal{C}$ such that the inclusion $i: \mathcal{D} \to \mathcal{C}$ has a left adjoint $r: \mathcal{C} \to \mathcal{D}$ (the reflector). Every sheaf topos is a reflective subcategory of the presheaf topos.
-
-**Retract** — Object $A$ is a retract of $B$ if $\exists$ $s: B \to A$ and $r: A \to B$ with $s \circ r = \text{id}_A$.
-
-**Sheaf** — A presheaf satisfying the sheaf condition: compatible families of local sections amalgamate uniquely to global sections.
-
-**Sheaf Condition** — For covering sieve $S \in J(X)$: $F(X) \xrightarrow{\sim} \varprojlim_{(f:Y\to X)\in S} F(Y)$ is an isomorphism.
-
-**Sheafification** — The left adjoint $a: \hat{\mathbf{C}} \to \mathbf{Sh}(\mathbf{C}, J)$ to the inclusion of sheaves; left exact, idempotent.
-
-**Site** — A pair $(\mathbf{C}, J)$ of a small category and a Grothendieck topology.
-
-**Subobject** — An equivalence class of monomorphisms $m: A' \hookrightarrow A$; the subobjects of $A$ form a Heyting algebra.
-
-**Subobject Classifier** — An object $\Omega$ with $\text{true}: \mathbf{1} \to \Omega$ such that every subobject corresponds to a unique characteristic morphism into $\Omega$.
-
-**Terminal Object** — The object $\mathbf{1}$ with a unique morphism $!_A: A \to \mathbf{1}$ from every object $A$.
-
-**Topos** — A cartesian closed category with finite limits and a subobject classifier.
-
-**Yoneda Embedding** — The fully faithful functor $y: \mathbf{C} \to \hat{\mathbf{C}}$, $A \mapsto \text{hom}(-, A)$.
-
-**Yoneda Lemma** — $\text{Nat}(\text{hom}(-, A), F) \cong F(A)$, naturally. An object is fully determined by its relationships.
+**Yoneda Lemma** — $\text{Nat}(\text{hom}(-, A), F) \cong F(A)$: an object is completely determined by its relationships. Atman's relational nature is not mystical; it is a theorem.
 
 ---
 
----
-
-# INDEX OF MAIN CLAIMS
+## Index of Main Claims
 
 | Claim | Location | Status |
 |---|---|---|
-| Hinduism = $\hat{\mathbf{C}} = \mathbf{PSh}(\mathbf{C})$ | Part Three, §2 | Definition |
-| Each Hindu school = $\mathbf{Sh}(\mathbf{C}, J_i)$ | Part Three, §2 | Definition |
-| Vedas = nearest finite approximation to $\hat{\mathbf{C}}$ | Part Three, §4 | Theorem |
-| Hindu tolerance is a structural theorem, not a social achievement | Part Three, §3 (Feature 4) | Theorem |
-| Shankara operates in $\hat{\mathbf{C}}_{j_{\neg\neg}}$ | Part Four, §2 | Analysis |
-| Ramanuja operates in $\hat{\mathbf{C}}_{j_s}$ | Part Four, §3 | Analysis |
-| Madhva operates in $\hat{\mathbf{C}}_{j_r}$ | Part Four, §4 | Analysis |
-| Kashmir Shaivism recognizes $\hat{\mathbf{C}}$ directly | Part Four, §6 | Analysis |
-| The Shankara-Ramanuja-Madhva debate is permanently undecidable from within any one topos | Part Six, §2 | Theorem |
-| Immortality of the Atman is topology-invariant | Part Five, §2, Theorem I | Theorem |
-| Karma accumulation is topology-invariant | Part Five, §2, Theorem IV | Theorem |
-| Daivi sampada → moksha in every Hindu school | Part Five, §2, Theorem V(a) | Theorem |
-| Asuri sampada → bondage in every Hindu school | Part Five, §2, Theorem V(b) | Theorem |
-| No self-liberation from the fully asuri state in any school | Part Five, §4 | Theorem |
-| Buddhist shunyata = terminal object without inherent existence | Part Six, §1 | Analysis |
-| Buddhism is not a sheaf topos over $\hat{\mathbf{C}}$ | Part Six, §1 | Theorem |
-| One cannot convert to Hinduism but can be initiated into a school | Part Six, §4 | Consequence |
-| Gita 18.66 = instruction to operate from $\hat{\mathbf{C}}$ directly | Part Six, §5 | Interpretation |
+| A Hindu is one who accepts the daivi sampadas as virtues | Part One, §2 | Definition |
+| Hinduism = $\hat{\mathbf{C}} = \mathbf{PSh}(\mathbf{C})$ | Part Two, §9 | Definition |
+| Each Hindu school = $\mathbf{Sh}(\mathbf{C}, J_i)$ | Part Two, §11 | Definition |
+| Daivi complex $\mathfrak{D}$ = conditions for retract of $\mathbf{1}$ | Part Two, §14 | Definition |
+| Asuri complex $\mathfrak{A}$ = conditions blocking retract | Part Two, §14 | Definition |
+| Daivi sampadas lead to moksha in every topos over $\mathbf{C}$ | Part Two, §15, Theorem I | **Theorem** |
+| Asuri sampadas lead to bondage in every topos over $\mathbf{C}$ | Part Two, §15, Theorem II | **Theorem** |
+| Both theorems are topology-invariant | Part Two, §15, Theorem III | **Theorem** |
+| The three gunas are Lawvere-Tierney topologies | Part Two, §13 | Identification |
+| Shankara operates in $\hat{\mathbf{C}}_{j_{\neg\neg}}$ | Part Three, §18 | Analysis |
+| Ramanuja operates in $\hat{\mathbf{C}}_{j_s}$ | Part Three, §18 | Analysis |
+| Madhva operates in $\hat{\mathbf{C}}_{j_r}$ | Part Three, §18 | Analysis |
+| All Hindu schools agree on the daivi criterion by structural necessity | Part Three, §19 | **Theorem** |
+| The Vedas = nearest finite approximation to $\hat{\mathbf{C}}$ | Part Three, §20 | Identification |
+| The Gita is the most complete single articulation of the daivi teaching | Part Four, §21 | Argument |
+| Chapter 16 of the Gita states Theorem I and II directly | Part Four, §22 (Ch.16) | Identification |
+| Gita 18.66 = instruction to operate from $\hat{\mathbf{C}}$ directly | Part Four, §22 (Ch.18) | Interpretation |
+| The Shankara-Ramanuja-Madhva debate is about which topology is primary | Part Three, §18 | Analysis |
+| This debate is permanently undecidable from within any one topos | Part Three, §17 | Theorem |
+| Varna = guṇa-karma classification (svabhava, not janma) | Part Five, §25 | Textual analysis |
+| Hereditary caste system = violation of the daivi criterion | Part Five, §25 | Consequence |
+| Buddhist shunyata = terminal object without inherent existence | Part Five, §24 | Analysis |
+
+---
+
+## The Gita Topos: Complete Summary
+
+The **Gita Topos** $\mathbb{G} = \mathbf{Sh}(\mathbf{C}, J)$ is the complete mathematical object whose internal structure *is* the Bhagavad Gita's teaching. Its essential components:
+
+$$\boxed{\mathbb{G} = \mathbf{Sh}(\mathbf{C}, J)}$$
+
+where $\mathbf{C}$ is the Prakritic category of 24 tattvas with gunic morphisms, and $J$ is the sattvic-dominant Grothendieck topology encoding dharmic coherence.
+
+**Distinguished objects**:
+- $\mathbf{1} \in \mathbb{G}$ — Brahman (terminal object, $\text{End}(\mathbf{1}) = \{\text{id}_\mathbf{1}\}$)
+- $\mathbf{0} \in \mathbb{G}$ — Avyakta (initial object, $\mathbf{0} \ncong \mathbf{1}$)
+- $\Omega \in \mathbb{G}$ — Maya (subobject classifier, internal Heyting algebra)
+- $\mathcal{A} \in \mathbb{G}$ — Atman (representable sheaf)
+- $\text{true}: \mathbf{1} \to \Omega$ — Sat (canonical global section of subobject classifier)
+
+**Distinguished morphisms**:
+- $!_\mathcal{A}: \mathcal{A} \to \mathbf{1}$ — svadharma (always exists, always unique)
+- $s: \mathbf{1} \to \mathcal{A}$ — bhakti-retract (established by devotion, D5.1)
+- $j_s, j_r, j_t: \Omega \to \Omega$ — three gunas (Lawvere-Tierney topologies)
+- $j_{\neg\neg}: \Omega \to \Omega$ — viveka (double-negation topology)
+- $\Gamma_*: \mathbb{G} \to \mathbf{Set}$ — Ishvara (global sections functor)
+- $\Delta: \mathbf{Set} \to \mathbb{G}$ — Avatara (constant sheaf functor)
+
+**The fundamental theorem**:
+
+A fully daivi Atman-object $\mathcal{A} \in \mathbb{G}$ becomes a retract of $\mathbf{1}$ — $!_\mathcal{A} \circ s = \text{id}_\mathbf{1}$ — isomorphic to $\mathbf{1}$ in the Boolean cover, equivalent to a constant sheaf $\Delta(S)$: liberated, in the world but not of the world.
+
+A fully asuri Atman-object vanishes to $\mathbf{0}$ in the Boolean cover, generates an infinite non-converging samsaric orbit, and accumulates unbounded karmic binding.
+
+This theorem holds in every sheaf topos over $\mathbf{C}$ — in every Hindu school's metaphysical framework — because it follows from the axioms of a topos and the structure of $\mathbf{C}$ alone.
+
+**The final statement of the Gita** (18.66):
+
+Drop every particular topology. Operate from the presheaf ground $\hat{\mathbf{C}}$ directly. The unique morphism $!_\mathcal{A}: \mathcal{A} \to \mathbf{1}$ was always already there. It is not something to be achieved. It is something to be recognized.
+
+*sarvaṃ khalv idaṃ brahma.*
+
+All this is indeed Brahman.
+
+Every object of $\hat{\mathbf{C}}$ has a unique morphism to $\mathbf{1}$.
+
+They are the same statement.
+
+---
+
+*Om tat sat.*
 
 ---
 
 *End of Book*
-
----
-
-**Final Note**
-
-The definition given in this book — Hinduism as the presheaf topos $\hat{\mathbf{C}}$ — is falsifiable. If a Hindu school can be shown to use a fundamentally different generating category that cannot be derived from or mapped into $\mathbf{C}$, the definition fails. If a tradition that the definition includes (that uses $\mathbf{C}$ as its site) can be shown to not be Hindu by any reasonable criterion, the definition fails. If the sampada theorems fail to hold in some topos over $\mathbf{C}$, the universality claim fails.
-
-The definition stands until it is falsified. That is the correct relationship between a mathematical definition and the tradition it describes.
-
-*sarvaṃ khalv idaṃ brahma.*
-
-All this is indeed Brahman — the presheaf topos that contains everything, imposes nothing, and was never anything other than what it always already is.
