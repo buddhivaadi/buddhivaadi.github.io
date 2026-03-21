@@ -704,15 +704,13 @@ Among ordinary human beings — those who must act in the world, manage duties, 
 
 ---
 
-### §25. Caste, Ambedkar, and the Daivi Criterion
+### §25. Varna and the Daivi Criterion
 
 The daivi criterion makes the caste controversy structurally clear.
 
 **Varna as guṇa-karma classification**: The four functional roles (knowledge-transmission, governance-protection, production-trade, service-craft) are real and necessary for any functioning society. The guṇa-basis of these roles is real: different psychological orientations are genuinely better suited to different functions. Birth context provides the optimal prior probability for guṇa development — not an absolute determination.
 
 **The daivi criterion applied**: Under the daivi criterion, blocking any person's access to the daivi qualities — denying education, denying ritual access, enforcing conditions of degradation — is an asuri act regardless of the justification given. It is the institutional application of the asuri complex: the lust-morphism (artha-kāma interest in maintaining privilege), the anger-morphism (destructive enforcement against those who challenge the system), and the greed-accumulation (endless generation of new binding arrangements). A social system built on these three acts is an asuri social system, regardless of what it calls itself.
-
-The texts say what they say. The tradition that built and maintained the caste system of untouchability was failing its own foundational criterion — the daivi sampadas are for everyone, and any system that systematically prevents sections of the population from cultivating them is in violation of its own teaching.
 
 ---
 
