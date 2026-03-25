@@ -18,3 +18,5 @@ Truth is served by **clarity of thought and validity of reasoning**, not by sent
 {% for post in site.posts %}
 - [{{ post.title }}]({{ post.url }}) — {{ post.date | date: "%Y-%m-%d" }}
 {% endfor %}
+## Interactive
+[Interactive 7-steps](/Flowchart_Beginner_to_Sahaj_Samadhi.html)
