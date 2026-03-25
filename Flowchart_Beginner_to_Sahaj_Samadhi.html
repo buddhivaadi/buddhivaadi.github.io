@@ -1,0 +1,1134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Yoga Vasishta — Path to Sahaj Samadhi</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Cinzel:wght@400;600&display=swap');
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --gold: #c9973a;
+    --gold-light: #e8c07a;
+    --gold-dim: #7a5a1e;
+    --bg: #080a0c;
+    --bg2: #0e1116;
+    --bg3: #141920;
+    --text: #d4cfc4;
+    --text-dim: #7a7060;
+    --border: #1e2530;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'EB Garamond', Georgia, serif;
+    font-size: 16px;
+    line-height: 1.65;
+    min-height: 100vh;
+  }
+
+  /* ── HEADER ── */
+  .header {
+    text-align: center;
+    padding: 48px 24px 32px;
+    border-bottom: 1px solid var(--border);
+    background: linear-gradient(180deg, #0a0c10 0%, var(--bg) 100%);
+  }
+  .header-eyebrow {
+    font-family: 'Cinzel', serif;
+    font-size: 11px;
+    letter-spacing: 5px;
+    color: var(--gold);
+    text-transform: uppercase;
+    margin-bottom: 14px;
+  }
+  .header h1 {
+    font-family: 'Cinzel', serif;
+    font-size: clamp(20px, 4vw, 34px);
+    font-weight: 400;
+    color: #f0ebe0;
+    line-height: 1.3;
+    margin-bottom: 12px;
+  }
+  .header p {
+    font-size: 15px;
+    color: var(--text-dim);
+    max-width: 480px;
+    margin: 0 auto;
+    font-style: italic;
+  }
+
+  /* ── LAYOUT ── */
+  .layout {
+    display: flex;
+    gap: 0;
+    max-width: 1280px;
+    margin: 0 auto;
+    min-height: calc(100vh - 160px);
+  }
+
+  /* ── LEFT SIDEBAR ── */
+  .sidebar {
+    width: 300px;
+    flex-shrink: 0;
+    border-right: 1px solid var(--border);
+    padding: 24px 0;
+    position: sticky;
+    top: 0;
+    height: calc(100vh - 0px);
+    overflow-y: auto;
+  }
+  .sidebar::-webkit-scrollbar { width: 4px; }
+  .sidebar::-webkit-scrollbar-track { background: transparent; }
+  .sidebar::-webkit-scrollbar-thumb { background: var(--border); border-radius: 2px; }
+
+  .sidebar-label {
+    font-family: 'Cinzel', serif;
+    font-size: 9px;
+    letter-spacing: 4px;
+    color: var(--text-dim);
+    text-transform: uppercase;
+    padding: 0 20px 12px;
+  }
+
+  .stage-btn {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    width: 100%;
+    padding: 12px 20px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    text-align: left;
+    border-left: 3px solid transparent;
+    transition: all 0.18s ease;
+    position: relative;
+  }
+  .stage-btn:hover { background: rgba(201,151,58,0.06); }
+  .stage-btn.active {
+    background: rgba(201,151,58,0.10);
+    border-left-color: var(--gold);
+  }
+  .stage-icon {
+    font-size: 20px;
+    flex-shrink: 0;
+    width: 28px;
+    text-align: center;
+  }
+  .stage-meta { flex: 1; min-width: 0; }
+  .stage-label {
+    font-family: 'Cinzel', serif;
+    font-size: 9px;
+    letter-spacing: 3px;
+    color: var(--text-dim);
+    text-transform: uppercase;
+    margin-bottom: 2px;
+  }
+  .stage-btn.active .stage-label { color: var(--gold-dim); }
+  .stage-name {
+    font-size: 14px;
+    color: #c8c0b0;
+    font-weight: 500;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .stage-btn.active .stage-name { color: var(--gold-light); }
+  .stage-sanskrit {
+    font-size: 11px;
+    color: var(--text-dim);
+    font-style: italic;
+  }
+  .stage-btn.active .stage-sanskrit { color: var(--gold-dim); }
+
+  .connector {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 18px;
+    color: #2a3040;
+    font-size: 14px;
+    user-select: none;
+  }
+
+  .sidebar-divider {
+    height: 1px;
+    background: var(--border);
+    margin: 16px 20px;
+  }
+
+  .warnings-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    width: calc(100% - 40px);
+    margin: 0 20px;
+    padding: 10px 14px;
+    background: rgba(180,40,40,0.08);
+    border: 1px solid rgba(180,40,40,0.3);
+    border-radius: 6px;
+    cursor: pointer;
+    font-family: 'EB Garamond', serif;
+    font-size: 13px;
+    color: #c07070;
+    transition: all 0.18s;
+  }
+  .warnings-btn:hover { background: rgba(180,40,40,0.15); }
+  .warnings-btn.open { border-color: rgba(200,60,60,0.5); }
+
+  .warnings-list {
+    display: none;
+    padding: 12px 20px 4px;
+  }
+  .warnings-list.open { display: block; }
+  .warning-item {
+    font-size: 12px;
+    color: #a06060;
+    margin-bottom: 10px;
+    line-height: 1.5;
+    padding-left: 18px;
+    position: relative;
+  }
+  .warning-item::before {
+    content: '⚠';
+    position: absolute;
+    left: 0;
+    color: #804040;
+  }
+
+  /* ── MAIN PANEL ── */
+  .main {
+    flex: 1;
+    padding: 32px;
+    overflow-y: auto;
+    min-width: 0;
+  }
+
+  .placeholder {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 400px;
+    text-align: center;
+    color: var(--text-dim);
+  }
+  .placeholder-icon { font-size: 52px; margin-bottom: 20px; opacity: 0.4; }
+  .placeholder h2 {
+    font-family: 'Cinzel', serif;
+    font-weight: 400;
+    font-size: 18px;
+    color: var(--gold-dim);
+    margin-bottom: 12px;
+  }
+  .placeholder p { font-size: 14px; line-height: 1.7; max-width: 340px; font-style: italic; }
+
+  /* ── DETAIL PANEL ── */
+  .detail { display: none; animation: fadeIn 0.25s ease; }
+  .detail.visible { display: block; }
+  @keyframes fadeIn { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: translateY(0); } }
+
+  .detail-header {
+    margin-bottom: 24px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--border);
+  }
+  .detail-eyebrow {
+    font-family: 'Cinzel', serif;
+    font-size: 9px;
+    letter-spacing: 4px;
+    color: var(--gold-dim);
+    text-transform: uppercase;
+    margin-bottom: 6px;
+  }
+  .detail-title {
+    font-family: 'Cinzel', serif;
+    font-size: clamp(18px, 3vw, 26px);
+    font-weight: 400;
+    color: #f0ebe0;
+    margin-bottom: 4px;
+  }
+  .detail-sanskrit {
+    font-size: 14px;
+    font-style: italic;
+    color: var(--gold);
+    margin-bottom: 14px;
+  }
+  .detail-desc {
+    font-size: 16px;
+    line-height: 1.75;
+    color: var(--text);
+  }
+
+  /* Quote block */
+  .quote-block {
+    border-left: 3px solid var(--gold-dim);
+    padding: 14px 20px;
+    margin: 20px 0;
+    background: rgba(201,151,58,0.05);
+    border-radius: 0 6px 6px 0;
+  }
+  .quote-block p {
+    font-size: 15px;
+    font-style: italic;
+    color: var(--gold-light);
+    line-height: 1.7;
+  }
+  .quote-block cite {
+    font-size: 12px;
+    color: var(--gold-dim);
+    display: block;
+    margin-top: 8px;
+    font-style: normal;
+    letter-spacing: 1px;
+  }
+
+  /* Section headers */
+  .section-head {
+    font-family: 'Cinzel', serif;
+    font-size: 10px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin: 28px 0 12px;
+    padding-bottom: 6px;
+    border-bottom: 1px solid var(--border);
+  }
+  .section-head.green { color: #5a9a6a; border-color: rgba(90,154,106,0.3); }
+  .section-head.gold  { color: var(--gold-dim); border-color: rgba(201,151,58,0.3); }
+  .section-head.red   { color: #8a4040; border-color: rgba(138,64,64,0.3); }
+  .section-head.blue  { color: #4a6a8a; border-color: rgba(74,106,138,0.3); }
+  .section-head.purple{ color: #6a4a8a; border-color: rgba(106,74,138,0.3); }
+
+  /* List items */
+  .item-list { list-style: none; }
+  .item-list li {
+    font-size: 15px;
+    color: var(--text);
+    margin-bottom: 8px;
+    padding-left: 20px;
+    position: relative;
+    line-height: 1.6;
+  }
+  .item-list li::before {
+    content: '◦';
+    position: absolute;
+    left: 4px;
+    color: var(--text-dim);
+  }
+  .item-list.green li::before { color: #5a9a6a; }
+  .item-list.red li::before { color: #8a5050; }
+
+  /* Practice cards */
+  .practice-card {
+    background: var(--bg2);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--gold-dim);
+    border-radius: 0 6px 6px 0;
+    padding: 14px 16px;
+    margin-bottom: 10px;
+  }
+  .practice-name {
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--gold-light);
+    margin-bottom: 6px;
+  }
+  .practice-detail {
+    font-size: 13px;
+    color: #9a9080;
+    line-height: 1.65;
+  }
+
+  /* Two disconnections */
+  .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+  @media (max-width: 600px) { .two-col { grid-template-columns: 1fr; } }
+  .disc-card {
+    background: var(--bg2);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 14px;
+  }
+  .disc-label {
+    font-family: 'Cinzel', serif;
+    font-size: 9px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+  }
+  .disc-card p { font-size: 13px; color: #9a9080; line-height: 1.6; }
+
+  /* Portrait grid */
+  .portrait-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+  @media (max-width: 600px) { .portrait-grid { grid-template-columns: 1fr; } }
+  .portrait-item {
+    background: var(--bg2);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 10px 12px;
+    font-size: 13px;
+    color: #9a9080;
+    line-height: 1.5;
+  }
+  .portrait-item::before { content: '✦ '; color: var(--gold-dim); }
+
+  /* Next step box */
+  .next-box {
+    margin-top: 28px;
+    border: 1px dashed var(--gold-dim);
+    border-radius: 6px;
+    padding: 16px 18px;
+    background: rgba(201,151,58,0.04);
+  }
+  .next-label {
+    font-family: 'Cinzel', serif;
+    font-size: 9px;
+    letter-spacing: 3px;
+    color: var(--gold-dim);
+    text-transform: uppercase;
+    margin-bottom: 8px;
+  }
+  .next-box p { font-size: 14px; color: var(--text-dim); line-height: 1.65; font-style: italic; }
+
+  /* Formula strip */
+  .formula {
+    margin-top: 32px;
+    background: var(--bg2);
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+    padding: 20px;
+  }
+  .formula-title {
+    font-family: 'Cinzel', serif;
+    font-size: 10px;
+    letter-spacing: 3px;
+    color: var(--text-dim);
+    text-transform: uppercase;
+    margin-bottom: 14px;
+  }
+  .formula-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; }
+  @media (max-width: 700px) { .formula-grid { grid-template-columns: 1fr 1fr; } }
+  .formula-card {
+    border-radius: 4px;
+    padding: 12px;
+    border-top: 2px solid;
+    background: var(--bg3);
+  }
+  .formula-card-name { font-family: 'Cinzel', serif; font-size: 13px; margin-bottom: 4px; }
+  .formula-card-desc { font-size: 12px; color: var(--text-dim); line-height: 1.5; }
+
+  /* Feel-like strip */
+  .feel-block {
+    background: var(--bg3);
+    border-radius: 6px;
+    padding: 14px 16px;
+    margin-top: 16px;
+    border: 1px solid var(--border);
+  }
+  .feel-label {
+    font-size: 10px;
+    letter-spacing: 2px;
+    color: #4a6a8a;
+    text-transform: uppercase;
+    margin-bottom: 6px;
+  }
+  .feel-block p { font-size: 13px; color: #7a8090; font-style: italic; line-height: 1.65; }
+
+  /* Arrival box */
+  .arrival-box {
+    background: linear-gradient(135deg, #0e0c06 0%, #14100a 100%);
+    border: 1px solid var(--gold-dim);
+    border-radius: 8px;
+    padding: 24px;
+    margin-top: 20px;
+    box-shadow: 0 0 40px rgba(201,151,58,0.08);
+  }
+
+  /* Responsive */
+  @media (max-width: 768px) {
+    .layout { flex-direction: column; }
+    .sidebar {
+      width: 100%;
+      height: auto;
+      position: relative;
+      border-right: none;
+      border-bottom: 1px solid var(--border);
+      padding: 16px 0;
+    }
+    .main { padding: 20px 16px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <div class="header-eyebrow">Yoga Vasishta · Sapta Jnana Bhoomi</div>
+  <h1>From Awakening to Sahaj Samadhi</h1>
+  <p>A complete path for the beginner who sees the trap of the world and seeks liberation</p>
+</div>
+
+<div class="layout">
+
+  <!-- ── SIDEBAR ── -->
+  <nav class="sidebar">
+    <div class="sidebar-label">The Path</div>
+
+    <button class="stage-btn" onclick="show(0)" id="btn-0">
+      <span class="stage-icon">🔒</span>
+      <div class="stage-meta">
+        <div class="stage-label">The Awakening</div>
+        <div class="stage-name">You Are Trapped</div>
+        <div class="stage-sanskrit">Vairagya Arising</div>
+      </div>
+    </button>
+    <div class="connector">↓</div>
+
+    <button class="stage-btn" onclick="show(1)" id="btn-1">
+      <span class="stage-icon">🌱</span>
+      <div class="stage-meta">
+        <div class="stage-label">Stage 1</div>
+        <div class="stage-name">Subheccha</div>
+        <div class="stage-sanskrit">Good Will</div>
+      </div>
+    </button>
+    <div class="connector">↓</div>
+
+    <button class="stage-btn" onclick="show(2)" id="btn-2">
+      <span class="stage-icon">🔍</span>
+      <div class="stage-meta">
+        <div class="stage-label">Stage 2</div>
+        <div class="stage-name">Vicharana</div>
+        <div class="stage-sanskrit">Right Inquiry</div>
+      </div>
+    </button>
+    <div class="connector">↓</div>
+
+    <button class="stage-btn" onclick="show(3)" id="btn-3">
+      <span class="stage-icon">🌊</span>
+      <div class="stage-meta">
+        <div class="stage-label">Stage 3</div>
+        <div class="stage-name">Tanumanasa</div>
+        <div class="stage-sanskrit">Thinning of Mind</div>
+      </div>
+    </button>
+    <div class="connector">↓</div>
+
+    <button class="stage-btn" onclick="show(4)" id="btn-4">
+      <span class="stage-icon">🌅</span>
+      <div class="stage-meta">
+        <div class="stage-label">Stage 4</div>
+        <div class="stage-name">Sattwapatti</div>
+        <div class="stage-sanskrit">Threshold · Self-Reliance</div>
+      </div>
+    </button>
+    <div class="connector">↓</div>
+
+    <button class="stage-btn" onclick="show(5)" id="btn-5">
+      <span class="stage-icon">🌙</span>
+      <div class="stage-meta">
+        <div class="stage-label">Stage 5</div>
+        <div class="stage-name">Asamsakti</div>
+        <div class="stage-sanskrit">Non-Attachment · Deep Absorption</div>
+      </div>
+    </button>
+    <div class="connector">↓</div>
+
+    <button class="stage-btn" onclick="show(6)" id="btn-6">
+      <span class="stage-icon">🪔</span>
+      <div class="stage-meta">
+        <div class="stage-label">Stage 6</div>
+        <div class="stage-name">Padarthabhavana</div>
+        <div class="stage-sanskrit">Living Liberation · Jivan Mukti</div>
+      </div>
+    </button>
+    <div class="connector">↓</div>
+
+    <button class="stage-btn" onclick="show(7)" id="btn-7">
+      <span class="stage-icon">☀️</span>
+      <div class="stage-meta">
+        <div class="stage-label">Stage 7 · Arrival</div>
+        <div class="stage-name">Sahaj Samadhi</div>
+        <div class="stage-sanskrit">Turyaga · Natural Liberation</div>
+      </div>
+    </button>
+
+    <div class="sidebar-divider"></div>
+
+    <button class="warnings-btn" id="warn-btn" onclick="toggleWarnings()">
+      ⚠ Critical Warnings (5)
+    </button>
+    <div class="warnings-list" id="warnings-list">
+      <div class="warning-item">Do NOT rely on physical practice (hatha yoga) alone. "Those who attempt to subdue the mind by bodily contortions strive as vainly as those who wish to bind a mad elephant with a rope of grass."</div>
+      <div class="warning-item">Do NOT surrender to fatalism. "Nothing comes from what the dull and mistaken call chance or fate." Present effort is stronger than past karma.</div>
+      <div class="warning-item">Do NOT mistake outer renunciation for inner liberation. Sikhidhwaja spent 18 years as a hermit with zero progress because the ego remained intact and unexamined.</div>
+      <div class="warning-item">Do NOT suppress the mind violently. It must be trained like a child — not forced. Suppression strengthens the suppressor (the ego).</div>
+      <div class="warning-item">Do NOT mistake the map for the territory. "Scriptures are not the means to divine knowledge." Reading this is not liberation — recognising yourself is.</div>
+    </div>
+  </nav>
+
+  <!-- ── MAIN ── -->
+  <main class="main">
+
+    <!-- Placeholder -->
+    <div class="placeholder" id="placeholder">
+      <div class="placeholder-icon">🪷</div>
+      <h2>Select a Stage</h2>
+      <p>Click any stage on the left to see its practices, inner signs, pitfalls, and when to move forward.</p>
+    </div>
+
+    <!-- Stage 0: Awakening -->
+    <div class="detail" id="detail-0">
+      <div class="detail-header">
+        <div class="detail-eyebrow">The Awakening · Before Stage 1</div>
+        <div class="detail-title">You Are Trapped — And You See It</div>
+        <div class="detail-sanskrit">Vairagya Arising · The First Light of Wisdom</div>
+        <p class="detail-desc">You suddenly see it clearly. Pleasure is temporary. Achievements fade. Relationships end in parting. Even the best the world offers — wealth, fame, love, power — leaves you hungry again. This is not depression. This is not failure. This is <em>vairagya</em> — the first awakening of genuine discrimination.</p>
+      </div>
+
+      <div class="quote-block">
+        <p>"I have examined everything within the range of worldly experience and found nothing that truly satisfies. My mind finds no rest — yet I can no longer be deceived."</p>
+        <cite>— Rama, opening Yoga Vasishta</cite>
+      </div>
+
+      <div class="section-head green">What Is Happening Inside You</div>
+      <ul class="item-list green">
+        <li>A creeping sense that no worldly gain brings lasting peace — pleasures deliver, then immediately create new hunger</li>
+        <li>Repetitive suffering begins to feel meaningless rather than motivating</li>
+        <li>Questions arise that cannot be silenced: <em>Why am I doing all this? Is there something more?</em></li>
+        <li>The world's promises begin to feel hollow — not through force, but through seeing them clearly</li>
+        <li>Even heaven is not enough — King Arishtanemi refused Indra's paradise because it was temporary</li>
+      </ul>
+
+      <div class="section-head red">Pitfalls at This Stage</div>
+      <ul class="item-list red">
+        <li><strong>Mistaking this for depression.</strong> Vairagya is clarity, not collapse. It is seeing truly, not feeling broken.</li>
+        <li><strong>Swinging back into worldly pursuit</strong> to escape the discomfort of the question. This is the ego's most reliable defense.</li>
+        <li><strong>Nihilism</strong> — concluding "nothing matters" rather than "something deeper matters." Vairagya points toward, not away.</li>
+        <li><strong>Performing detachment</strong> — talking about how the world is hollow while secretly hoping something in it will still save you.</li>
+      </ul>
+
+      <div class="quote-block">
+        <p>"Even heaven — which offers great bliss — is not the destination, for when merit is exhausted, one falls back to earth. A place from which one must eventually fall is no better than this world."</p>
+        <cite>— King Arishtanemi to Indra's messenger</cite>
+      </div>
+
+      <div class="next-box">
+        <div class="next-label">Sign You Are Ready for Stage 1</div>
+        <p>When the question "Is there something beyond all this?" becomes genuine and persistent — not a passing thought, but a quiet insistence that will not leave. When you would rather understand than acquire.</p>
+      </div>
+    </div>
+
+    <!-- Stage 1 -->
+    <div class="detail" id="detail-1">
+      <div class="detail-header">
+        <div class="detail-eyebrow">Stage 1 · First Step on the Ladder</div>
+        <div class="detail-title">Subheccha — Good Will</div>
+        <div class="detail-sanskrit">The First Genuine Desire for Liberation</div>
+        <p class="detail-desc">The desire for liberation is born — not as abstract philosophy but as a felt need. Something in you turns toward the light. Vasishta says this stage is like a <em>tender sprout</em> — it must be watered daily with reason, tended carefully, not forced to grow faster than it can.</p>
+      </div>
+
+      <div class="quote-block">
+        <p>"Why do I sit idle? I must know the scriptures in the company of good men."</p>
+        <cite>— Vasishta describing the inner speech of Stage 1</cite>
+      </div>
+
+      <div class="quote-block">
+        <p>"The venerable nature of yogis germinates in the first stage, blossoms in the second, and becomes fruitful in the third."</p>
+        <cite>— Vasishta</cite>
+      </div>
+
+      <div class="section-head green">What Is Happening Inside You</div>
+      <ul class="item-list green">
+        <li>You begin to genuinely want to understand the nature of reality — not just as a hobby</li>
+        <li>Attraction toward spiritual texts, teachers, or communities arises naturally</li>
+        <li>You begin to distinguish between actions that increase suffering and those that reduce it</li>
+        <li>A preference for peace over stimulation quietly develops</li>
+        <li>The company of people who gossip and chase pleasure starts to feel draining rather than entertaining</li>
+      </ul>
+
+      <div class="section-head gold">The Four Sentinels — Pick ONE to Begin</div>
+      <p style="font-size:14px;color:var(--text-dim);margin-bottom:12px;font-style:italic;">Vasishta explicitly says: practice any ONE of these four virtues and the others follow. Do not try to cultivate all four simultaneously. Choose the one that feels most natural to you right now.</p>
+      <div class="practice-card">
+        <div class="practice-name">Shanti — Peace of Mind</div>
+        <div class="practice-detail">Practice: each day, find one moment where you deliberately do not react. Someone says something irritating — pause. A desire arises — pause. In that pause, notice what is present before the reaction. That noticing is shanti in seed form.</div>
+      </div>
+      <div class="practice-card">
+        <div class="practice-name">Santosha — Contentment</div>
+        <div class="practice-detail">Practice: each morning, before reaching for your phone or beginning your tasks, sit for 2 minutes and notice what is already present and sufficient. Not gratitude as a technique — genuine noticing. What is already here?</div>
+      </div>
+      <div class="practice-card">
+        <div class="practice-name">Satsanga — Company of the Wise</div>
+        <div class="practice-detail">Find one person, one community, one text that genuinely points toward truth — and spend time with it weekly. "Except by the light of scriptures and association with the good and wise, there is no way to cross the river of ignorance." The realised person's presence is itself a transmission.</div>
+      </div>
+      <div class="practice-card">
+        <div class="practice-name">Vichara — Self-Inquiry</div>
+        <div class="practice-detail">Begin with the simplest form: when something causes you suffering today, ask — "Who is suffering?" Not to answer in words, but to turn attention toward the one who suffers. Even 30 seconds of this daily is the beginning of vichara.</div>
+      </div>
+
+      <div class="section-head gold">Additional Practices for Stage 1</div>
+      <div class="practice-card">
+        <div class="practice-name">Read the Yoga Vasishta — especially the stories</div>
+        <div class="practice-detail">"This excellent work is to be read always. It rewards the labor of the student if constantly read with reverence." Start with the stories — understanding comes through narrative first. The stories plant seeds below the intellect.</div>
+      </div>
+      <div class="practice-card">
+        <div class="practice-name">Contemplate impermanence for 5 minutes daily</div>
+        <div class="practice-detail">Call to mind something you value or fear losing. Hold it quietly. Acknowledge: this will change. It has always been changing. This is not morbid — it is the loosening of unconscious grip. Vairagya is not forced; it grows naturally when you see clearly.</div>
+      </div>
+      <div class="practice-card">
+        <div class="practice-name">Observe one desire without acting on it</div>
+        <div class="practice-detail">Each day, notice one desire as it arises — the urge to check the phone, to snack, to say the clever thing — and simply watch it. Not suppress it. Watch it. Notice: it arose. It intensified. What happened next if you didn't feed it? This builds the "muscle" of non-identification.</div>
+      </div>
+
+      <div class="section-head red">Pitfalls</div>
+      <ul class="item-list red">
+        <li><strong>Performing spirituality</strong> — appearing to seek while actually seeking status, identity, or belonging in a new tribe</li>
+        <li><strong>Reading without reflection</strong> — accumulating spiritual concepts as intellectual decoration without examining your actual mind</li>
+        <li><strong>Jumping to advanced practices</strong> before this foundation is stable. The sprout must root before you can prune the tree.</li>
+      </ul>
+
+      <div class="feel-block">
+        <div class="feel-label">What This Stage Feels Like</div>
+        <p>A tender sprout. Fragile. Easily crushed by cynicism or forgotten under distraction. But genuinely alive. There is a new kind of attention available — quieter, more curious, less desperate than the attention that chased worldly goals.</p>
+      </div>
+
+      <div class="next-box">
+        <div class="next-label">Sign You Are Ready for Stage 2</div>
+        <p>When study and good company naturally produce disgust with worldliness — when the world's promises feel genuinely hollow, not just intellectually. When you find yourself preferring a quiet evening of reflection over entertainment without forcing it.</p>
+      </div>
+    </div>
+
+    <!-- Stage 2 -->
+    <div class="detail" id="detail-2">
+      <div class="detail-header">
+        <div class="detail-eyebrow">Stage 2 · Investigation</div>
+        <div class="detail-title">Vicharana — Right Inquiry</div>
+        <div class="detail-sanskrit">Systematic Discernment · Active Investigation</div>
+        <p class="detail-desc">Systematic investigation begins. You now actively examine the nature of mind, world, and Self — not just reading, but testing what you study against your own direct experience. Pride, vanity and greed begin to be shed "like a snake casting off its old skin."</p>
+      </div>
+
+      <div class="quote-block">
+        <p>"From the mouths of the best scholars, he hears explanations of the scriptures. He learns the distinction between actions that are to be done or avoided. He takes off his outer habit of pride and vanity, his jealousy and greed — like a snake casting off an old skin."</p>
+        <cite>— Vasishta on Stage 2</cite>
+      </div>
+
+      <div class="section-head green">What Is Happening Inside You</div>
+      <ul class="item-list green">
+        <li>You begin to distinguish the real from the unreal in your own direct experience</li>
+        <li>Pride, vanity, jealousy and greed are now visible — you can watch them arise, rather than being identified with them</li>
+        <li>The question "Who is the one experiencing all this?" starts to arise naturally</li>
+        <li>Actions that cloud the mind become naturally unattractive; actions that produce clarity become preferable</li>
+        <li>You begin to see that knowledge and action must go together — "as birds fly with two wings"</li>
+      </ul>
+
+      <div class="section-head gold">Practices</div>
+      <div class="practice-card">
+        <div class="practice-name">Formal self-inquiry (Vichara) — 15 minutes daily</div>
+        <div class="practice-detail">Sit quietly. Ask: "Who am I?" — not as a riddle to solve with words, but as a direction of attention. When a thought arises, ask: who is thinking this? When an emotion arises: who is feeling this? Don't seek an answer — seek the one who is asking. The inquiry is directional, not analytical. Stay with the turning-toward rather than reaching for a conclusion.</div>
+      </div>
+      <div class="practice-card">
+        <div class="practice-name">Begin pranayama — 10 minutes before meditation</div>
+        <div class="practice-detail">Breathe in (puraka) for 4 counts → hold (kumbhaka) for 4 counts → breathe out (rechaka) for 8 counts. Start with 10 cycles. "As flying dust settles on the ground after a gust of wind passes, so the flying thoughts of the mind are stopped when breathings are put to a stop — they being one and the same thing." Pranayama is a support, not the path itself. Use it to prepare the ground for inquiry.</div>
+      </div>
+      <div class="practice-card">
+        <div class="practice-name">Karma Yoga — "Am I the doer?"</div>
+        <div class="practice-detail">Once today, in any significant action, hold this question: "Is this happening through me, or am I doing it?" Don't impose an answer. Hold the question while acting fully. The Yoga Vasishta: "An indifferent action, like a fried grain, does not germinate into any binding effect."</div>
+      </div>
+      <div class="practice-card">
+        <div class="practice-name">Service without seeking recognition</div>
+        <div class="practice-detail">Perform one act daily with no expectation of gratitude, recognition, or reciprocity. Then notice: what arises in the mind when the expected reward doesn't come? The noticing is the practice.</div>
+      </div>
+      <div class="practice-card">
+        <div class="practice-name">Study the philosophical sections of the Yoga Vasishta</div>
+        <div class="practice-detail">Now move beyond the stories to the theory in Books III and IV. Don't just read — examine each claim against your own experience. "Is this what I actually find when I look?" Use the text as a mirror, not as a set of beliefs to adopt.</div>
+      </div>
+
+      <div class="section-head red">Critical Pitfall at This Stage</div>
+      <ul class="item-list red">
+        <li><strong>Intellectualising.</strong> "Ignorance is always ignorant of truth — even during meditation. Knowledge is always knowing — even during sleep." Accumulating philosophical frameworks is not Self-knowledge. Verify everything in direct experience.</li>
+        <li><strong>Spiritual bypassing</strong> — using philosophy to avoid confronting actual emotional patterns. The ego can wear spiritual robes very convincingly.</li>
+        <li><strong>Seeking special experiences</strong> — the path is not about peak states of bliss. It is about seeing clearly in ordinary moments.</li>
+      </ul>
+
+      <div class="feel-block">
+        <div class="feel-label">What This Stage Feels Like</div>
+        <p>The stage where the yogi "blossoms." There is increasing clarity about what one is and isn't. The world still pulls, but the pull is more visible — you can watch it rather than being swept by it. A new kind of honesty becomes possible.</p>
+      </div>
+
+      <div class="next-box">
+        <div class="next-label">Sign You Are Ready for Stage 3</div>
+        <p>When the mind spontaneously turns away from worldly amusements and gossip — not through discipline but through genuine disinterest. When solitude feels more natural than stimulation. When you find more satisfaction in inquiry than in conversation.</p>
+      </div>
+    </div>
+
+    <!-- Stage 3 -->
+    <div class="detail" id="detail-3">
+      <div class="detail-header">
+        <div class="detail-eyebrow">Stage 3 · The Thinning</div>
+        <div class="detail-title">Tanumanasa — The Mind Grows Thin</div>
+        <div class="detail-sanskrit">Genuine Detachment · Two Kinds of Disconnection</div>
+        <p class="detail-desc">The mind's compulsive grip on sense objects weakens. Not through suppression — through seeing. Two distinct layers of inner detachment emerge: ordinary disconnection (not attached to outcomes) and absolute disconnection (not identified with the one who could be attached).</p>
+      </div>
+
+      <div class="quote-block">
+        <p>"The flower of inner discrimination is expanded, like the lotus-bud, by the sunbeams of reason — and produces the fruit of renunciation in the garden of the third stage."</p>
+        <cite>— Vasishta</cite>
+      </div>
+
+      <div class="section-head green">What Is Happening Inside You</div>
+      <ul class="item-list green">
+        <li>Solitude becomes genuinely pleasurable — not something to escape from or endure</li>
+        <li>The two disconnections begin to manifest (see below)</li>
+        <li>The mind begins to thin: its turbulence is less frequent, its grip less total</li>
+        <li>You begin to perceive that it is not "I" acting but something acting through this form</li>
+        <li>The world begins to look less permanently solid — its appearances more fluid</li>
+      </ul>
+
+      <div class="section-head blue">The Two Kinds of Disconnection</div>
+      <p style="font-size:13px;color:var(--text-dim);margin-bottom:12px;font-style:italic;">Vasishta carefully distinguishes two stages within Stage 3 itself:</p>
+      <div class="two-col">
+        <div class="disc-card">
+          <div class="disc-label" style="color:#5a9a6a;">Ordinary Disconnection</div>
+          <p>"I have no ultimate control over outcomes. All prosperity and adversity, health and disease happen to me of their own accord. All union is for separation, all gain is for loss." This frees from anxiety about results without yet dissolving the sense of self.</p>
+        </div>
+        <div class="disc-card">
+          <div class="disc-label" style="color:#6a4a8a;">Absolute Disconnection</div>
+          <p>"It is not I but the great God/Consciousness that does everything through this form. Having left aside the thought of one's agency — whoever sits quiet and tranquil in themselves — such a one is absolutely unconnected with everything." The ego itself is seen through.</p>
+        </div>
+      </div>
+
+      <div class="section-head gold">Practices</div>
+      <div class="practice-card">
+        <div class="practice-name">Daily meditation — minimum 20–30 minutes, without exception</div>
+        <div class="practice-detail">The practice is not to have no thoughts but to not be swept away by them. Watch the mind the way you watch clouds — they appear, move, dissolve. You are the sky in which they appear. The sky is not disturbed by the clouds. Return to this recognition every time you drift.</div>
+      </div>
+      <div class="practice-card">
+        <div class="practice-name">The three-state inquiry</div>
+        <div class="practice-detail">Throughout the day, notice: in waking — "who is watching this experience?" At the moment of falling asleep — "what is still present as the body relaxes?" On waking — "what was here before the first thought arose?" This trains the recognition of turiya-awareness — the witness that is present in all three states.</div>
+      </div>
+      <div class="practice-card">
+        <div class="practice-name">Contemplate: "I am not the doer" as a sustained background</div>
+        <div class="practice-detail">Before any significant action: "This is occurring through this body-mind." After: "That arose and passed. I did not do it — it occurred." Not passive fatalism — active non-identification. Act fully. Claim nothing.</div>
+      </div>
+      <div class="practice-card">
+        <div class="practice-name">Reduce unnecessary social engagement</div>
+        <div class="practice-detail">Not renunciation — calibration. Fewer words. Less news. Less entertainment. More silence. Vasishta: "Avoid all company which he finds as agreeable as a bed of flowers." Ordinary company becomes less nourishing and more draining at this stage — this is a natural sign, not antisocial behaviour.</div>
+      </div>
+      <div class="practice-card">
+        <div class="practice-name">Equal vision practice (Samadarsana)</div>
+        <div class="practice-detail">Look at something you consider ugly or unpleasant. Look at something beautiful. Ask: is the Consciousness in which both appear any different? The same awareness holds both. Rest in the awareness rather than in the preference. Practice this with people, situations, and inner states.</div>
+      </div>
+
+      <div class="section-head red">Pitfalls</div>
+      <ul class="item-list red">
+        <li><strong>Performing non-attachment</strong> while secretly attached — the ego learns to speak the language of liberation fluently</li>
+        <li><strong>Stopping here.</strong> Stage 3 can feel like a comfortable plateau — calm, clear, peaceful. The ego can settle here very happily, mistaking the absence of obvious suffering for liberation.</li>
+        <li><strong>Confusing ordinary disconnection with absolute disconnection</strong> — not caring about outcomes is still not the same as seeing through the one who could care</li>
+      </ul>
+
+      <div class="feel-block">
+        <div class="feel-label">What This Stage Feels Like</div>
+        <p>The stage where the venerable nature becomes "fruitful" — real transformation visible to others. The yogi appears genuinely calm, unhurried, content in solitude. There is less reactivity, less inner commentary, more simple presence with what is.</p>
+      </div>
+
+      <div class="next-box">
+        <div class="next-label">Sign You Are Ready for Stage 4</div>
+        <p>When the world begins to appear genuinely dream-like during waking — not as a concept you hold but as a perception that arises spontaneously. Duality starts to feel like a trick of the mind rather than an absolute fact. Silence is easier than thought.</p>
+      </div>
+    </div>
+
+    <!-- Stage 4 -->
+    <div class="detail" id="detail-4">
+      <div class="detail-header">
+        <div class="detail-eyebrow">Stage 4 · The Threshold</div>
+        <div class="detail-title">Sattwapatti — Resting in the Self</div>
+        <div class="detail-sanskrit">The Gateway · Beginning of Liberation</div>
+        <p class="detail-desc">The threshold of liberation. The world's apparent solidity begins to thin as a direct perception — not a philosophy. The Self becomes the true and only refuge. Unity shines where duality had appeared. Stages 1–3 were the waking-state of the yogi. Stage 4 is described as "dreaming" — the solidity of the world's separateness dissolves like clouds in autumn.</p>
+      </div>
+
+      <div class="quote-block">
+        <p>"The yogi in this state is said to have reached the fourth stage when he sees the world like a vision in a dream. As the mistake of duality disappears and the knowledge of unity shines supremely bright — the sense that things are fundamentally separate begins to dissolve."</p>
+        <cite>— Vasishta</cite>
+      </div>
+
+      <div class="section-head green">What Is Happening Inside You</div>
+      <ul class="item-list green">
+        <li>The world appears genuinely dream-like — this is a perceptual shift, not a concept you are applying</li>
+        <li>The sense of separate things begins to thin; objects are seen as appearances rather than solid independent entities</li>
+        <li>The Divine is now the actual refuge — worldly supports are seen as secondary and temporary</li>
+        <li>Formal meditation and daily life begin to feel continuous rather than separate</li>
+        <li>"Resting in the fourth and succeeding stages is called liberation" — this is the entry point</li>
+      </ul>
+
+      <div class="section-head gold">Practices</div>
+      <div class="practice-card">
+        <div class="practice-name">Turiya meditation — pure witness practice</div>
+        <div class="practice-detail">Sit. Close eyes. Notice thoughts arising and passing. Notice feelings. Notice sensations. Now: what is the thing that notices all of this? Don't think about it — stay as it. Not a thought about the witness but the witnessing itself. Even one minute of genuine resting as the witness rather than as an object within it is more valuable than an hour of concentration practice.</div>
+      </div>
+      <div class="practice-card">
+        <div class="practice-name">Hold "Who am I?" in stillness — not in thought</div>
+        <div class="practice-detail">Vasishta on turiya: "that state in which the feelings of one's egoism and non-egoism are utterly drowned under a total aloofness — settled in one unchangeable uniform course of tranquility." Aim for this even briefly. The question dissolves the questioner when held in stillness rather than in thought.</div>
+      </div>
+      <div class="practice-card">
+        <div class="practice-name">Recognise Brahman in any ordinary object</div>
+        <div class="practice-detail">Look at any object — a cup, a tree, a hand. It arises in consciousness. It is known by consciousness. It is made of consciousness. The cup is not separate from the knowing of the cup. Rest in the knowing rather than in the cup. Do this for 30 seconds, any time, anywhere.</div>
+      </div>
+      <div class="practice-card">
+        <div class="practice-name">Service as complete offering</div>
+        <div class="practice-detail">Bhagiratha's liberation came through total selfless engagement — not through withdrawal. Act fully. Offer completely. Claim nothing. Every action becomes worship when performed without doership. The liberating recognition is not "I should not claim this" but "there is genuinely no one here to claim it."</div>
+      </div>
+
+      <div class="section-head red">The Ego's Most Sophisticated Trap</div>
+      <ul class="item-list red">
+        <li><strong>Identifying with being "the witness."</strong> The ego can create a new subtle identity: "I am the one who watches." This is turiya mis-taken as an object. The witness is not an object within consciousness — it IS consciousness. There is no "I" that witnesses. There is only witnessing.</li>
+        <li><strong>Mistaking temporary bliss states for liberation.</strong> Stage 4 is the threshold, not the completion. Beautiful experiences of unity arise — and pass. Liberation is not the peak experience. It is what remains when the peak experience has passed.</li>
+        <li><strong>Grasping the dream-like quality as a concept.</strong> The shift must be perceptual — arising from within — not imposed from philosophical reading.</li>
+      </ul>
+
+      <div class="feel-block">
+        <div class="feel-label">What This Stage Feels Like</div>
+        <p>Vasishta: "He who devotes his mind to yoga with undivided attention from first to last, and who sees all things in one even and same light, has arrived at the fourth stage." There is a quiet settledness, an increasing inability to be fully disturbed. The world is still present and vivid but has lost its absolute solidity.</p>
+      </div>
+
+      <div class="next-box">
+        <div class="next-label">Sign You Are Ready for Stage 5</div>
+        <p>When even the distinction between "I am in samadhi" and "I am not in samadhi" begins to dissolve. When the witness and the witnessed begin to feel like the same thing seen from two angles. When profound stillness is easier to sustain than it is to leave.</p>
+      </div>
+    </div>
+
+    <!-- Stage 5 -->
+    <div class="detail" id="detail-5">
+      <div class="detail-header">
+        <div class="detail-eyebrow">Stage 5 · Deep Absorption</div>
+        <div class="detail-title">Asamsakti — Non-Attachment</div>
+        <div class="detail-sanskrit">The Sleeping State of Yoga · Undivided Unity</div>
+        <p class="detail-desc">Profound absorption. The sense of duality melts. The yogi rests in awareness of undivided unity — all variety of things and species is replaced by one recognition. This is described as the "sleeping state of yoga": not unconscious, but deeply, effortlessly still. Inner delight is entirely self-sufficient.</p>
+      </div>
+
+      <div class="quote-block">
+        <p>"The yogi loses all external perceptions and sits quietly with internal vision. The sense of duality is entirely melted down and lost in the cheerfulness of an awakened mind. The continued calmness of his posture gives him the appearance of sleep — yet he is profoundly awake inwardly."</p>
+        <cite>— Vasishta</cite>
+      </div>
+
+      <div class="section-head green">What Is Happening Inside You</div>
+      <ul class="item-list green">
+        <li>External perceptions no longer pull the attention compulsively — the world appears but does not hook</li>
+        <li>The sense of duality is "entirely melted down" — not as a concept but as the actual texture of experience</li>
+        <li>Awareness of undivided unity is the baseline, not the peak</li>
+        <li>Inner delight is self-sufficient — nothing outside is needed to feel whole</li>
+        <li>The yogi "sits quietly with internal vision" — appears asleep to others, profoundly alive internally</li>
+        <li>Vasishta's note: "The yogi continues in this position practicing the denial of all his desires" — not suppression but the natural cessation of feeding</li>
+      </ul>
+
+      <div class="section-head gold">Practices</div>
+      <div class="practice-card">
+        <div class="practice-name">Extended silent meditation — 1 hour or more</div>
+        <div class="practice-detail">Not forcing — simply remaining as the witness, allowing the recognition to deepen on its own. When thoughts arise, don't fight and don't follow. Return to witnessing. At this stage, formal meditation is less a technique than a deliberate resting in what is always already the case.</div>
+      </div>
+      <div class="practice-card">
+        <div class="practice-name">Nididhyasana — prolonged contemplation</div>
+        <div class="practice-detail">Take one sentence: "There is only pure Consciousness." Sit with it for 45 minutes. Not analyzing. Not picturing. Simply letting the recognition saturate the mind the way water saturates cloth. This is different from thinking about the statement. It is resting in the direction the statement points.</div>
+      </div>
+      <div class="practice-card">
+        <div class="practice-name">"I am not the doer" as continuous background</div>
+        <div class="practice-detail">Not as an occasional reminder but as the sustained ground of every waking moment. Act. Speak. Move. But each action arises and completes within awareness that does not claim it. This is the potter's wheel — spinning from prior momentum, requiring no new force.</div>
+      </div>
+
+      <div class="section-head red">Pitfalls</div>
+      <ul class="item-list red">
+        <li><strong>Attachment to the bliss of Stage 5</strong> — creating subtle craving for the absorption state, which then becomes another object of desire</li>
+        <li><strong>Premature withdrawal from responsibilities.</strong> Vishnu woke Prahlada from samadhi specifically because "your duties are not finished." Liberation does not end responsibility — it transforms it.</li>
+      </ul>
+
+      <div class="feel-block">
+        <div class="feel-label">What This Stage Feels Like</div>
+        <p>Vasishta: "The sense of duality is entirely melted down and lost in the cheerfulness of an awakened mind." There is a quality of quiet joy that is not dependent on anything. The world continues but is no longer binding. Like Bali in his cave — externally imprisoned, internally completely free.</p>
+      </div>
+
+      <div class="next-box">
+        <div class="next-label">Sign You Are Ready for Stage 6</div>
+        <p>When even consciousness of being "in" or "out" of the absorbed state dissolves — when there is simply this, always. When the question of spiritual progress no longer arises because there is no longer a "you" anxiously tracking it.</p>
+      </div>
+    </div>
+
+    <!-- Stage 6 -->
+    <div class="detail" id="detail-6">
+      <div class="detail-header">
+        <div class="detail-eyebrow">Stage 6 · Living Liberation</div>
+        <div class="detail-title">Padarthabhavana — Jivan Mukti</div>
+        <div class="detail-sanskrit">The Liberated Sage in the World</div>
+        <p class="detail-desc">Living Liberation. The ego's grip is completely dissolved. The sage functions in the world normally — governing, teaching, loving, fighting — yet nothing sticks. This is the state of Janaka, Bali, Prahlada, Chudala. The yogi is "extinct or dead to consciousness" yet fully alive. "Like a lamp in a picture that emits no flame."</p>
+      </div>
+
+      <div class="quote-block">
+        <p>"The yogi remains unmindful of everything, quite unconscious of unity or duality. By being freed from every scruple and suspicion in his mind, he arrives at the dignity of living liberation. Within and without he is full of divine ecstasy, like a full pot in a sea."</p>
+        <cite>— Vasishta</cite>
+      </div>
+
+      <div class="section-head gold">Portrait of the Living Liberated Sage</div>
+      <div class="portrait-grid">
+        <div class="portrait-item">Always as deep and clear as a large lake in a valley</div>
+        <div class="portrait-item">Ever content without expectation of reward for actions</div>
+        <div class="portrait-item">Not moved by torture or pleasure of the body</div>
+        <div class="portrait-item">Neither praises nor is displeased when honored or dishonored</div>
+        <div class="portrait-item">Like a crystal — takes no tinge from effects of actions</div>
+        <div class="portrait-item">Hurts nobody and is not hurt by any</div>
+        <div class="portrait-item">Free from anger, affection, fear, and ego-reactions</div>
+        <div class="portrait-item">Acts from prior momentum like a potter's wheel</div>
+        <div class="portrait-item">Not terrified by warfare, thunder, demons, or death</div>
+        <div class="portrait-item">May follow social customs or not — indifferent either way</div>
+        <div class="portrait-item">Can die anywhere — holy place or savage's hut — irrelevant</div>
+        <div class="portrait-item">Sees Brahman in all — tree, demon, god, grain of dust</div>
+      </div>
+
+      <div class="quote-block" style="margin-top:20px;">
+        <p>"Whether engaged in business or retired from it, whether living with family or leading a single life — the man who thinks himself as nothing but consciousness, who has nothing to fear or care or be sorry for, is reckoned as liberated in this life."</p>
+        <cite>— Manu to King Ikshaku, Yoga Vasishta</cite>
+      </div>
+
+      <div class="section-head red">Note</div>
+      <ul class="item-list red">
+        <li>This is the penultimate stage — do not mistake it for the final arrival. The subtle identification with being "the liberated one" is the last residue.</li>
+        <li>At this stage there is no effort, no technique, no practice in the conventional sense. The Potter's Wheel spins on from its own prior momentum.</li>
+      </ul>
+
+      <div class="feel-block">
+        <div class="feel-label">What This Stage Feels Like</div>
+        <p>Vasishta: "Though still living, the yogi is said to be extinct or dead to consciousness. He sits like a lamp in a picture that emits no flame — with a vacant heart and mind like an empty cloud hanging in the empty air. Yet within and without, full of divine ecstasy."</p>
+      </div>
+
+      <div class="next-box">
+        <div class="next-label">Transition to Stage 7</div>
+        <p>There is no effort here. Stage 7 is not attained — it is what Stage 6 opens into when even the subtlest residue of "I am the liberated one" dissolves. It flows naturally, in its own time.</p>
+      </div>
+    </div>
+
+    <!-- Stage 7 -->
+    <div class="detail" id="detail-7">
+      <div class="detail-header">
+        <div class="detail-eyebrow">Stage 7 · The Arrival</div>
+        <div class="detail-title">Sahaj Samadhi — The Natural State</div>
+        <div class="detail-sanskrit">Turyaga · Permanent Liberation · The Potter's Wheel</div>
+        <p class="detail-desc">Sahaj Samadhi — natural, permanent, effortless liberation. The samadhi that coexists with all activity. Not a state entered and exited. Not a peak experience. The permanent ground of every moment, every action, every breath. Brahma, Vishnu and Shiva appear to Rama and say: <em>"Remain firmly established in Brahman always. Joyfully carry out your work."</em></p>
+      </div>
+
+      <div class="quote-block">
+        <p>"Ah! I have attained the most wonderful state of nirvana — the end of the purpose of life! I am always in form, but in the extremely peaceful myself there is nothing. There is nothing now covetable to me."</p>
+        <cite>— Rama's cry of liberation, Yoga Vasishta</cite>
+      </div>
+
+      <div class="section-head gold">What Sahaj Samadhi Is</div>
+      <div class="practice-card" style="border-left-color:#c9973a;">
+        <div class="practice-name">Not ordinary samadhi</div>
+        <div class="practice-detail">Ordinary samadhi requires withdrawal from activity — the mind becomes still by retreating. Returning to activity disturbs it. This is not sahaj samadhi.</div>
+      </div>
+      <div class="practice-card" style="border-left-color:#c9973a;">
+        <div class="practice-name">Not nirvikalpa samadhi alone</div>
+        <div class="practice-detail">Formless absorption — no sense of individual identity — available but temporary unless stabilised at the deepest level. This is not yet sahaj.</div>
+      </div>
+      <div class="practice-card" style="border-left-color:#e8c07a;">
+        <div class="practice-name">Sahaj samadhi — this is the goal</div>
+        <div class="practice-detail">"The rishis, having attained nirvana, are endowed with the highest state of sahaj samadhi that allows them to mix with people and perform their allotted duties in life without ever coming down from their samadhi state." Permanent. Effortless. Coexisting with full worldly engagement.</div>
+      </div>
+
+      <div class="section-head gold">What Is Now the Case</div>
+      <ul class="item-list green">
+        <li>The samadhi coexists with all activity — governing, teaching, loving, fighting, eating, sleeping</li>
+        <li>"Even and transparent light in which the devotee loses self-consciousness" — no observer observing, only awareness</li>
+        <li>Actions continue from prior vasanas — the potter's wheel spins without new force applied</li>
+        <li>"The mind withdrawn from its functions, freed from all thoughts, all doubts drowned in even temperament"</li>
+        <li>Full, free, unclaimed engagement with life — Rama returns to fulfil his destiny as king</li>
+        <li>The gods themselves confirm: act fully, from Brahman — every act is worship, every moment liberation</li>
+      </ul>
+
+      <div class="arrival-box">
+        <div style="font-family:'Cinzel',serif;font-size:11px;letter-spacing:3px;color:var(--gold-dim);margin-bottom:14px;text-transform:uppercase;">The Final Teaching</div>
+        <p style="font-size:16px;color:#c8b870;line-height:1.8;font-style:italic;margin-bottom:16px;">"This is neither the state of waking, owing to its lack of any wish or concern, nor the state of sound sleep, which is one of perfect unconsciousness. It is that calmness in which the wise man sees everything going on in the world — and is moved by none of it."</p>
+        <p style="font-size:13px;color:var(--text-dim);line-height:1.7;font-style:italic;">"Brahma, Vishnu and Maheshwara appeared and advised Rama to remain firmly established in Brahman always — and to joyfully carry out his work and duties in the true spirit of one who is liberated while living."</p>
+        <div style="margin-top:16px;padding-top:16px;border-top:1px solid var(--border);font-size:12px;color:var(--text-dim);text-align:center;letter-spacing:1px;">He is the knower, the knowledge, and all that is to be known.<br>He is the seer, the act of seeing, and all that is to be seen.<br>He is the actor, the cause, and the effect.<br><span style="color:var(--gold-dim);display:block;margin-top:8px;">— Opening salutation, Yoga Vasishta</span></div>
+      </div>
+    </div>
+
+    <!-- Core Formula (always visible below detail) -->
+    <div class="formula" id="formula" style="display:none;">
+      <div class="formula-title">The Core Formula · Vasishta's Four Means</div>
+      <div class="formula-grid">
+        <div class="formula-card" style="border-top-color:#c95a5a;">
+          <div class="formula-card-name" style="color:#c07070;">Vairagya</div>
+          <div class="formula-card-desc">Dispassion — seeing through the world's false promises. The entry point.</div>
+        </div>
+        <div class="formula-card" style="border-top-color:#c9973a;">
+          <div class="formula-card-name" style="color:#c9973a;">Viveka</div>
+          <div class="formula-card-desc">Discrimination — distinguishing the permanent from the impermanent, real from apparent.</div>
+        </div>
+        <div class="formula-card" style="border-top-color:#5a9a6a;">
+          <div class="formula-card-name" style="color:#5a9a6a;">Vichara</div>
+          <div class="formula-card-desc">Self-inquiry — "Who am I?" turned toward the source, not toward an answer in words.</div>
+        </div>
+        <div class="formula-card" style="border-top-color:#6a4a8a;">
+          <div class="formula-card-name" style="color:#8a70aa;">Satsanga</div>
+          <div class="formula-card-desc">Company of the wise — osmosis of truth. The teacher's presence mirrors what the student already is.</div>
+        </div>
+      </div>
+      <p style="font-size:13px;color:var(--text-dim);text-align:center;margin-top:16px;font-style:italic;">"Contentment, society of the virtuous, the practice of reasoning, and remaining undisturbed comprise the means for mankind to cross over the ocean of the world." — Vasishta</p>
+    </div>
+
+  </main>
+</div>
+
+<script>
+  let current = null;
+
+  function show(n) {
+    // Hide placeholder
+    document.getElementById('placeholder').style.display = 'none';
+
+    // Show formula
+    document.getElementById('formula').style.display = 'block';
+
+    // Hide all details
+    document.querySelectorAll('.detail').forEach(d => {
+      d.classList.remove('visible');
+    });
+
+    // Remove active from all buttons
+    document.querySelectorAll('.stage-btn').forEach(b => {
+      b.classList.remove('active');
+    });
+
+    if (current === n) {
+      // Toggle off
+      current = null;
+      document.getElementById('placeholder').style.display = 'flex';
+      document.getElementById('formula').style.display = 'none';
+    } else {
+      current = n;
+      document.getElementById('detail-' + n).classList.add('visible');
+      document.getElementById('btn-' + n).classList.add('active');
+
+      // Scroll main into view on mobile
+      if (window.innerWidth < 769) {
+        document.querySelector('.main').scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+  }
+
+  function toggleWarnings() {
+    const list = document.getElementById('warnings-list');
+    const btn = document.getElementById('warn-btn');
+    list.classList.toggle('open');
+    btn.classList.toggle('open');
+    btn.textContent = list.classList.contains('open')
+      ? '▲ Close Warnings'
+      : '⚠ Critical Warnings (5)';
+  }
+
+  // Open Stage 0 by default
+  show(0);
+</script>
+</body>
+</html>
